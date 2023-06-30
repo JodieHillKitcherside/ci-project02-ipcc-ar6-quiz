@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto+Condensed&display=swap');
+
+/* all pages features */
+
+body {
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    text-align: center;
+    /*color: #;*/
+}
+
+/* style headings */
+
+h1 {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 32px;
+    text-transform: uppercase;
+    letter-spacing: .25rem;
+    text-align: center;
+    /*color: #fff;*/
+}
+
+h2 {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 21px;
+    text-transform: uppercase;
+    letter-spacing: .25rem;
+    text-align: center;
+    /*color: #fff;*/
+}
