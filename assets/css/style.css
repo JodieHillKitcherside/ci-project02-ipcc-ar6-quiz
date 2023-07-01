@@ -33,6 +33,8 @@ h2 {
 
 #fog-opening {
     background-image: url("../images/fog-opening-the-dawn-ipcc-ar6-synthesis.jpg");
+    width: 100%;
+    height: 100%;
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
