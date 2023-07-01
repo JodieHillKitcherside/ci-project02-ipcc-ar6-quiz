@@ -80,9 +80,9 @@ const quiz = [
     {
         numb: 8,
         question: "What is the highest risk associated with our ocean/coastal ecosystems, considering all levels of increased temperature?",
-        answer: "Warm - water corals",
+        answer: "Warm-water corals",
         options: [
-            "Warm - water corals",
+            "Warm-water corals",
             "Kelp forests",
             "Seagrass meadows",
             "Epipelagic zone(upper open ocean, affecting sunlight for algae to thrive)",
