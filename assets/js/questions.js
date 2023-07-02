@@ -2,12 +2,12 @@ const quiz = [
     {
         numb: 1,
         question: "Which statement accurately describes the global surface temperature difference between the period 2001 - 2020 and 1850 - 1900?",
-        answer: "The global surface temperature between 2001 - 2020 was 1.10°C higher than 1850 - 1900.",
+        answer: "1.10°C",
         options: [
-            "The global surface temperature between 2001 - 2020 was 1.10°C higher than 1850 - 1900.",
-            "The global surface temperature between 2001 - 2020 was 1.59 °C higher than in 1850 - 1900.",
-            "The global surface temperature between 2001 - 2020 was 0.88 °C higher than in 1850 - 1900.",
-            "The global surface temperature between 2001 - 2020 was 0.95 to 1.20 °C higher than in 1850 - 1900."
+            "1.10°C",
+            "1.59°C",
+            "0.88°C",
+            "0.95°C"
         ]
     },
     {
@@ -15,10 +15,10 @@ const quiz = [
         question: "Which human-caused activities contributed most to the global surface temperature increase over the period 2001 - 2020?",
         answer: "Cities, settlements and infrastructure(Inland flooding and associated damages, Flood / storm induced damages in coastal areas, Damages to key economic sectors, Damages to infrastructure). ",
         options: [
-            "Biodiversity and ecosystems(Terrestrial ecosystems, Freshwater ecosystems, Ocean ecosystems)",
+            "Biodiversity and ecosystems (Terrestrial ecosystems, Freshwater ecosystems, Ocean ecosystems)",
             "Water availability and food production (Physical water availability, Agriculture / crop production, Fisheries yields and aquaculture production, Animal and livestock health and productivity)",
-            "Health and well-being(Infectious diseases, Mental health, Displacement, Heat, malnutrition and harm from wildfire)",
-            "Cities, settlements and infrastructure(Inland flooding and associated damages, Flood / storm induced damages in coastal areas, Damages to key economic sectors, Damages to infrastructure)."
+            "Health and well-being (Infectious diseases, Mental health, Displacement, Heat, malnutrition and harm from wildfire)",
+            "Cities, settlements and infrastructure (Inland flooding and associated damages, Flood / storm induced damages in coastal areas, Damages to key economic sectors, Damages to infrastructure)."
         ]
     },
     {
@@ -26,13 +26,13 @@ const quiz = [
         question: "Which limitation is the most significant in creating adaptation gaps across sectors and regions?",
         answer: "All options are correct!",
         options: [
-            "Small - scale farmers and households along some low - lying coastal areas",
+            "Small - scale farmers and households along some low-lying coastal areas",
             "Financial, governance, institutional and policy constraints",
             "Some tropical, coastal, polar and mountain ecosystems have reached hard adaptation limits",
             "Limited resources, lack of private sector and citizen engagement",
             "Insufficient mobilization of finance(including for research)",
             "Low climate literacy",
-            "Lack of political commitment, limited research and / or slow and low uptake of adaptation science, and low sense of urgency."
+            "Lack of political commitment, limited research and/or slow and low uptake of adaptation science, and low sense of urgency."
         ]
     },
     {
@@ -40,7 +40,7 @@ const quiz = [
         question: "Which limitation is the most significant in creating adaptation gaps across sectors and regions?",
         answer: "Significant shortfalls for the levels needed to limit warming to below 2°C or to 1.5°C across all sectors and regions",
         options: [
-            "The adoption of low - emission technologies lags in most developing countries",
+            "The adoption of low-emission technologies lags in most developing countries",
             "Growth and expansion of climate finance flows slowing since 2018",
             "Public and private finance flows for fossil fuels outweighing those for climate adaptation and mitigation",
             "Significant shortfalls for the levels needed to limit warming to below 2°C or to 1.5°C across all sectors and regions",
