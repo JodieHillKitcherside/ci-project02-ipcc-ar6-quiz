@@ -63,7 +63,6 @@ h3 {
 #quiz-bio {
     background-color: rgb(56, 136, 202, 0.5);
     color: rgba(255, 255, 255, 0.797);
-    text-align: center;
     margin: 1.5rem;
     margin-bottom: 2rem;
     padding: 1.5rem;
@@ -83,19 +82,18 @@ h3 {
     border-radius: 25px;
 }
 
-#test-knowl:hover {
+button:hover {
     cursor: hover;
     box-shadow: 0 0.4rem 1.4rem 0 rgb(56, 136, 202, 0.4);
     transition: transform 150ms;
 }
 
-#test-knowl[disabled]:hover {
+button[disabled]:hover {
     ?
 }
 
 #timer {
     color: rgb(56, 136, 202, 0.4);
-    display: flex;
     width: 30%;
     height: 30%;
     justify-content: center;
@@ -105,15 +103,10 @@ h3 {
 #next-question {
     background-color: #5492cd;
     padding: 1.5rem;
+    margin: 1.5rem;
     border-radius: 25px;
     width: 30%;
     height: 20%;
-}
-
-#next-question:hover {
-    cursor: hover;
-    box-shadow: 0 0.4rem 1.4rem 0 rgb(56, 136, 202, 0.4);
-    transition: transform 150ms;
 }
 
 /* question and options styling */
@@ -128,9 +121,17 @@ quiz-area {
     text-align: center;
 }
 
-#option-select-area {}
+#question {
+    padding: 2rem;
+}
+
+#option-select-area {
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+}
 
 #select-option {
     text-align: left;
     display: flex;
+    margin-bottom: 0.5rem;
 }

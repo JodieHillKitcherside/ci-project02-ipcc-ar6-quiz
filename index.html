@@ -25,30 +25,45 @@
     <main>
         <div id="fog-opening"></div>
         <!-- This is the quiz area : -->
-        <div id="timer">
-            <i class="fa-regular fa-clock fa-spin-pulse"></i>
-        </div>
         <div id="quiz-area">
-            <div>
+            <div id="timer"></div>
+            <div id="question">
                 <h2>Insert Question?</h2>
+                <i class="fa-regular fa-clock fa-spin-pulse"></i>
             </div>
             <!-- Option select buttons : -->
             <div id="option-select-area">
                 <div class="select-option">
-                    <p class="choice-prefix">A</p>
-                    <button type="button" onClick="revealAnswer">Enter Choice Example</button>
+                    <div>
+                        <p class="choice-prefix">A</p>
+                    </div>
+                    <div>
+                        <button type="button" onClick="revealAnswer">Enter Choice Example</button>
+                    </div>
                 </div>
                 <div class="select-option">
-                    <p class="choice-prefix">B</p>
-                    <button type="button" onClick="revealAnswer">Enter Choice Example</button>
+                    <div>
+                        <p class="choice-prefix">B</p>
+                    </div>
+                    <div>
+                        <button type="button" onClick="revealAnswer">Enter Choice Example</button>
+                    </div>
                 </div>
                 <div class="select-option">
-                    <p class="choice-prefix">C</p>
-                    <button type="button" onClick="revealAnswer">Enter Choice Example</button>
+                    <div>
+                        <p class="choice-prefix">C</p>
+                    </div>
+                    <div>
+                        <button type="button" onClick="revealAnswer">Enter Choice Example</button>
+                    </div>
                 </div>
                 <div class="select-option">
-                    <p class="choice-prefix">D</p>
-                    <button type="button" onClick="revealAnswer">Enter Choice Example</button>
+                    <div>
+                        <p class="choice-prefix">D</p>
+                    </div>
+                    <div>
+                        <button type="button" onClick="revealAnswer">Enter Choice Example</button>
+                    </div>
                 </div>
             </div>
             <!--  Next question button : -->
@@ -57,8 +72,16 @@
                     <h3>Next Question</h3>
                 </button>
             </div>
+            <!--  Results area : -->
+            <div id="results-area">
+                <div id="">Questions Remaining:</div>
+                <div id=""> /12</div>
+                <div id="">Total Correct:</div>
+                <div id="">/12</div>
+            </div>
         </div>
         <br>
+        <!-- Quiz bio - landing elements : -->
         <div class=" quiz-bio">
             <p>
                 This year’s Intergovernmental Panel on Climate Change’s (IPCC) Sixth Assessment Report (AR6) was an
