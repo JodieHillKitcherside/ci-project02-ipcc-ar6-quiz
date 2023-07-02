@@ -17,6 +17,7 @@ h1 {
     text-transform: uppercase;
     letter-spacing: .25rem;
     text-align: center;
+    margin-bottom: 1rem;
     /*color: #fff;*/
 }
 
@@ -26,7 +27,22 @@ h2 {
     text-transform: uppercase;
     letter-spacing: .25rem;
     text-align: center;
+    margin-bottom: 1rem;
     /*color: #fff;*/
+}
+
+h3 {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: .25rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.hidden {
+    display: none;
 }
 
 /* background image */
@@ -42,7 +58,9 @@ h2 {
     image-rendering: auto;
 }
 
-.quiz-bio {
+/* main html styling */
+
+#quiz-bio {
     background-color: rgb(56, 136, 202, 0.5);
     color: rgba(255, 255, 255, 0.797);
     text-align: center;
@@ -51,7 +69,9 @@ h2 {
     padding: 1.5rem;
 }
 
-.test-knowl {
+/* buttons */
+
+#test-knowl {
     background-color: #5492cd;
     color: #fff;
     font-family: 'Roboto Condensed', sans-serif;
@@ -61,4 +81,56 @@ h2 {
     text-align: center;
     padding: 1.5rem;
     border-radius: 25px;
+}
+
+#test-knowl:hover {
+    cursor: hover;
+    box-shadow: 0 0.4rem 1.4rem 0 rgb(56, 136, 202, 0.4);
+    transition: transform 150ms;
+}
+
+#test-knowl[disabled]:hover {
+    ?
+}
+
+#timer {
+    color: rgb(56, 136, 202, 0.4);
+    display: flex;
+    width: 30%;
+    height: 30%;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+#next-question {
+    background-color: #5492cd;
+    padding: 1.5rem;
+    border-radius: 25px;
+    width: 30%;
+    height: 20%;
+}
+
+#next-question:hover {
+    cursor: hover;
+    box-shadow: 0 0.4rem 1.4rem 0 rgb(56, 136, 202, 0.4);
+    transition: transform 150ms;
+}
+
+/* question and options styling */
+
+quiz-area {
+    margin: 5rem;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    width: 70%;
+    background-color: rgb(56, 136, 202, 0.5);
+    color: rgba(255, 255, 255, 0.797);
+    text-align: center;
+}
+
+#option-select-area {}
+
+#select-option {
+    text-align: left;
+    display: flex;
 }

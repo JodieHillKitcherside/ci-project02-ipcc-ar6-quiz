@@ -24,7 +24,42 @@
     <!-- This is the main : -->
     <main>
         <div id="fog-opening"></div>
-        <div class="quiz-bio">
+        <!-- This is the quiz area : -->
+        <div id="timer">
+            <i class="fa-regular fa-clock fa-spin-pulse"></i>
+        </div>
+        <div id="quiz-area">
+            <div>
+                <h2>Insert Question?</h2>
+            </div>
+            <!-- Option select buttons : -->
+            <div id="option-select-area">
+                <div class="select-option">
+                    <p class="choice-prefix">A</p>
+                    <button type="button" onClick="revealAnswer">Enter Choice Example</button>
+                </div>
+                <div class="select-option">
+                    <p class="choice-prefix">B</p>
+                    <button type="button" onClick="revealAnswer">Enter Choice Example</button>
+                </div>
+                <div class="select-option">
+                    <p class="choice-prefix">C</p>
+                    <button type="button" onClick="revealAnswer">Enter Choice Example</button>
+                </div>
+                <div class="select-option">
+                    <p class="choice-prefix">D</p>
+                    <button type="button" onClick="revealAnswer">Enter Choice Example</button>
+                </div>
+            </div>
+            <!--  Next question button : -->
+            <div>
+                <button type="button" onClick="nextQuestion()" id="next-question">
+                    <h3>Next Question</h3>
+                </button>
+            </div>
+        </div>
+        <br>
+        <div class=" quiz-bio">
             <p>
                 This year’s Intergovernmental Panel on Climate Change’s (IPCC) Sixth Assessment Report (AR6) was an
                 eight-year long
@@ -44,13 +79,14 @@
             mitigation and adaptation, and how, where possible, can we prevent further global destruction?
             <br>
             <br>
-            Don't worry if you do not know a lot about either the report or current status of global wamring, feel free
+            Don't worry if you do not know a lot about either the report or current status of global wamring, feel
+            free
             to guess and we will provide key findings alongside the answers.
             </p>
             <br>
         </div>
         <div>
-            <button class="test-knowl">
+            <button class="test-knowl" type="button">
                 Test Your Knowlegde Here!
             </button>
         </div>
@@ -60,7 +96,7 @@
     <footer>
         <a href="https://www.ipcc.ch/ar6-syr/" aria-label="Link opens in new tab">IPCC AR6 Synthesis Report Link</a>
     </footer>
-    <script src="https://kit.fontawesome.com" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/4880f4d32b.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
