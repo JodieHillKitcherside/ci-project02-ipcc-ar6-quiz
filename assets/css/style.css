@@ -3,7 +3,7 @@
 /* all pages features */
 
 body {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Playfair Display', sans-serif;
     font-size: 16px;
     text-align: center;
     /*color: #;*/
@@ -70,7 +70,7 @@ h3 {
 
 /* buttons */
 
-#test-knowl {
+#test-knowl button {
     background-color: #5492cd;
     color: #fff;
     font-family: 'Roboto Condensed', sans-serif;
@@ -83,13 +83,23 @@ h3 {
 }
 
 button:hover {
-    cursor: hover;
+    cursor: pointer;
     box-shadow: 0 0.4rem 1.4rem 0 rgb(56, 136, 202, 0.4);
     transition: transform 150ms;
 }
 
-button[disabled]:hover {
+/*button[disabled]:hover {
     ?
+}*/
+
+#select-option button {
+    background-color: #5492cd;
+    color: #fff;
+    font-size: 21px;
+    font-family: 'Playfair Display', sans-serif;
+    font-size: 16px;
+    padding: 1.5rem;
+    border-radius: 25px;
 }
 
 #timer {
