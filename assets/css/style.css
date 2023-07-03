@@ -61,7 +61,7 @@ h3 {
 /* main html styling */
 
 #quiz-bio {
-    background-color: rgb(56, 136, 202, 0.5);
+    background-color: #5493cdda;
     color: rgba(255, 255, 255, 0.797);
     margin: 1.5rem;
     margin-bottom: 2rem;
@@ -70,8 +70,8 @@ h3 {
 
 /* buttons */
 
-#test-knowl button {
-    background-color: #5492cd;
+#test-knowl {
+    background-color: #5493cdda;
     color: #fff;
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 21px;
@@ -79,7 +79,10 @@ h3 {
     letter-spacing: .25rem;
     text-align: center;
     padding: 1.5rem;
+    margin: 1.5rem;
     border-radius: 25px;
+    width: 30%;
+    height: 20%;
 }
 
 button:hover {
@@ -92,14 +95,15 @@ button:hover {
     ?
 }*/
 
-#select-option button {
-    background-color: #5492cd;
+.select-option button {
+    background-color: #80a4c6;
     color: #fff;
     font-size: 21px;
     font-family: 'Playfair Display', sans-serif;
     font-size: 16px;
     padding: 1.5rem;
     border-radius: 25px;
+    width: 80%;
 }
 
 #timer {
@@ -111,7 +115,13 @@ button:hover {
 }
 
 #next-question {
-    background-color: #5492cd;
+    background-color: #5493cdda;
+    color: #fff;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 21px;
+    text-transform: uppercase;
+    letter-spacing: .25rem;
+    text-align: center;
     padding: 1.5rem;
     margin: 1.5rem;
     border-radius: 25px;
