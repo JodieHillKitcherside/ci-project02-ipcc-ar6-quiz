@@ -43,7 +43,7 @@ function testKnowl() {
 // Quiz select option button
 
 function selectOption() {
-
+    
 }
 
 // Next question button 
