@@ -35,19 +35,19 @@
             <div id="option-select-area">
                 <div class="select-option">
                     <p class="choice-prefix">A</p>
-                    <button type="button" onClick="revealAnswer">Enter Choice Example</button>
+                    <button type="button" onClick="revealAnswer" data-number="1">Enter Choice Example</button>
                 </div>
                 <div class="select-option">
                     <p class="choice-prefix">B</p>
-                    <button type="button" onClick="revealAnswer">Enter Choice Example</button>
+                    <button type="button" onClick="revealAnswer" data-number="2">Enter Choice Example</button>
                 </div>
                 <div class="select-option">
                     <p class="choice-prefix">C</p>
-                    <button type="button" onClick="revealAnswer">Enter Choice Example</button>
+                    <button type="button" onClick="revealAnswer" data-number="3">Enter Choice Example</button>
                 </div>
                 <div class="select-option">
                     <p class="choice-prefix">D</p>
-                    <button type="button" onClick="revealAnswer">Enter Choice Example</button>
+                    <button type="button" onClick="revealAnswer" data-number="4">Enter Choice Example</button>
                 </div>
             </div>
             <br>
@@ -59,10 +59,10 @@
             </div>
             <!--  Results area : -->
             <div id="results-area">
-                <div id="">Questions Remaining:</div>
-                <div id=""> /12</div>
-                <div id="">Total Correct:</div>
-                <div id="">/12</div>
+                <p>Questions Remaining:</p>
+                <div id="questions-count"> /12</div>
+                <p>Total Correct:</p>
+                <div id="correct-count">/12</div>
             </div>
         </div>
         <br>
@@ -94,11 +94,11 @@
             <br>
         </div>
         <div>
-            <button id="test-knowl" type="button">
+            <button id="test-knowl" type="button" onClick="testKnowl()">
                 Test Your Knowlegde Here!
             </button>
         </div>
-        <div id="result-area">
+        <div id="final-result-area">
             <div id="result">
                 <h2>Congratulations!
                     You finished the quiz!
@@ -120,7 +120,7 @@
                 <br>
                 <h3>Want to try again?</h3>
                 <div id="restart-quiz">
-                    <button type="button" onClick="restartQuiz">
+                    <button type="button" onClick="restartQuiz()">
                         Restart Quiz
                     </button>
                 </div>
