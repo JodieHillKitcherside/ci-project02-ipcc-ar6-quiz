@@ -1,3 +1,9 @@
+/** 
+ * First Array shows all quiz questions, options and correct answers.
+ * Second Array for all explanations related to each relevant question. 
+ * Q11 Part 1-4 shown as nested array.
+ **/
+
 const quiz = [
     {
         numb: 1,
