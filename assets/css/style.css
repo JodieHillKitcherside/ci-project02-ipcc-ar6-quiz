@@ -49,12 +49,12 @@ h3 {
 
 #fog-opening {
     background-image: url("../images/fog-opening-the-dawn-ipcc-ar6-synthesis.jpg");
-    width: 100%;
-    height: 100%;
+    width: auto-fit;
+    height: auto-fit;
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
-    object-fit: fill;
+    object-fit: cover;
     image-rendering: auto;
 }
 
@@ -67,6 +67,9 @@ h3 {
     margin-bottom: 2rem;
     padding: 1.5rem;
     width: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
 }
 
 /* buttons */
@@ -183,4 +186,6 @@ quiz-area {
     margin-bottom: 2rem;
     padding: 1.5rem;
     width: 50%;
+    display: flex;
+    justify-content: center;
 }

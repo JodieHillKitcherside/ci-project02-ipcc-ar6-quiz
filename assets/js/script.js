@@ -31,7 +31,13 @@ let userScore = 0;
 // Start quiz button "Test Your Knowledge Here"
 
 function testKnowl() {
-
+    quizBio.style.display = 'none';
+    finalResultArea.style.display = 'none';
+    quizArea.style.display = 'block';
+    showQuestions(0);
+    questionsCount(questionNumber);
+    currentScore();
+    beginTimer(20);
 }
 
 // Quiz select option button
@@ -43,7 +49,17 @@ function selectOption() {
 // Next question button 
 
 function nextQuestion() {
-
+    questionNumber++;
+    if (questionNumber, quiz.length) {
+        showQuestions(questionNumber);
+        currentScore();
+        clearInterval(timer);
+        startTimer(20);
+    }
+    else {
+        questionNumber = 0;
+        showResult();
+    }
 }
 
 // Restart quiz button 
@@ -59,9 +75,9 @@ let elapsedTime = 0;
 
 /**
  * The beginTimer() function restarts after each new question,
- * if no option is selected, this will display the correct answer, 
- * and disables the selectOption().
- * This then shows the nextQuestion() button.
+ * if no option is selected, this will display the correct answer, ??
+ * and disables the selectOption(). ??
+ * This then shows the nextQuestion() button. ??
  */
 
 let sec = 20;
@@ -74,4 +90,8 @@ function beginTimer(time) {
         clearInterval(time);
         alert("Time's up! Try the next question!");
     }
-} 
+}
+
+
+
+
