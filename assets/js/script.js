@@ -14,7 +14,7 @@ const correctCount = document.getElementbyId("correct-count");
 
 // Quiz bio and landing info
 const quizBio = document.getElementbyId("quiz-bio");
-const testKnowl = document.getElementbyId("test-knowl");
+const testKnowl = document.querySelector("#test-knowl");
 const nextQuestionButton = document.getElementbyId("next-question");
 
 //Final result area
@@ -57,6 +57,8 @@ function questionsCount() {
 
 // Refresh (each question and corresponding mulitple choice options) as new question loads
 function refreshQuestion() {
+    questionsCount(1);
+    showScore(0);
 
 }
 
@@ -90,7 +92,17 @@ function restartQuiz() {
 
 // Timer function 
 function timer() {
+    let timer = () => {
+        if (timer === 20) {
+            clearInterval(interval);
+            next_question.click();
+        }
+        else {
+            timer++;
+            timer.innerText = timer;
 
+        }
+    };
 }
 
 // Final result and result takeaway functions 
