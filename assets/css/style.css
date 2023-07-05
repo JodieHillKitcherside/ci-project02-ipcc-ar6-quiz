@@ -49,7 +49,8 @@ h3 {
 
 #fog-opening {
     background-image: url("../images/fog-opening-the-dawn-ipcc-ar6-synthesis.jpg");
-    background-size: cover;
+    width: auto-fit;
+    height: auto-fit;
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
@@ -66,8 +67,6 @@ h3 {
     padding: 1.5rem;
     width: 70%;
     text-align: center;
-    display: flex;
-    justify-content: center;
 }
 
 #quiz-bio-list {
