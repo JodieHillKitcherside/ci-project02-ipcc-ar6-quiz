@@ -14,130 +14,135 @@
 <!-- This is the header containing logo and nav : -->
 
 <body>
-    <header>
-        <div class="header">
-            <h2>IPCC AR6 Synthesis Report, Mar 2023</h2>
-            <h1>Key Findings Quiz</h1>
-        </div>
-    </header>
-    <br>
-    <!-- This is the main : -->
-    <main>
-        <div id="fog-opening"></div>
-        <!-- This is the quiz area : -->
-        <div id="quiz-area">
-            <div id="timer"></div>
-            <div id="question">
-                <h2>Insert Question?</h2>
-                <i class="fa-regular fa-clock fa-spin-pulse"></i>
+    <div id="fog-opening">
+        <header>
+            <div class="header">
+                <h2>IPCC AR6 Synthesis Report, Mar 2023</h2>
+                <h1>Key Findings Quiz</h1>
             </div>
-            <!-- Option select buttons : -->
-            <div id="option-select-area">
-                <div class="select-option">
-                    <p class="choice-prefix">A</p>
-                    <button type="button" onClick="revealAnswer" data-number="1">Enter Choice Example</button>
-                </div>
-                <div class="select-option">
-                    <p class="choice-prefix">B</p>
-                    <button type="button" onClick="revealAnswer" data-number="2">Enter Choice Example</button>
-                </div>
-                <div class="select-option">
-                    <p class="choice-prefix">C</p>
-                    <button type="button" onClick="revealAnswer" data-number="3">Enter Choice Example</button>
-                </div>
-                <div class="select-option">
-                    <p class="choice-prefix">D</p>
-                    <button type="button" onClick="revealAnswer" data-number="4">Enter Choice Example</button>
-                </div>
-            </div>
-            <br>
-            <br>
-            <!--  Next question button : -->
-            <div>
-                <button type="button" onClick="nextQuestion()" id="next-question">Next Question
-                </button>
-            </div>
-            <!--  Results area : -->
-            <div id="results-area">
-                <p>Questions Remaining:</p>
-                <div id="questions-count"> /12</div>
-                <p>Total Correct:</p>
-                <div id="correct-count">/12</div>
-            </div>
-        </div>
+        </header>
         <br>
-        <!-- Quiz bio - landing elements : -->
-        <div id="quiz-bio">
-            <div>
-                <p>
-                    This year’s Intergovernmental Panel on Climate Change’s (IPCC) Sixth Assessment Report (AR6) was an
-                    eight-year long
-                    undertaking from the world’s most authoritative scientific body on climate change.
-                    The report concludes on:
-                <ul id="quiz-bio-list">
-                    <li>The devastating consequences of rising greenhouse gas (GHG) emissions worldwide</li>
-                    <li>The expected loss of livelihoods and the fragmentation of communities</li>
-                    <li>The increasingly dangerous and irreversible risks should we fail to change course</li>
-                    <li>The pathways to avoid these intensifying risks</li>
-                </ul>
-                Looking forward, and ahead of UNFCCC COP28 hosted in Dubai this year, the following quiz is a summary on
-                the current status of global warming, preceding the report.
-                <br>
-                <br>
-                How much do you know about the current consequence of global warming? What are the best actions for
-                mitigation and adaptation, and how, where possible, can we prevent further global destruction?
-                <br>
-                <br>
-                Don't worry if you do not know a lot about either the report or current status of global wamring, feel
-                free
-                to guess and we will provide key findings alongside the answers.
-                </p>
-                <br>
-            </div>
-        </div>
-        <div>
-            <button id="test-knowl" type="button" onClick="testKnowl()">
-                Test Your Knowlegde Here!
-            </button>
-        </div>
-        <div id="final-result-area">
-            <div id="result">
-                <h2>Congratulations!
-                    You finished the quiz!
-                </h2>
-                <h2>Your final score is:</h2>
-                <div id="final-result">
-                    <h2>0</h2>
+        <!-- This is the main : -->
+        <main>
+            <!-- This is the quiz area : -->
+            <div id="quiz-area">
+                <div id="timer"></div>
+                <div id="question">
+                    <h2>Insert Question?</h2>
+                    <i class="fa-regular fa-clock fa-spin-pulse"></i>
                 </div>
-                <p id="result-takeaway">Now you know more about the report findings from this year; we hope this
-                    ultimately impacts our
-                    progress -
-                    whether that be making you more aware, condisering new habits or challenging your team at work
-                    to be
-                    productive for the planet.
-                    However best we can work towards reducing global warming, we have a number of years to make a
-                    difference before we cause irreversible devestation.
-                    <br>
-                    Keep an eye out for next year's report and we hope to see you at COP28.
-                </p>
+                <!-- Option select buttons : -->
+                <div id="option-select-area">
+                    <div class="select-option">
+                        <p class="choice-prefix">A</p>
+                        <button type="button" onClick="revealAnswer" data-number="1">Enter Choice Example</button>
+                    </div>
+                    <div class="select-option">
+                        <p class="choice-prefix">B</p>
+                        <button type="button" onClick="revealAnswer" data-number="2">Enter Choice Example</button>
+                    </div>
+                    <div class="select-option">
+                        <p class="choice-prefix">C</p>
+                        <button type="button" onClick="revealAnswer" data-number="3">Enter Choice Example</button>
+                    </div>
+                    <div class="select-option">
+                        <p class="choice-prefix">D</p>
+                        <button type="button" onClick="revealAnswer" data-number="4">Enter Choice Example</button>
+                    </div>
+                </div>
                 <br>
-                <h3>Want to try again?</h3>
-                <div id="restart-quiz">
-                    <button type="button" onClick="restartQuiz()">
-                        Restart Quiz
+                <br>
+                <!--  Next question button : -->
+                <div>
+                    <button type="button" onClick="nextQuestion()" id="next-question">Next Question
                     </button>
                 </div>
+                <!--  Results area : -->
+                <div id="results-area">
+                    <p>Questions Remaining:</p>
+                    <div id="questions-count"> /12</div>
+                    <p>Total Correct:</p>
+                    <div id="correct-count">/12</div>
+                </div>
             </div>
-        </div>
-    </main>
-    <br>
-    <!-- This is the footer : -->
-    <footer id="footer">
-        <a href="https://www.ipcc.ch/ar6-syr/" aria-label="Link opens in new tab">IPCC AR6 Synthesis Report Link</a>
-    </footer>
-    <script src="https://kit.fontawesome.com/4880f4d32b.js" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
-    <script src="questions.js"></script>
+            <br>
+            <!-- Quiz bio - landing elements : -->
+            <div id="quiz-bio">
+                <div>
+                    <p>
+                        This year’s Intergovernmental Panel on Climate Change’s (IPCC) Sixth Assessment Report (AR6) was
+                        an
+                        eight-year long
+                        undertaking from the world’s most authoritative scientific body on climate change.
+                        The report concludes on:</p>
+                    <ul id="quiz-bio-list">
+                        <li>The devastating consequences of rising greenhouse gas (GHG) emissions worldwide</li>
+                        <li>The expected loss of livelihoods and the fragmentation of communities</li>
+                        <li>The increasingly dangerous and irreversible risks should we fail to change course</li>
+                        <li>The pathways to avoid these intensifying risks</li>
+                    </ul>
+                    <p>Looking forward, and ahead of UNFCCC COP28 hosted in Dubai this year, the following quiz is a
+                        summary on
+                        the current status of global warming, preceding the report.
+                        <br>
+                        <br>
+                        How much do you know about the current consequence of global warming? What are the best actions
+                        for
+                        mitigation and adaptation, and how, where possible, can we prevent further global destruction?
+                        <br>
+                        <br>
+                        Don't worry if you do not know a lot about either the report or current status of global
+                        wamring,
+                        feel
+                        free
+                        to guess and we will provide key findings alongside the answers.
+                    </p>
+                    <br>
+                </div>
+            </div>
+            <div>
+                <button id="test-knowl" type="button" onClick="testKnowl()">
+                    Test Your Knowlegde Here!
+                </button>
+            </div>
+            <div id="final-result-area">
+                <div id="result">
+                    <h2>Congratulations!
+                        You finished the quiz!
+                    </h2>
+                    <h2>Your final score is:</h2>
+                    <div id="final-result">
+                        <h2>0</h2>
+                    </div>
+                    <p id="result-takeaway">Now you know more about the report findings from this year; we hope this
+                        ultimately impacts our
+                        progress -
+                        whether that be making you more aware, condisering new habits or challenging your team at work
+                        to be
+                        productive for the planet.
+                        However best we can work towards reducing global warming, we have a number of years to make a
+                        difference before we cause irreversible devestation.
+                        <br>
+                        Keep an eye out for next year's report and we hope to see you at COP28.
+                    </p>
+                    <br>
+                    <div id="restart-quiz">
+                        <button type="button" onClick="restartQuiz()">
+                            Restart Quiz
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <br>
+        <!-- This is the footer : -->
+        <footer id="footer">
+            <a href="https://www.ipcc.ch/ar6-syr/" aria-label="Link opens in new tab">IPCC AR6 Synthesis Report Link</a>
+        </footer>
+        <script src="https://kit.fontawesome.com/4880f4d32b.js" crossorigin="anonymous"></script>
+        <script src="script.js"></script>
+        <script src="questions.js"></script>
+    </div>
 </body>
 
 </html>

@@ -6,7 +6,10 @@ body {
     font-family: 'Playfair Display', sans-serif;
     font-size: 16px;
     text-align: center;
-    /*color: #;*/
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    vertical-align: middle;
 }
 
 /* style headings */
@@ -18,7 +21,7 @@ h1 {
     letter-spacing: .25rem;
     text-align: center;
     margin-bottom: 1rem;
-    /*color: #fff;*/
+    color: #fff;
 }
 
 h2 {
@@ -28,7 +31,7 @@ h2 {
     letter-spacing: .25rem;
     text-align: center;
     margin-bottom: 1rem;
-    /*color: #fff;*/
+    color: #fff;
 }
 
 h3 {
@@ -45,15 +48,16 @@ h3 {
     display: none;
 }
 
+
 /* background image */
 
 #fog-opening {
     background-image: url("../images/fog-opening-the-dawn-ipcc-ar6-synthesis.jpg");
-    width: auto-fit;
-    height: auto-fit;
+    background-size: cover;
+    width: 100%;
     background-position: center;
     background-repeat: no-repeat;
-    position: relative;
+    position: absolute;
     image-rendering: auto;
 }
 
@@ -93,6 +97,10 @@ h3 {
     height: 20%;
 }
 
+button {
+    font-size: 18px;
+}
+
 button:hover {
     cursor: pointer;
     box-shadow: 0 0.4rem 1.4rem 0 rgb(56, 136, 202, 0.4);
@@ -104,11 +112,11 @@ button:hover {
 }*/
 
 .select-option button {
-    background-color: #bad3eb;
-    /*#80a4c6;*/
-    color: #fff;
-    font-size: 21px;
-    letter-spacing: 0.3rem;
+    background-color: #5493cdda;
+    color: rgba(255, 255, 255, 0.797);
+    /*#bad3eb;*/
+    font-size: 18px;
+    letter-spacing: 0.2rem;
     font-family: 'Playfair Display', sans-serif;
     font-size: 16px;
     padding: 1.5rem;
@@ -168,11 +176,13 @@ quiz-area {
 
 #question {
     padding: 2rem;
+    background: rgba(57, 55, 69, .1);
 }
 
 #option-select-area {
     font-family: 'Playfair Display', serif;
     font-size: 16px;
+    color: #fff;
 }
 
 #select-option {
@@ -199,8 +209,6 @@ quiz-area {
     left: 0;
     right: 0;
     background-color: #5493cdda;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
     padding-top: 1.2rem;
     padding-bottom: 1.2rem;
 }
@@ -209,3 +217,5 @@ footer a {
     text-decoration: none;
     color: rgba(255, 255, 255, 0.797);
 }
+
+/* media query */

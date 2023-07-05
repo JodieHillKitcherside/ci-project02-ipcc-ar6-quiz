@@ -40,6 +40,7 @@ function testKnowl() {
     avaliableQuestions = [...question];
     currentScore(0);
     beginTimer(20);
+    console.log(avaliableQuestions);
 }
 
 // Select option button 
@@ -49,7 +50,9 @@ function selectOption() {
 
 // Questions count
 function questionsCount() {
-
+    let remainingQ = document.getElementById("remaining-questions");
+    let remainingQTag = `<span>${quiz[questionNumber].numb}</span>`;
+    remainingQ.innerHTM = remainingQTag;
 }
 
 // Refresh (each question and corresponding mulitple choice options) as new question loads
