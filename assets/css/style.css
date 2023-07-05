@@ -49,12 +49,10 @@ h3 {
 
 #fog-opening {
     background-image: url("../images/fog-opening-the-dawn-ipcc-ar6-synthesis.jpg");
-    width: auto-fit;
-    height: auto-fit;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
-    object-fit: cover;
     image-rendering: auto;
 }
 
