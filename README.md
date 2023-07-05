@@ -221,7 +221,7 @@ Examples:
 
 ### Inspired websites and tutor/mentor suggestions
 
-- [Flexbox Froggy](https://flexboxfroggy.com/) inspired fixtures, team and social pages in order to algin divs, items and borders.
+- [Stackoverflow - Hide div onload](https://stackoverflow.com/questions/39307329/hide-div-onload-in-javascript) taught me how to hide elements until event listeners clicked!
 - [W3S Schools](https://www.w3schools.com/cssref/css3_pr_overflow-x.php) inspired uses of overflow auto and scroll, padding and margins.
 - Header, Nav and Footer first inspired by the Love Running Project, which have been really edited fit for this website.
 - Thanks to the Code Institute Tutors: Sean, Sarah, Gemma and Joanne who really helped with media response confusion for various sections and items across media device sizes.

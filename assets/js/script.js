@@ -3,8 +3,12 @@
 // Quiz area
 const timer = document.getElementbyId("timer");
 const quizArea = document.getElementbyId("quiz-area");
-const selectOption = document.getElementbyClass("select-option");
+
+// Question
 const question = document.getElementbyClass("question");
+
+// Mulitple choice options
+const selectOption = document.getElementbyClass("select-option");
 const choicePrefix = document.getElementbyClass("choice-prefix");
 
 // Recurring result area
@@ -22,17 +26,22 @@ const finalResultArea = document.getElementbyId("final-result-area");
 const finalResult = document.getElementbyId("final-result");
 const restartQuiz = document.getElementbyId("restart-quiz");
 
-// Get elements by query selector 
+// Page load, hide elements until clicked 
+window.onload = () => {
+    document.getElementById('quiz-area').style.display = 'none';
+    document.getElementById('final-result-area').style.display = 'none';
+};
 
 // Fluctuating variable numbers 
 let questionNumber = 0;
-let userScore = 0;
+let userScore = undefined;
+let timer = 0;
 
 // All Buttons 
 
 // Start quiz button "Test Your Knowledge Here"
 
-function testKnowl() {
+testKnowl.addEventListener("click", () => {
     quizBio.style.display = 'none';
     finalResultArea.style.display = 'none';
     quizArea.style.display = 'block';
@@ -46,21 +55,21 @@ function testKnowl() {
 // Select option button 
 function selectOption() {
 
-}
+    }
 
 // Questions count
 function questionsCount() {
-    let remainingQ = document.getElementById("remaining-questions");
-    let remainingQTag = `<span>${quiz[questionNumber].numb}</span>`;
-    remainingQ.innerHTM = remainingQTag;
-}
+        let remainingQ = document.getElementById("remaining-questions");
+        let remainingQTag = `<span>${quiz[questionNumber].numb}</span>`;
+        remainingQ.innerHTM = remainingQTag;
+    }
 
 // Refresh (each question and corresponding mulitple choice options) as new question loads
 function refreshQuestion() {
-    questionsCount(1);
-    showScore(0);
+        questionsCount(1);
+        showScore(0);
 
-}
+    }
 
 /**
  * New question function:
@@ -91,6 +100,7 @@ function restartQuiz() {
 }
 
 // Timer function 
+// add alert? 
 function timer() {
     let timer = () => {
         if (timer === 20) {
