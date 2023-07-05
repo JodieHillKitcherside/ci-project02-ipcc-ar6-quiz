@@ -5,11 +5,12 @@ const timer = document.getElementbyId("timer");
 const quizArea = document.getElementbyId("quiz-area");
 
 // Question
-const question = document.getElementbyClass("question");
+const questionNo = document.getElementbyId("question-no");
+const questionText = document.getElementbyId("question-text");
 
 // Mulitple choice options
-const selectOption = document.getElementbyClass("select-option");
-const choicePrefix = document.getElementbyClass("choice-prefix");
+const selectOption = document.getElementsbyClass("select-option");
+const choicePrefix = document.getElementsbyClass("choice-prefix");
 
 // Recurring result area
 const resultsArea = document.getElementbyId("results-area");
@@ -28,18 +29,37 @@ const restartQuiz = document.getElementbyId("restart-quiz");
 
 // Page load, hide elements until clicked 
 window.onload = () => {
-    document.getElementById('quiz-area').style.display = 'none';
-    document.getElementById('final-result-area').style.display = 'none';
+    document.getElementById("quiz-area").style.display = 'none';
+    document.getElementById("final-result-area").style.display = 'none';
 };
 
 // Fluctuating variable numbers 
-let questionNumber = 0;
+questionNo = 0;
 let userScore = undefined;
-let timer = 0;
 
 // All Buttons 
 
 // Start quiz button "Test Your Knowledge Here"
+
+// Options loop, start question function and testknowl event listener 
+
+const optionText = document.getElementsbyClass("option-text");
+optionsCounter = 0;
+
+optionsLoop = () => {
+    optionText.forEach(option => {
+        const option = quiz.dataset['option'];
+        optionText.innerHTML = quiz.options["option"];
+        optionsCounter++;
+    });
+};
+
+function startQuestion() {
+    questionNo.innerText = questionNo + 1 + ".";
+    questionText.innerText = quiz[index].question;
+    optionsLoop();
+    timer = 0;
+}
 
 testKnowl.addEventListener("click", () => {
     quizBio.style.display = 'none';
@@ -51,11 +71,6 @@ testKnowl.addEventListener("click", () => {
     beginTimer(20);
     console.log(avaliableQuestions);
 }
-
-// Select option button 
-function selectOption() {
-
-    }
 
 // Questions count
 function questionsCount() {
@@ -91,13 +106,15 @@ function revealAnswer() {
 }
 
 // Next question button
-function nextQuestionButton() {
+nextQuestionButton.addEventListener("click"), () => {
 
-}
+};
+
+
 // Restart quiz button
-function restartQuiz() {
+restartQuiz.addEventListener("click"), () => {
 
-}
+};
 
 // Timer function 
 // add alert? 

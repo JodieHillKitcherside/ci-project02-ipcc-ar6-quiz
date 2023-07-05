@@ -120,70 +120,67 @@ const quiz = [
     },
     {
         numb: 11,
-        question: "Which of the following options score the highest for feasibility of climate responses and adaptation and potential mitigation of options for near term for our: ",
-        part1 = {
-            subject: "Energy supply?",
-            answer: "Solar",
-            options: [
-                "Reduction of methane, oil and gas",
-                "Geothermal and hydropower",
-                "Solar",
-                "Wind",
-                "Nuclear",
-                "Bioelectricity",
-                "Fossil Carbon Capture and Storage"
-            ],
-        },
-        part2 = {
-            subject: "Land, water and food?",
-            answer: "Improved sustainable forest management, ecosystem restoration, afforestation and reforstation",
-            options: [
-                "Reduce conversion of natural ecosystems",
-                "Improved sustainable forest management, ecosystem restoration, afforestation and reforstation",
-                "Geothermal and hydropower",
-                "Carbon sequestration in agriculture",
-                "Reduce methane and N2O in agriculture",
-            ],
-            fact: "Interestingly, shifting to sustainable healthy diets and reducing food waste and food loss are not currently accounted for cost wise as there is a lack of variability. Ecosystem restoration, afforestation, reforestation scores high as the potential feasibility up to 1.5°C is most cost effective. Reducing conversion and carbon sequestration scores lowest for mitigation and costal defence, hardening and coastal zone management has lack of confidence due to the lack of assessment."
-        },
-        part3 = {
-            subject: "Settlements and Infrastructure?",
-            answer: "Fuel efficient vehicles, electric vehicles, public transport and bicycling, Efficient shipping and aviation and Avoid demand for energy services",
-            options: [
-                "Efficient buildings",
-                "Fuel efficient vehicles, electric vehicles, public transport and bicycling",
-                "Efficient shipping and aviation",
-                "Avoid demand for energy services",
-                "Onsite renewables",
-                "Bioelectricity",
-                "Sustainable water management"
-            ],
-            fact: "Trick question! Overall, there are a few options score high to mitigate our settlements and infrastructure. Efficient buildings and onsite renewables are the most expensive of all options. There is also not a lot of confidence in sustainable water management. Overall, having fuel efficient vehchiles, public transport, shipping and avaiation, and avoiding energy usage scores extremely high in both mitigating and feasaibity."
-        },
-        part4 = {
-            subject: "Industry and waste?",
-            answer: "Energy efficiency",
-            options: [
-                "Fuel switching",
-                "CCUS and CCS",
-                "Energy efficiency",
-                "Enhanced recycling",
-                "Material efficiency",
-                "Reducing methane from water/wastewater ",
-                "Construction materials substitution"
-            ],
-            fact: "Reducing methane from wastewater used to be most effective to mitigate however has become more expensive as we have got warmer. Energy efficiency costs $0-20 per tCO2-eq, however is 20% of the fraction of costs for fuel switching and CCU/CCS."
-        },
+        question: "Which of the following options score the highest for feasibility of climate responses and adaptation and potential mitigation of options for near term for our: 'Energy supply?'",
+        answer: "Solar",
+        options: [
+            "Reduction of methane, oil and gas",
+            "Geothermal and hydropower",
+            "Solar",
+            "Wind",
+            "Nuclear",
+            "Bioelectricity",
+            "Fossil Carbon Capture and Storage"
+        ],
     },
     {
         numb: 12,
+        question: "Which of the following options score the highest for feasibility of climate responses and adaptation and potential mitigation of options for near term for our: 'Land, water and food?'",
+        answer: "Improved sustainable forest management, ecosystem restoration, afforestation and reforstation",
+        options: [
+            "Reduce conversion of natural ecosystems",
+            "Improved sustainable forest management, ecosystem restoration, afforestation and reforstation",
+            "Geothermal and hydropower",
+            "Carbon sequestration in agriculture",
+            "Reduce methane and N2O in agriculture",
+        ],
+    },
+    {
+        numb: 13,
+        question: "Which of the following options score the highest for feasibility of climate responses and adaptation and potential mitigation of options for near term for our: 'Settlements and Infrastructure?'",
+        answer: "Fuel efficient vehicles, electric vehicles, public transport and bicycling, Efficient shipping and aviation and Avoid demand for energy services",
+        options: [
+            "Efficient buildings",
+            "Fuel efficient vehicles, electric vehicles, public transport and bicycling",
+            "Efficient shipping and aviation",
+            "Avoid demand for energy services",
+            "Onsite renewables",
+            "Bioelectricity",
+            "Sustainable water management"
+        ],
+    },
+    {
+        numb: 14,
+        question: "Which of the following options score the highest for feasibility of climate responses and adaptation and potential mitigation of options for near term for our: 'Industry and waste?'",
+        answer: "Energy efficiency",
+        options: [
+            "Fuel switching",
+            "CCUS and CCS",
+            "Energy efficiency",
+            "Enhanced recycling",
+            "Material efficiency",
+            "Reducing methane from water/wastewater ",
+            "Construction materials substitution"
+        ],
+    },
+    {
+        numb: 15,
         question: "Where does the highest synergy lie for mitigation and the Sustainable Development Goals (SDGs)?",
         answer: "Improved availability of and access to finance(public or private, local, national, international, bilateral, multinational and alternative sources) for climate action",
         options: [
             "Eradicating extreme poverty, energy poverty and providing decent living standards in low - emitting and vulnerable countries, including health benefits for women and children, electrification combined with low GHG energy, shifts to active mobility and public transport.",
             "Effective climate action enabled by political commitment, well-aligned multi-level governance, institutional frameworks, laws, policies and strategies for finance and technology.",
             "Improved availability of and access to finance(public or private, local, national, international, bilateral, multinational and alternative sources) for climate action."
-        ]
+        ];
     }
 ];
 
@@ -230,6 +227,20 @@ const explanation = [
     },
     {
         numb: 12,
+        answer: "Interestingly, shifting to sustainable healthy diets and reducing food waste and food loss are not currently accounted for cost wise as there is a lack of variability. Ecosystem restoration, afforestation, reforestation scores high as the potential feasibility up to 1.5°C is most cost effective. Reducing conversion and carbon sequestration scores lowest for mitigation and costal defence, hardening and coastal zone management has lack of confidence due to the lack of assessment."
+    },
+    {
+        numb: 13,
+        answer: "Trick question! Overall, there are a few options score high to mitigate our settlements and infrastructure. Efficient buildings and onsite renewables are the most expensive of all options. There is also not a lot of confidence in sustainable water management. Overall, having fuel efficient vehchiles, public transport, shipping and avaiation, and avoiding energy usage scores extremely high in both mitigating and feasaibity."
+
+    },
+    {
+        numb: 14,
+        answer: "Reducing methane from wastewater used to be most effective to mitigate however has become more expensive as we have got warmer. Energy efficiency costs $0-20 per tCO2-eq, however is 20% of the fraction of costs for fuel switching and CCU/CCS."
+
+    },
+    {
+        numb: 15,
         answer: "All three have high confidence to work towards mitigating global warming. Examples of improved availability for finance scores the highest and includes: addressing the needs and gaps for equitable finance, increased access to finance to advert risks for vulnerable countries, public finance for private finance, reducing financial barriers and scaling up financial flows, scaled - up public grants for areas like Sub-Sharan Africa, financing to enable technology for innovation and international co-operation for accessing finance."
     }
 ];

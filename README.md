@@ -222,7 +222,8 @@ Examples:
 ### Inspired websites and tutor/mentor suggestions
 
 - [Stackoverflow - Hide div onload](https://stackoverflow.com/questions/39307329/hide-div-onload-in-javascript) taught me how to hide elements until event listeners clicked!
-- [W3S Schools](https://www.w3schools.com/cssref/css3_pr_overflow-x.php) inspired uses of overflow auto and scroll, padding and margins.
+- [Stackoverflow - Loop options and questions](https://stackoverflow.com/questions/66765795/for-loops-for-multiple-choice-questions) taught me how to create a loop to extract options and questions.
+
 - Header, Nav and Footer first inspired by the Love Running Project, which have been really edited fit for this website.
 - Thanks to the Code Institute Tutors: Sean, Sarah, Gemma and Joanne who really helped with media response confusion for various sections and items across media device sizes.
 - Thanks to my mentor Lauren-Nicole Popich who has been all start amazing at simplifying the break down of displaying items flex and how to assemble multple sections, divs within divs. The use of sketching intention and working through what needed a div or needed to be put in to another div section, then flexed, has really provided help.
