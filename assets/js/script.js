@@ -51,7 +51,8 @@ optionsLoop = () => {
         const option = quiz.dataset['option'];
         optionText.innerHTML = quiz.options["option"];
         optionsCounter++;
-    });
+    }
+    );
 };
 
 function startQuestion() {
@@ -66,25 +67,24 @@ testKnowl.addEventListener("click", () => {
     finalResultArea.style.display = 'none';
     quizArea.style.display = 'block';
     questionsCount(questionNumber);
-    avaliableQuestions = [...question];
+    startQuestion();
     currentScore(0);
-    beginTimer(20);
-    console.log(avaliableQuestions);
-}
+    console.log();
+});
 
 // Questions count
 function questionsCount() {
-        let remainingQ = document.getElementById("remaining-questions");
-        let remainingQTag = `<span>${quiz[questionNumber].numb}</span>`;
-        remainingQ.innerHTM = remainingQTag;
-    }
+    let remainingQ = document.getElementById("remaining-questions");
+    let remainingQTag = `<span>${quiz[questionNumber].numb}</span>`;
+    remainingQ.innerHTM = remainingQTag;
+}
 
 // Refresh (each question and corresponding mulitple choice options) as new question loads
 function refreshQuestion() {
-        questionsCount(1);
-        showScore(0);
+    questionsCount(1);
+    showScore(0);
 
-    }
+}
 
 /**
  * New question function:
@@ -106,15 +106,15 @@ function revealAnswer() {
 }
 
 // Next question button
-nextQuestionButton.addEventListener("click"), () => {
+nextQuestionButton.addEventListener("click", () => {
 
-};
+});
 
 
 // Restart quiz button
-restartQuiz.addEventListener("click"), () => {
+restartQuiz.addEventListener("click", () => {
 
-};
+});
 
 // Timer function 
 // add alert? 

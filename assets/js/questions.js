@@ -180,7 +180,7 @@ const quiz = [
             "Eradicating extreme poverty, energy poverty and providing decent living standards in low - emitting and vulnerable countries, including health benefits for women and children, electrification combined with low GHG energy, shifts to active mobility and public transport.",
             "Effective climate action enabled by political commitment, well-aligned multi-level governance, institutional frameworks, laws, policies and strategies for finance and technology.",
             "Improved availability of and access to finance(public or private, local, national, international, bilateral, multinational and alternative sources) for climate action."
-        ];
+        ],
     }
 ];
 
