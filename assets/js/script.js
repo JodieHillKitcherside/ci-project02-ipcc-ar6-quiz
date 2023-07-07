@@ -48,7 +48,7 @@ optionsCounter = 0;
 
 optionsLoop = () => {
     optionText.forEach(option => {
-        const option = quiz.dataset['option'];
+        option = quiz.dataset['option'];
         optionText.innerHTML = quiz.options["option"];
         optionsCounter++;
     }
@@ -73,7 +73,7 @@ testKnowl.addEventListener("click", () => {
 });
 
 // Questions count
-function questionsCount() {
+questionsCount() {
     let remainingQ = document.getElementById("remaining-questions");
     let remainingQTag = `<span>${quiz[questionNumber].numb}</span>`;
     remainingQ.innerHTM = remainingQTag;
