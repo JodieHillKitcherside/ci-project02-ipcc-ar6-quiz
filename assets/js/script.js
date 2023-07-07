@@ -62,6 +62,7 @@ function startQuestion() {
 }
 
 testKnowl.addEventListener("click", () => {
+    console.log("testKnowl clicked");
     quizBio.style.display = 'none';
     finalResultArea.style.display = 'none';
     quizArea.style.display = 'block';
@@ -69,7 +70,6 @@ testKnowl.addEventListener("click", () => {
     startQuestion();
     optionsLoop();
     currentScore(0);
-    console.log("testKnowl clicked");
 });
 
 // Questions count
@@ -113,6 +113,7 @@ explanationsLoop = () => {
 };
 
 revealAnswer.addEventListener("click", () => {
+    console.log("revealAnswer clicked");
     answerLoop();
     explanationLoop();
     startQuestion();
@@ -134,7 +135,6 @@ revealAnswer.addEventListener("click", () => {
         }
                 );
 }
-  	    console.log("revealAnswer clicked");
 setTimeout(6000);
                 });
 
