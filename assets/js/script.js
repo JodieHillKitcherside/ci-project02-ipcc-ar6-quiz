@@ -40,7 +40,7 @@ let userScore = undefined;
 
 // Start quiz button "Test Your Knowledge Here"
 
-// Options loop, start question function and testknowl event listener 
+// Options loop, explanations loop, start question function and testknowl event listener 
 
 const optionText = document.getElementsbyClass("option-text");
 optionsCounter = 0;
@@ -59,7 +59,7 @@ function startQuestion() {
     questionText.innerText = quiz[index].question;
     optionsLoop();
     timer = 0;
-};
+}
 
 testKnowl.addEventListener("click", () => {
     quizBio.style.display = 'none';
@@ -79,28 +79,13 @@ questionsCount(); {
     remainingQ.innerHTM = remainingQTag;
 }
 
-// Refresh (each question and corresponding mulitple choice options) as new question loads
-function refreshQuestion() {
-    questionsCount(1);
-    showScore(0);
-
-}
-
-/**
- * New question function:
- * Load new question and corresponding multiple choice options
- * Each new question group should be new from the questions.js
- * Loop to stop asking when quiz questions stop */
-
-refreshQuestion();
-
-
 /**
  * Reveal answer function:
  * Sets the event listener for the select options buttons and validates correct or incorrect ??
  * Displays correct answer and explanation
  * Diables select option buttons when user clicks answer ??
  * Shows the next question button when user clicks answer ??
+ * Sets timeout for 6seconds in order for user to mentally log answer and read explanation
  */
 
 const answerText = document.getElementsbyClass("answer");
@@ -146,13 +131,28 @@ revealAnswer.addEventListener("click", () => {
                 optionsSelectArea.children[i].classList.add('correct');
                 optionsSelectArea.children[i].classList.add('disabled');
             }
-        });
+        }
+                );
 }
-    });
-console.log("revealAnswer clicked");
-});
+  	    console.log("revealAnswer clicked");
+setTimeout(6000);
+                });
 
+/**
+ * New question function:
+ * Load new question and corresponding multiple choice options
+ * Each new question group should be new from the questions.js
+ * Loop to stop asking when quiz questions stop */
 
+refreshQuestion(); {
+    questionNumber++;
+    if (questionsNumber, quiz.length) {
+
+        questionsCount(1);
+        showScore(0);
+
+    }
+}
 
 // Restart quiz button
 restartQuiz.addEventListener("click", () => {
