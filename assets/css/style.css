@@ -75,6 +75,14 @@ h3 {
     margin: 0 auto;
 }
 
+#timer {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    color: #fff;
+    z-index: 1;
+}
+
 /* buttons */
 
 #test-knowl {
@@ -134,14 +142,6 @@ button:hover {
     height: 20%;
 }
 
-#timer {
-    color: rgb(56, 136, 202, 0.4);
-    width: 30%;
-    height: 30%;
-    justify-content: center;
-    border-radius: 50%;
-}
-
 /*#next-question {
     background-color: #5493cdda;
     color: #fff;
@@ -172,6 +172,8 @@ quiz-area {
 #question {
     padding: 2rem;
     background: rgba(57, 55, 69, .1);
+    display: flex;
+    justify-content: space-around;
 }
 
 #option-select-area {
@@ -187,6 +189,13 @@ quiz-area {
 }
 
 /* result area */
+
+#results-area {
+    padding: 2rem;
+    background: rgba(57, 55, 69, .2);
+    display: flex;
+    justify-content: space-evenly;
+}
 
 #result-takeaway {
     background-color: #5493cdda;
