@@ -7,6 +7,7 @@ let questionNo = document.getElementbyId("question-no");
 const questionText = document.getElementbyId("question-text");
 
 // Mulitple choice options
+const optionSelectArea = document.getElementbyId("options-select-area");
 const selectOption = document.getElementsbyClass("select-option");
 const choicePrefix = document.getElementsbyClass("choice-prefix");
 
@@ -53,7 +54,6 @@ optionsLoop = () => {
     );
 };
 
-
 function startQuestion() {
     questionNo.innerText = questionNo + 1 + ".";
     questionText.innerText = quiz[index].question;
@@ -67,6 +67,7 @@ testKnowl.addEventListener("click", () => {
     quizArea.style.display = 'block';
     questionsCount(questionNumber);
     startQuestion();
+    optionsLoop();
     currentScore(0);
     console.log("testKnowl clicked");
 });
@@ -96,10 +97,10 @@ refreshQuestion();
 
 /**
  * Reveal answer function:
- * Sets the event listener for the select options buttons and validates correct or incorrect
+ * Sets the event listener for the select options buttons and validates correct or incorrect ??
  * Displays correct answer and explanation
- * Diables select option buttons when user clicks answer
- * Shows the next question button when user clicks answer
+ * Diables select option buttons when user clicks answer ??
+ * Shows the next question button when user clicks answer ??
  */
 
 const answerText = document.getElementsbyClass("answer");
@@ -128,25 +129,38 @@ explanationsLoop = () => {
 
 revealAnswer.addEventListener("click", () => {
     answerLoop();
-    explanationLoop;
+    explanationLoop();
     startQuestion();
     currentScore(0);
-    console.log("revealAnswer clicked");
+    [...selectOption].forEach(option => {
+        let correctAnswer = [quiz.questionNumber].answer;
+        if (optionText === correctAnswer) {
+            userScore++;
+            clearInterval();
+            event.target.classList.add("correct");
+        }
+        else {
+            event.target.classList.add("correct");
+            for (i = 0, i < allOptions; i === {
+                if(optionsSelectArea.children[i].textContent == correctAnswer) {
+                optionsSelectArea.children[i].classList.add('correct');
+                optionsSelectArea.children[i].classList.add('disabled');
+            }
+        });
+}
+    });
+console.log("revealAnswer clicked");
 });
 
-// Next question button
-nextQuestionButton.addEventListener("click", () => {
-
-});
 
 
 // Restart quiz button
 restartQuiz.addEventListener("click", () => {
-
+    testKnowl();
 });
 
 // Timer function 
-// add alert? 
+// add alert ??
 timer = () => {
     if (timer === 20) {
         clearInterval(interval);
@@ -161,6 +175,6 @@ timer = () => {
 
 // Final result and result takeaway functions 
 function finalResultArea() {
-    restartQuiz();
-
+    quizBio.style.display = 'none';
+    quizArea.style.display = 'none';
 }
