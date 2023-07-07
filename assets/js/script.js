@@ -1,11 +1,9 @@
-// Get element by Id/Class/QuerySelector
-
 // Quiz area
-const timer = document.getElementbyId("timer");
+let timer = document.getElementbyId("timer");
 const quizArea = document.getElementbyId("quiz-area");
 
 // Question
-const questionNo = document.getElementbyId("question-no");
+let questionNo = document.getElementbyId("question-no");
 const questionText = document.getElementbyId("question-text");
 
 // Mulitple choice options
@@ -48,19 +46,20 @@ optionsCounter = 0;
 
 optionsLoop = () => {
     optionText.forEach(option => {
-        option = quiz.dataset['option'];
-        optionText.innerHTML = quiz.options["option"];
+        option = quiz.dataset.option;
+        optionText.innerHTML = quiz.options.option;
         optionsCounter++;
     }
     );
 };
+
 
 function startQuestion() {
     questionNo.innerText = questionNo + 1 + ".";
     questionText.innerText = quiz[index].question;
     optionsLoop();
     timer = 0;
-}
+};
 
 testKnowl.addEventListener("click", () => {
     quizBio.style.display = 'none';
@@ -69,11 +68,11 @@ testKnowl.addEventListener("click", () => {
     questionsCount(questionNumber);
     startQuestion();
     currentScore(0);
-    console.log();
+    console.log("testKnowl clicked");
 });
 
 // Questions count
-questionsCount() {
+questionsCount(); {
     let remainingQ = document.getElementById("remaining-questions");
     let remainingQTag = `<span>${quiz[questionNumber].numb}</span>`;
     remainingQ.innerHTM = remainingQTag;
@@ -91,6 +90,7 @@ function refreshQuestion() {
  * Load new question and corresponding multiple choice options
  * Each new question group should be new from the questions.js
  * Loop to stop asking when quiz questions stop */
+
 refreshQuestion();
 
 
@@ -101,9 +101,38 @@ refreshQuestion();
  * Diables select option buttons when user clicks answer
  * Shows the next question button when user clicks answer
  */
-function revealAnswer() {
 
-}
+const answerText = document.getElementsbyClass("answer");
+answerCounter = 0;
+
+answerLoop = () => {
+    answerText.forEach(answer => {
+        answer = quiz.dataset.answer;
+        answerText.innerHTML = quiz.answers.answer;
+        answerCounter++;
+    }
+    );
+};
+
+const explanationText = document.getElementsbyClass("explanation-text");
+explanationCounter = 0;
+
+explanationsLoop = () => {
+    explanationText.forEach(explanation => {
+        explanation = quiz.dataset.explanation;
+        explanationText.innerHTML = quiz.explanations.explanation;
+        explanationCounter++;
+    }
+    );
+};
+
+revealAnswer.addEventListener("click", () => {
+    answerLoop();
+    explanationLoop;
+    startQuestion();
+    currentScore(0);
+    console.log("revealAnswer clicked");
+});
 
 // Next question button
 nextQuestionButton.addEventListener("click", () => {
@@ -118,23 +147,20 @@ restartQuiz.addEventListener("click", () => {
 
 // Timer function 
 // add alert? 
-function timer() {
-    let timer = () => {
-        if (timer === 20) {
-            clearInterval(interval);
-            next_question.click();
-        }
-        else {
-            timer++;
-            timer.innerText = timer;
+timer = () => {
+    if (timer === 20) {
+        clearInterval(interval);
+        next_question.click();
+    }
+    else {
+        timer++;
+        timer.innerText = timer;
 
-        }
-    };
-}
+    }
+};
 
 // Final result and result takeaway functions 
 function finalResultArea() {
     restartQuiz();
 
 }
-
