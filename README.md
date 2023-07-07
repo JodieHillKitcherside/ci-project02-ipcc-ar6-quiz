@@ -18,105 +18,52 @@ The BCFCLS wesbite includes a home page with season updates and several other pa
 
 ### Wireframe:
 
-This is a basic format used to formalise a theory for the website. Ideas for the 5 pages are displayed here, including a suggestion for placement of sections. Since creating the website, placement of the items have been reconsidered and the hero image changed.
-![Wireframe - Home](assets/images/screenshots-readme/home-wireframe.png)
-![Wireframe - Fixtures](assets/images/screenshots-readme/fixtures-wireframe.png)
-![Wireframe - Team](assets/images/screenshots-readme/team-wireframe.png)
-![Wireframe -Social](assets/images/screenshots-readme/social-wireframe.png)
-![Wireframe - Gallery](assets/images/screenshots-readme/gallery-wireframe.png)
+This is a basic format used to formalise a theory for the website. Ideas for the site are displayed here, including a suggestion for the transitition as the quiz progresses. Since creating the website, placement of the items and styling have been reconsidered. 
+![Wireframe](assets/images/readme/wireframe-iphone13.jpg)
 
 ## Existing Pages & Features
 
-### Navigation Bar
+### Quiz Bio
 
-Featured on all five pages, the fully responsive navigation bar includes links to the Logo, Home page, Fixtures, Team, Social and Gallery. This is position in the bar at the top of the page and easily displayed in a red panel containing the logo and navigation bar. It is identical in each page.
-This section will allow the user to easily navigate from page to page across all devices without having to revert back to the previous page via the ‘back’ button.
+Featured on window load, hidden display once 'Test Your Knowledge Here!' button is clicked by event listener. 
+Text explains the importance of the quiz and what the user should gain from testing their knowledge. 
+Unordered list and basic html format reduce when screen width is smaller. 
+This section allows the user to progress to the quiz. 
 ![BCFCLS Nav Bar](assets/images/screenshots-readme/nav-bar-logo.jpg)
 
 ### Footer
 
-Featured on all five pages, the footer contains social icons with links to the team's Twitter, Instagram and Facebook sites. It is identical in each page for continuity and familiarity to connecting sites.
+Fixed throughout, displays link to the IPCC AR6 report where a user can read in full, should they wish. Aria labelled accordingly. 
 ![BCFCLS Footer](assets/images/screenshots-readme/footer.jpg)
 
-### Home page features
+## Quiz area
 
-1. Landing image:
-   The landing image includes a photograph to define the sense of community and identfity the team as soon as the user accesses the site.
-2. BCFCLS History:
-   This text gives a breif synopsys of the foundation of the team. This allows the user to learn the background and orgin of the team.
-3. Season Update:
-   This section addresses the upcoming season and gives notice to fees and expectations. This provides the user with information to pay for their season position on the team via bank details and gives notice to the team protocol.
-   ![BCFCLS Home Page - Hero Image](assets/images/screenshots-readme/home-mf.png)
+### Question 
+### Timer
+### Select Option Buttons
+### Question Number and Current Score (Total Correct)
 
-### Fixtures features
-
-1. Latest Results table:
-   This table provides the user information on the live results, contatining the last 5 results from previous games. This means the user can stay updated on previous wins, losses or draws.
-2. Upcoming fixtures table:
-   This table lists the upcoming matches to notify the user of the next game. Users may be either a player or observerer, and therefore this updates the user on how to attend/ participate based on venue, timing and location.
-3. Central League table:
-   This table groups all teams in the Central London Premier League. This will tell the user what postion BCFCLS current sit at, should they be interested to track the league standings. This also tells the user of competitiors standings.
-4. Map of the home ground:
-   This feautres displays the address and google map to the home ground. This will guide all users to the location of their majority matches. User can play around with the map on the page to see nearby how to access the park or for shops, resturants, public transport links.
-   ![BCFCLS Fixtures - Table and Map](assets/images/screenshots-readme/fixtures-mf.png)
-
-### Team features
-
-1. Players and their poitions table:
-   This table displays all player names and their postion. This means the user can look up any team player. For example: player A's wife may wish to use the website to find out what postion player A plays.
-2. Fantasy Rules 23/24:
-   This feaure displays two tables - match points and bonus points. The user can identify which points they will be allocated and which actions will earn them extra points towards the team's fantasy team.
-3. Player of the match:
-   This feature identifies the latest player of the match. This encourages users to click on the team page to see updates from the prevous game. A user may be an assigned player that dd not play the previou week and would like to catch up on the highlights.
-4. Latest match highlights:
-   This feature lists several points of reference from the previous match.
-5. Quotes from team Mascot, a Get Well Soon and Captain and Manager:
-   This featured diplays images and quotes from team members and creates a sense of community. The user can sense what kid of football tram this is from reading the quotes and seeing photos of the team.
-   ![BCFCLS Team - Team Mentions and Player of the Week/ Highlghts](assets/images/screenshots-readme/team-mf.png)
-
-### Social features
-
-1. List of upcoming events:
-   This lists any upcoming social events hosted by the team. This encourages the user to get involved, player or observer.
-2. Photo of the team on a previous social:
-   Image supports the list of upcoming events and tells the user there have been previous events before.
-3. Twitter feed:
-   This feature updates the user with regular twitter comments. Twitter is the most used social media for BCFCLS and as with most sports fan clubs, provides real time updates, news and asks for the team. This fautre enables the user can stay connected to the BCFCLS team twitter, without leaving the site.
-   ![BCFCLS Social - Events and Twitter](assets/images/screenshots-readme/social-mf.jpg)
-
-### Gallery features
-
-1. Lists all photos:
-   Here the user can see all team asscoaited photos. There is not currently one page on any social media platform that can group all images together in a gallery. This means the user can browse all images at once.
-2. List all videos:
-   Here the user can see all team asscoaited videos, including previous match snippets. There is not currently one page on any social media platform that can group all videos together in a gallery. This means the user can browse all videos at once.
-   ![BCFCLS Gallery](assets/images/screenshots-readme/gallery-mf.png)
-
-## Stand Out Features
-
-### Tables
-
-- All tables are media responsive, and have a scroll bar in order to allow the user to access the information without looking font size for smaller screen accessibilty. All tables will be updated with each week match information. Some tables have borders that sit beside other tables and do no interact with each other accross various screen sizes. There is a light red/ pink highlight for the table row as the user hover, in order to make this specific data set stand out to the user.
-  ![BCFCLS Tables](assets/images/screenshots-readme/tables.jpg)
-
-### Gallery
-
-- All images are stored to the right as you scroll. Each week the team manager will update with more images to add, at which we will add captions.
-- All videos are stored with a select play/ pause/ stop.
-  ![BCFCLS Images](assets/images/screenshots-readme/gallery-video-press-play.png)
+## Result Takeaway area
+### Result 
+### Result takeaway
+### Restart quiz 
 
 ### Features left to implement
 
-1. Javascript link to pay for the season team placement fee.
-2. More images on the Fixtures and Team page to add animation to the page.
-3. Recruitment page with form application.
+1. Nested questions inside a question in javascript. Ie. Q11 Part A..., Q11 Part B.... . 
+2. Graphs or assigned links to each explanation/ when answer revealled. 
+3. List of all sources with a button to release this - would be especially useful for any scientists, research and developemtn or product development users. 
 
 ## Design
 
-- Red colour chosen throughout html header, headings and borders to match the colours of the team home colours. Red has also been used to aplly a sport style bold alert, and to draw attention for the user.
-- Complimentary tones of grey and lighter red/ pink been identified to add texture to the design yet not loose focus from the red and white theme.
-- In order to reduce the white background, more borders could be considered or images added.
-- The header has been centralised and is larger in order to be stand out on any device. Could have applied a reduced header bar, however in order to be stand out and look different to the Bristol City FC main football club, a larger header has been chosen in order not to confuse the user.
+- Background photo and basic colour scheme mirroring the IPCC Synthesis Report website:
+![IPCC Website Styling](assets/images/readme/ipcc-styling.png)
+
+- Colour scheme worked around tints of  s#5493cd Blue:
+![#5493cd tints](assets/images/readme/tints.jpg)
+
+- Complimentary tones of light grey and white used in fonts and div backgrounds to improve over all styling and readability. 
+- All elements have been centred to allow a common theme and easy scrolling / movement throughout the quiz for the user. 
 
 ### Validator Testing
 
@@ -148,16 +95,8 @@ Featured on all five pages, the footer contains social icons with links to the t
 
 ## Media Response
 
-- Pages are designed to adjust items in to a column and centrally read as media devices get smaller.
-- Logo and menu text adjusts dependant on the screen size.
-- Maps, all tables, and main images all re-size depandant on the screen. Tables and divs have overflow scroll bar options when re-sized.
-- Borders and divs have been placed not to over spill.
-- All headings have been targeted under 800px to algin with the header text. As h1 has been used throughout the main body, this was important to reduce at a smaller screen size.
-
-# MR finds to consider
-
-- Images on Team, Quotes and Mentions section and some borders for media screen below 360 (Samsung Galaxy 8 size)
-- Hero image - have done the best to object-fill but not background cover. The smaller the screen gets, again below 360px, this image begins to cut width.
+- All elements are designed to adjust items in to a column as media devices get smaller.
+- All headings, paragraph text, the footer, and specialised ids have been reduced to 90% as the screen size is reduced. 
 
 Examples:
 
@@ -223,6 +162,10 @@ Examples:
 
 - [Stackoverflow - Hide div onload](https://stackoverflow.com/questions/39307329/hide-div-onload-in-javascript) taught me how to hide elements until event listeners clicked!
 - [Stackoverflow - Loop options and questions](https://stackoverflow.com/questions/66765795/for-loops-for-multiple-choice-questions) taught me how to create a loop to extract options and questions.
+- [Stackoverflow - Timer](https://stackoverflow.com/questions/44314897/javascript-timer-for-a-quiz) taught me how to create a timer.
+- [Stackoverflow - Window Onload](https://stackoverflow.com/questions/39307329/hide-div-onload-in-javascript) taught me how to reset the quiz and postion my elements on load of the browser. 
+- Tutor Ed helped me identify how to change the x-index of elements layered on the screen. 
+- [Youtube](https://www.youtube.com/watch?v=Opje9VBrNfg) and [Youtube](https://www.youtube.com/watch?v=3fbU4z7fPe4&t=2606s) examples helped with functionality and event listening. 
 
 - Header, Nav and Footer first inspired by the Love Running Project, which have been really edited fit for this website.
 - Thanks to the Code Institute Tutors: Sean, Sarah, Gemma and Joanne who really helped with media response confusion for various sections and items across media device sizes.
@@ -230,16 +173,17 @@ Examples:
 
 ### Content
 
-- All table content taken from [FA Social](https://fulltime.thefa.com/displayTeam.html?id=431724151)
-- All speech directly received from either the BCFCLS team Manager, Jed Begley or team Captain, Alfie Hill-Kitcherside.
+- All quiz quesitons, multiple choice answers, correct answers and explanations taken from [IPCC AR6 Synthesis Report Policy Makers Summary](https://www.ipcc.ch/report/ar6/syr/downloads/report/IPCC_AR6_SYR_SPM.pdf) 
+- No API used to form questions, all researched and created by myself. 
+- Bio text and takeaway written by myself, with context to the report and current industry I work in. You can see more about the company I currently work for here: [Climate Action](https://www.climateaction.org/)
 
 ### Media
 
-- Images and videos sourced directly from the BCFCLS team Manager and Captain (named above). All photos and videos taken on personal media devices and uploaded.
-- Logo Image sourced from [BCFC_fans_fc Twitter](https://twitter.com/bcfc_fans_fc)
-- The icons in the footer and on the team page from [BCFC_fans_fc TwitterFont Awesome](https://fontawesome.com/)
-- The fonts were taken from [Google Fonts](https://fonts.google.com/)
+- Background image sourced directly from the IPCC Article AR6 Syntehsis Report landing page. 
 
 ### Inspiration
 
-- Bristol City Football Club, Premier League [BCFC site page](https://www.bcfc.co.uk/)
+- The IPCC AR6 Synthesis Longer Report is 85 pages in itself and 34 pages in the Policy Makers Summary, of which this quiz is based off of the figures and report findings. 
+The average user will either not have heard of this report, or would not have had the chance to read all of it in detail. 
+There are numerous articles which summarise big findings, but again most of which would have only been read by those who know about the report and work closely to the research within the industry. 
+This quiz website is inspired based on the lack of educatation for the general user and can be played by any user. 

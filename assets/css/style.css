@@ -142,21 +142,6 @@ button:hover {
     height: 20%;
 }
 
-/*#next-question {
-    background-color: #5493cdda;
-    color: #fff;
-    font-family: 'Roboto Condensed', sans-serif;
-    font-size: 21px;
-    text-transform: uppercase;
-    letter-spacing: .25rem;
-    text-align: center;
-    padding: 1.5rem;
-    margin: 1.5rem;
-    border-radius: 25px;
-    width: 30%;
-    height: 20%;
-}*/
-
 /* question and options styling */
 
 quiz-area {
