@@ -187,3 +187,5 @@ Examples:
 The average user will either not have heard of this report, or would not have had the chance to read all of it in detail. 
 There are numerous articles which summarise big findings, but again most of which would have only been read by those who know about the report and work closely to the research within the industry. 
 This quiz website is inspired based on the lack of educatation for the general user and can be played by any user. 
+You can see snippets of the report I read to create the quiz here: 
+![IPCC AR6 Snippets](assets/images/readme/report-snippets.JPG)
