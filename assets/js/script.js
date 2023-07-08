@@ -135,7 +135,6 @@ revealAnswer.addEventListener("click", () => {
         }
                 );
 }
-setTimeout(6000);
                 });
 
 /**

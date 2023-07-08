@@ -1,8 +1,8 @@
 # IPCC AR6 Synthesis Report Quiz
 
-/_ --------- All to edit for current project _/
 The IPCC AR6 Synthesis Report Quiz has been created to test the user's knowledge based on the report findings, and will provide explanations and further depth to any understanding the user had on our current global warming status.
 The quiz' main target market group includes both the public (average joe or jaspreet!), and those with knowledge in the sector currently: private sector, public sector, investors, scientists and activists, all working towards reducing gloabl warming. This target market group has such a huge varitety of typical users, and therefore the quiz has been designed for those with any level of knowledge. If a user doesn't have any context to the questions, then they can simply guess and recieve the correct answer and facts to boost their knowledge. For users that are already focussing work in the sctor, the quiz provides extra depth and controversial facts as to how we advance our efforts to reducing warming.
+
 An ideal user would be members from product development in RnD across industry sectors, asset managers, policy makers, UN advisory group memebers and so forth; (typically those who have not read the report page to page) and in order to educate on the means neccessary to achieve, and in some way redirect our efforts, for reduction of gloabl warming.
 ![amiresponsive.co.uk](INSERT IMAGE HERE)
 
@@ -12,16 +12,16 @@ An ideal user would be members from product development in RnD across industry s
 
 # Features
 
-The BCFCLS wesbite includes a home page with season updates and several other pages including fixtures, team information, social events and a gallery.
-
-## Source Pages and Features
-
 ### Wireframe:
 
 This is a basic format used to formalise a theory for the website. Ideas for the site are displayed here, including a suggestion for the transitition as the quiz progresses. Since creating the website, placement of the items and styling have been reconsidered. 
 ![Wireframe](assets/images/readme/wireframe-iphone13.jpg)
 
-## Existing Pages & Features
+### Flowchart planning 
+This is a basic structure for both html sections and javascript, and I produced this to run through the plan for the quiz. Breaking this down in to thoughts on each function, event listeners for my html buttons (onlclick), loops and conditional statements helped to simplify how I wrote out the javascript, each function step by step. 
+![Wireframe](assets/images/readme/p2-ipcc-flowchat-plan.png)
+
+## Existing Features
 
 ### Quiz Bio
 
@@ -42,6 +42,8 @@ Fixed throughout, displays link to the IPCC AR6 report where a user can read in 
 ### Timer
 ### Select Option Buttons
 ### Question Number and Current Score (Total Correct)
+
+### Questions.js and script.js 
 
 ## Result Takeaway area
 ### Result 
