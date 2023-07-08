@@ -1,180 +1,159 @@
 
-// Quiz area
-let timer = document.getElementbyId("timer");
-const quizArea = document.getElementbyId("quiz-area");
-
-// Question
-let questionNo = document.getElementbyId("question-no");
-const questionText = document.getElementbyId("question-text");
-
-// Mulitple choice options
-const optionSelectArea = document.getElementbyId("options-select-area");
-const selectOption = document.getElementsbyClass("select-option");
-const choicePrefix = document.getElementsbyClass("choice-prefix");
-
-// Recurring result area
-const resultsArea = document.getElementbyId("results-area");
-const questionsCount = document.getElementbyId("questions-count");
-const correctCount = document.getElementbyId("correct-count");
-
-// Quiz bio and landing info
-const quizBio = document.getElementbyId("quiz-bio");
-const testKnowl = document.querySelector("#test-knowl");
-const nextQuestionButton = document.getElementbyId("next-question");
-
-//Final result area
-const finalResultArea = document.getElementbyId("final-result-area");
-const finalResult = document.getElementbyId("final-result");
-const restartQuiz = document.getElementbyId("restart-quiz");
-
+//Js ordered in sequence of flowchart (see readme file)
 // Page load, hide elements until clicked 
-window.onload = () => {
+window.onload = function () {
     document.getElementById("quiz-area").style.display = 'none';
     document.getElementById("final-result-area").style.display = 'none';
 };
 
-// Fluctuating variable numbers 
-questionNo = 0;
-let userScore = undefined;
+//Constanants per function
 
-// All Buttons 
+const testKnowl = document.getElementById("test-knowl");
+const questionNumber = document.getElementById("question-no");
+const question = document.getElementById("question");
+const startInterval = document.getElementById("timer");
+const selectOption = document.getElementById("selectOption");
 
-// Start quiz button "Test Your Knowledge Here"
-
-// Options loop, explanations loop, start question function and testknowl event listener 
-
-const optionText = document.getElementsbyClass("option-text");
-optionsCounter = 0;
-
-optionsLoop = () => {
-    optionText.forEach(option => {
-        option = quiz.dataset.option;
-        optionText.innerHTML = quiz.options.option;
-        optionsCounter++;
-    }
-    );
-};
-
-function startQuestion() {
-    questionNo.innerText = questionNo + 1 + ".";
-    questionText.innerText = quiz[index].question;
-    optionsLoop();
-    timer = 0;
-}
-
-testKnowl.addEventListener("click", () => {
-    console.log("testKnowl clicked");
-    quizBio.style.display = 'none';
-    finalResultArea.style.display = 'none';
-    quizArea.style.display = 'block';
-    questionsCount(questionNumber);
-    startQuestion();
-    optionsLoop();
-    currentScore(0);
+testKnowl.addEventListener("click", function () {
+    console.log("test-knowl")
+    document.getElementById("quiz-bio").style.display = 'none';
+    document.getElementById("final-result-area").style.display = 'none';
+    document.getElementById("text-knowl").style.display = 'none';
+    document.getElementById("quiz-area").style.display = 'block';
+    questionNumber();
+    question();
+    startInterval();
+    choicePrefix();
+    selectOption()
 });
 
-// Questions count
-questionsCount(); {
-    let remainingQ = document.getElementById("remaining-questions");
-    let remainingQTag = `<span>${quiz[questionNumber].numb}</span>`;
-    remainingQ.innerHTM = remainingQTag;
-}
-
 /**
- * Reveal answer function:
- * Sets the event listener for the select options buttons and validates correct or incorrect ??
- * Displays correct answer and explanation
- * Diables select option buttons when user clicks answer ??
- * Shows the next question button when user clicks answer ??
- * Sets timeout for 6seconds in order for user to mentally log answer and read explanation
+ * question number function implemented to:
+ * select elements with id of "question-no"
+ * log a questions number counter
+ * loop through the question number for each question in the quiz array (question.js), assosciated as "numb"
+ * print inner html to the correct question number 
+ * for each question, add 1 to the questions number counter 
+ * start the loop at index of 0
  */
 
-const answerText = document.getElementsbyClass("answer");
-answerCounter = 0;
-
-answerLoop = () => {
-    answerText.forEach(answer => {
-        answer = quiz.dataset.answer;
-        answerText.innerHTML = quiz.answers.answer;
-        answerCounter++;
-    }
-    );
+function questionNumber(_index) {
+    const questionNumber = Array.from(document.getElementsById('question-no'));
+    questionNumbersCounter = 0;
+    questionNumberLoop = () => {
+        questionNumber.forEach(questionNumber => {
+        const number = quiz.dataset['numb'];
+        questionNumber.innerHTML = quiz[numb];
+        questionNumberCounter++;
+  });
 };
-
-const explanationText = document.getElementsbyClass("explanation-text");
-explanationCounter = 0;
-
-explanationsLoop = () => {
-    explanationText.forEach(explanation => {
-        explanation = quiz.dataset.explanation;
-        explanationText.innerHTML = quiz.explanations.explanation;
-        explanationCounter++;
-    }
-    );
-};
-
-revealAnswer.addEventListener("click", () => {
-    console.log("revealAnswer clicked");
-    answerLoop();
-    explanationLoop();
-    startQuestion();
-    currentScore(0);
-    [...selectOption].forEach(option => {
-        let correctAnswer = [quiz.questionNumber].answer;
-        if (optionText === correctAnswer) {
-            userScore++;
-            clearInterval();
-            event.target.classList.add("correct");
-        }
-        else {
-            event.target.classList.add("correct");
-            for (i = 0, i < allOptions; i === {
-                if(optionsSelectArea.children[i].textContent == correctAnswer) {
-                optionsSelectArea.children[i].classList.add('correct');
-                optionsSelectArea.children[i].classList.add('disabled');
-            }
-        }
-                );
+questionNumberLoop(0)
 }
-                });
 
 /**
- * New question function:
- * Load new question and corresponding multiple choice options
- * Each new question group should be new from the questions.js
- * Loop to stop asking when quiz questions stop */
+ * question  function implemented to:
+ * select elements with id of "question"
+ * log a questions counter
+ * loop through the question for each question in the quiz array (question.js), assosciated as "question"
+ * print inner html to the correct question 
+ * start the loop at index of 0
+ */
 
-refreshQuestion(); {
-    questionNumber++;
-    if (questionsNumber, quiz.length) {
+function question(_index) {
+    const question = Array.from(document.getElementsById('question'));
+    questionsCounter = 0;
+    questionLoop = (_questionId) => {
+        question.forEach(question => {
+        const question = quiz.dataset['question'];
+        question.innerHTML = quiz[question];
+  });
+};
+questionLoop(0)
+}
 
-        questionsCount(1);
-        showScore(0);
+// start interval function is set to start timer
 
+var count = 15;
+var interval = setInterval(function(){
+  document.getElementById('timer').innerHTML=count;
+  count--;
+  if (count === 0){
+    clearInterval(interval);
+    document.getElementById('timer').innerHTML='Done';
+  }
+}, 2000);
+
+/**
+ * select option function implemented to:
+ * select elements with id of "select-option"
+ * log a options counter
+ * loop through the options for each question in the quiz array (question.js), assosciated as "options"
+ * print inner html to the correct options array 
+ * for each question, add 1 to the options counter 
+ * start the loop at index of 0
+ */
+
+function selectOption(_index) {
+    const selectOption = Array.from(document.getElementsByClassName('select-option'));
+    optionsCounter = 0;
+    optionsLoop = () => {
+        options.forEach(option => {
+        const options = quiz.dataset['options'];
+        selctOption.innerHTML = quiz[options];
+        optionsCounter++;
+  });
+};
+optionsLoop(0)
+}
+
+/**
+ * statements 
+ * if answer correct - and 1 to totalCorrect then proceed to reveal answer + explanation 
+ * else answer incorrect - proceed to reveal answer + explanation 
+ */
+const selectOption = document.getElementById("answer");
+const totalCorrect = document.getElementById("correct-count");
+
+selectOption.addEventListener("click", () => {
+    if (selectOption = correctAnswer) {
+        totalCorrect.innerHTML = totalCorrect + 1;
+        revealAnswer();
+        revealExplanation();
+    }
+    else {
+        revealAnswer();
+        revealExplanation();
     }
 }
 
-// Restart quiz button
-restartQuiz.addEventListener("click", () => {
-    testKnowl();
-});
+/** 
+ * reveal answer function implemented to:
+ * select correct answer from quiz array (questions.js)
+ */
 
-// Timer function 
-// add alert ??
-timer = () => {
-    if (timer === 20) {
-        clearInterval(interval);
-        next_question.click();
-    }
-    else {
-        timer++;
-        timer.innerText = timer;
-
-    }
+ function revealAnswer(_index) {
+    const revealAnswer = Array.from(document.getElementsByClassName('answer'));
+    answersLoop = () => {
+        answer.forEach(answer => {
+        const answer = quiz.dataset['answer'];
+        answer.innerHTML = quiz[answer];
+  });
 };
+answersLoop(0)
+}
 
-// Final result and result takeaway functions 
-function finalResultArea() {
-    quizBio.style.display = 'none';
-    quizArea.style.display = 'none';
+/** 
+ * reveal explanation function implemented to:
+ * select correct answer from explanation array (explanations.js)
+ */
+
+ function revealExplanation(_index) {
+    const revealExplanation = Array.from(document.getElementsByClassName('explanation'));
+    answersLoop = () => {
+        answer.forEach(answer => {
+        const answer = quiz.dataset['answer'];
+        answer.innerHTML = quiz[answer];
+  });
+};
+answersLoop(0)
 }
