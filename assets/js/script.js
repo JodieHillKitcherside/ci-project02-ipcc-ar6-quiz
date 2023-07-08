@@ -1,3 +1,4 @@
+
 // Quiz area
 let timer = document.getElementbyId("timer");
 const quizArea = document.getElementbyId("quiz-area");

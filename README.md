@@ -19,7 +19,7 @@ This is a basic format used to formalise a theory for the website. Ideas for the
 
 ### Flowchart planning 
 This is a basic structure for both html sections and javascript, and I produced this to run through the plan for the quiz. Breaking this down in to thoughts on each function, event listeners for my html buttons (onlclick), loops and conditional statements helped to simplify how I wrote out the javascript, each function step by step. 
-![Wireframe](assets/images/readme/p2-ipcc-flowchat-plan.png)
+![Wireframe](assets/images/readme/p2-ipcc-flowchart.jpg)
 
 ## Existing Features
 
@@ -166,6 +166,7 @@ Examples:
 - [Stackoverflow - Loop options and questions](https://stackoverflow.com/questions/66765795/for-loops-for-multiple-choice-questions) taught me how to create a loop to extract options and questions.
 - [Stackoverflow - Timer](https://stackoverflow.com/questions/44314897/javascript-timer-for-a-quiz) taught me how to create a timer.
 - [Stackoverflow - Window Onload](https://stackoverflow.com/questions/39307329/hide-div-onload-in-javascript) taught me how to reset the quiz and postion my elements on load of the browser. 
+https://stackoverflow.com/questions/58580824/in-javascript-how-to-import-an-array-from-another-javascript-file 
 - Tutor Ed helped me identify how to change the x-index of elements layered on the screen. 
 - [Youtube](https://www.youtube.com/watch?v=Opje9VBrNfg) and [Youtube](https://www.youtube.com/watch?v=3fbU4z7fPe4&t=2606s) examples helped with functionality and event listening. 
 
