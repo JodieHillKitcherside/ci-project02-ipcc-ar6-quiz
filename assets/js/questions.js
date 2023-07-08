@@ -24,14 +24,15 @@ var quiz = [
     {
         numb: 3,
         question:"Which limitation is the most significant in creating adaptation gaps across sectors and regions?",
-        answer: //quiz.filter(item => item.options),
+        answer: "All of them",
         options: [
             "Financial, governance, institutional and policy constraints ",
             "Some tropical, coastal, polar and mountain ecosystems have reached hard adaptation limits ",
             "Limited resources, lack of private sector and citizen engagement",
             "Insufficient mobilization of finance (including for research)",
             "Low climate literacy",
-            "Lack of political commitment, limited research and/or slow and low uptake of adaptation science, and low sense of urgency."
+            "Lack of political commitment, limited research and/or slow and low uptake of adaptation science, and low sense of urgency.",
+            "All of them"
         ]
     },
     {
@@ -139,14 +140,15 @@ var quiz = [
     {
         numb: 13,
         question:"Which of the following options score the highest for feasibility of climate responses and adaptation and potential mitigation of options for near term for our: 'Settlements and Infrastructure'?",
-        answer: //""Fuel efficient vehicles, electric vehicles, public transport and bicycling","Efficient shipping and aviation","Avoid demand for energy services",",
+        answer: "Multiple answers",
         options: [
             "Efficient buildings",
             "Fuel efficient vehicles, electric vehicles, public transport and bicycling",
             "Efficient shipping and aviation",
             "Avoid demand for energy services",
             "Onsite renewables",
-            "Sustainable water management"
+            "Sustainable water management",
+            "Multiple answers"
         ]
     },
     {
