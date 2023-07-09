@@ -9,8 +9,6 @@ window.onload = function () {
 //Constanants per function
 
 const testKnowl = document.getElementById("test-knowl");
-const questionNumber = document.getElementById("question-no");
-const question = document.getElementById("question");
 const startInterval = document.getElementById("timer");
 const selectOption = document.getElementById("selectOption");
 
@@ -38,7 +36,7 @@ testKnowl.addEventListener("click", function () {
  */
 
 function questionNumber() {
-    const questionNumber = Array.from(document.getElementsById('question-no'));
+    const questionNumber = Array.from(document.getElementsByClassName('question-no'));
     questionNumbersCounter = 0;
     questionNumberLoop = () => {
         questionNumber.forEach(questionNumber => {
@@ -110,7 +108,7 @@ optionsLoop(0)
  * if answer correct - and 1 to totalCorrect then proceed to reveal answer + explanation 
  * else answer incorrect - proceed to reveal answer + explanation 
  */
-const selectOption = document.getElementById("answer");
+
 const totalCorrect = document.getElementById("correct-count");
 
 selectOption.addEventListener("click", () => {
@@ -131,7 +129,7 @@ selectOption.addEventListener("click", () => {
  */
 
  function revealAnswer() {
-    const revealAnswer = Array.from(document.getElementsByClassName('answer'));
+    var revealAnswer = Array.from(document.getElementsByClassName('answer'));
     answersLoop = () => {
         answer.forEach(answer => {
         answer.innerHTML = quiz.dataset.answer;

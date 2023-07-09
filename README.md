@@ -125,7 +125,7 @@ Examples:
 
 - All js files were showing error messages due to syntax errors, these have been corrected.
 - Test-knowl issues on starting the quiz. I logged the console each time pressed to check in Dev Tools, of which js errors explained on the syntax. Error message read that it didn't like the 'export' action I set for internal js files. This has been removed. 
--
+- Gloabl and local bugs where repeated const and function usage was blocking js. This has been checked and changed appropriately.
 
 ### Unsolved Bugs
 
