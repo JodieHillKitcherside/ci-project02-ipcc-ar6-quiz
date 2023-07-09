@@ -3,6 +3,7 @@
 // Page load, hide elements until clicked 
 window.onload = function () {
     document.getElementById("quiz-area").style.display = 'none';
+    document.getElementById("answer-explanation").style.display = 'none';
     document.getElementById("final-result-area").style.display = 'none';
 };
 
@@ -16,12 +17,11 @@ testKnowl.addEventListener("click", function () {
     console.log("test-knowl")
     document.getElementById("quiz-bio").style.display = 'none';
     document.getElementById("final-result-area").style.display = 'none';
-    document.getElementById("text-knowl").style.display = 'none';
+    document.getElementById("test-knowl").style.display = 'none';
     document.getElementById("quiz-area").style.display = 'block';
     questionNumber();
     question();
     startInterval();
-    choicePrefix();
     selectOption();
 });
 
@@ -61,7 +61,7 @@ function question() {
     questionsCounter = 0;
     questionLoop = (_questionId) => {
         question.forEach(question => {
-        question.innerHTML = (quiz.dataset.question);
+        document.getElementById('question').innerHTML = (quiz.dataset.question);
   });
 };
 questionLoop(0);
@@ -112,7 +112,7 @@ displayOptionsLoop(0)
 const totalCorrect = document.getElementById("correct-count");
 
 selectOption.addEventListener("click", function () {
-    if (selectOption = correctAnswer) {
+    if (selectOption = answer) {
         totalCorrect.innerHTML = totalCorrect + 1;
         revealAnswer();
         revealExplanation();
@@ -129,7 +129,7 @@ selectOption.addEventListener("click", function () {
  */
 
  function revealAnswer() {
-    var revealAnswer = Array.from(document.getElementsByClassName('answer'));
+    let answer = Array.from(document.getElementsByClassName('answer'));
     answersLoop = () => {
         answer.forEach(answer => {
         answer.innerHTML = quiz.dataset.answer;
@@ -149,12 +149,12 @@ answersLoop(0);
 
  function revealExplanation() {
     const revealExplanation = Array.from(document.getElementsByClassName('explanation'));
-    answersLoop = () => {
-        answer.forEach(answer => {
-        answer.innerHTML = (quiz.datset.answer);
+    explanationsLoop = () => {
+        explanations.forEach(answer => {
+        explanation.innerHTML = (explanation.datset.answer);
   });
 };
-answersLoop(0); 
+explanationsLoop(0); 
 };
 
 /**
