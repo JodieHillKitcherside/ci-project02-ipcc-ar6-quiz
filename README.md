@@ -25,14 +25,17 @@ This is a basic structure for both html sections and javascript, and I produced 
 
 ## Quiz Bio
 
-Featured on window load, hidden display once 'Test Your Knowledge Here!' button is clicked by event listener. 
+Featured on window load, hidden display once 'Test Your Self Here!' button is clicked by event listener. 
 Text explains the importance of the quiz and what the user should gain from testing their knowledge. 
 Unordered list and basic html format reduce when screen width is smaller. 
 This section allows the user to progress to the quiz. 
+At any point during the quiz, should a user refresh the page, it will bring you back to the start of the quiz.
+![Winow onload - Quiz bio](assets/images/readme/window-onload.jpg)
 
 ## Footer
 
 Fixed throughout, displays link to the IPCC AR6 report where a user can read in full, should they wish. Aria labelled accordingly. 
+![Footer](assets/images/readme/footer.jpg)
 
 ## Quiz area
 
