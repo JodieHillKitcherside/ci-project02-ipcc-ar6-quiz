@@ -24,7 +24,7 @@ testKnowl.addEventListener("click", function () {
     question();
     startInterval();
     choicePrefix();
-    selectOption()
+    selectOption();
 });
 
 /**
@@ -42,12 +42,11 @@ function questionNumber() {
     questionNumbersCounter = 0;
     questionNumberLoop = () => {
         questionNumber.forEach(questionNumber => {
-        const number = quiz.dataset['numb'];
-        questionNumber.innerHTML = quiz[numb];
+        questionNumber.innerHTML = (quiz.dataset.numb);
         questionNumberCounter++;
   });
 };
-questionNumberLoop(0)
+questionNumberLoop(0);
 }
 
 /**
@@ -64,22 +63,23 @@ function question() {
     questionsCounter = 0;
     questionLoop = (_questionId) => {
         question.forEach(question => {
-        const question = quiz.dataset['question'];
-        question.innerHTML = quiz[question];
+        question.innerHTML = (quiz.dataset.question);
   });
 };
-questionLoop(0)
+questionLoop(0);
 }
 
 // start interval function is set to start timer
 
-var count = 15;
-var interval = setInterval(function(){
-  document.getElementById('timer').innerHTML=count;
+var count = 20;
+var interval = setInterval(function() {
+  document.getElementById('timer').innerHTML= count;
   count--;
   if (count === 0){
     clearInterval(interval);
     document.getElementById('timer').innerHTML='Done';
+    revealAnswer();
+    revealExplanation();
   }
 }, 2000);
 
@@ -98,8 +98,7 @@ function selectOption() {
     optionsCounter = 0;
     optionsLoop = () => {
         options.forEach(option => {
-        const options = quiz.dataset['options'];
-        selctOption.innerHTML = quiz[options];
+        selectOption.innerHTML = quiz.dataset.options;
         optionsCounter++;
   });
 };
@@ -135,15 +134,14 @@ selectOption.addEventListener("click", () => {
     const revealAnswer = Array.from(document.getElementsByClassName('answer'));
     answersLoop = () => {
         answer.forEach(answer => {
-        const answer = quiz.dataset['answer'];
-        answer.innerHTML = quiz[answer];
+        answer.innerHTML = quiz.dataset.answer;
         for (let i = 0; i < answers.length; i++) {
             if (selectOption === answers[i])
             result = true;
         }
   });
 };
-answersLoop(0)
+answersLoop(0);
 };
 
 /** 
@@ -155,11 +153,10 @@ answersLoop(0)
     const revealExplanation = Array.from(document.getElementsByClassName('explanation'));
     answersLoop = () => {
         answer.forEach(answer => {
-        const answer = quiz.dataset['answer'];
-        answer.innerHTML = quiz[answer];
+        answer.innerHTML = (quiz.datset.answer);
   });
 };
-answersLoop(0)
+answersLoop(0); 
 };
 
 /**
@@ -174,7 +171,7 @@ function rereshQuestion () {
         questionNumber();
         question();
         startInterval();
-        selectOption()
+        selectOption();
     }
     else {
         questionNumber = 0;
@@ -200,14 +197,14 @@ function finalResultTakeaway() {
     if (totalCorrect < 7) {
         document.getElementById("quiz-area").style.display = 'none';
         document.getElementById("quiz-bio").style.display = 'block';
-        scoreStatement.innerHTML = "Amazing job! You scored more than 50% on the quiz.. Now it's time to put your knowledge in to action!"
+        scoreStatement.innerHTML = "Amazing job! You scored more than 50% on the quiz.. Now it's time to put your knowledge in to action!";
         document.getElementById("result-takeaway").style.display = 'block';
         document.getElementById("restart-quiz").style.display = 'block';
     }
     else {
         document.getElementById("quiz-area").style.display = 'none';
         document.getElementById("quiz-bio").style.display = 'block';
-        scoreStatement.innerHTML = "Better luck next time! You scored less than 50%, but that's really okay. We hope to have inspired you with more learnings!"
+        scoreStatement.innerHTML = "Better luck next time! You scored less than 50%, but that's really okay. We hope to have inspired you with more learnings!";
         document.getElementById("result-takeaway").style.display = 'block';
         document.getElementById("restart-quiz").style.display = 'block';
     }

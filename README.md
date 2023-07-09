@@ -8,7 +8,7 @@ An ideal user would be members from product development in RnD across industry s
 
 # User Feedback
 
-- "I think this is amazing, really easy to navigate on my phone. We (the team, captain and I) would use the site to keep the team up to date and recruit new players. This shows a great showcase the team and key individuals. Excited to use for our next season" Jed Begley, BCFCLS Captain.
+- ""
 
 # Features
 
@@ -23,40 +23,47 @@ This is a basic structure for both html sections and javascript, and I produced 
 
 ## Existing Features
 
-### Quiz Bio
+## Quiz Bio
 
 Featured on window load, hidden display once 'Test Your Knowledge Here!' button is clicked by event listener. 
 Text explains the importance of the quiz and what the user should gain from testing their knowledge. 
 Unordered list and basic html format reduce when screen width is smaller. 
 This section allows the user to progress to the quiz. 
 
-### Footer
+## Footer
 
 Fixed throughout, displays link to the IPCC AR6 report where a user can read in full, should they wish. Aria labelled accordingly. 
 
 ## Quiz area
 
 ### Question 
-### Timer
-### Select Option Buttons
-### Question Number and Current Score (Total Correct)
+Selects relevant question number and question from quiz array.
 
-### Questions.js and explanatation.js 
-## Separate files: 
+### Timer
+Set to 20secs for every question. Text at timer id should result "done" when the timer is up, and the correct answer and explanation is shown.
+
+### Select Option Buttons
+Event listener added to check when the select option chosen is selected and check if this matches the correct answer.
+
+### Question Number and Current Score (Total Correct)
+Implemented to either add 1 to the questions number counter or stop quiz based on quiz length. Current score to add 1 if the question is answered correctly.
+
+### Final Result Takeaway
+Sets a conditonal statement to notify the user if they scored 50% and above or less then 50%.
+
+## Questions.js and explanatation.js 
+### Separate files: 
 This quiz has two addtional files set up to store both the quiz dataset and explanations dataset. The quiz containts: question number, question, (correct) answer and all options. The explanation data set contains the question number and relevant explanation. 
 Due to the context of this quiz, the explnatation has been added to reveal more depth to the user's understanding and knowldge as a takeaway from the quiz. 
 Both the reveal answer and explanation are built to load simulatnouesly as the user selects their answer option for the question. 
 
-## Changing options lenegth per question 
+### Changing options length per question 
 The questions.js quiz dataset has a different number of options to select per question. Most online quiz examples use a basic format of four routine options, labelled with dataset 1 and so forth. This quiz uses a loop to return all select options per object (question). 
 
-## Mulitple true answers in javascript array 
+### Mulitple true answers in javascript array 
 The questions.js quiz dataset has two unique questions 'numb 3' and 'numb 13'. Both of these questions are trick questions to the user, and have multple answers as the correct answer. Code has been written with an array of corrrect answers  for each, then checked via a loop under the main function for reveal answer.
 
-## Final Result Takeaway
-Sets a conditonal statement to notify the user if they scored 50% and above or less then 50%.
-
-### Features left to implement
+## Features left to implement
 
 1. Nested questions inside a question in javascript. Ie. Q11 Part A..., Q11 Part B.... . 
 2. Graphs or assigned links to each explanation/ when answer revealled. 
@@ -79,10 +86,12 @@ Sets a conditonal statement to notify the user if they scored 50% and above or l
 ### Validator Testing
 
 ## HTML
-
+- No errors found.
+![#5493cd tints](assets/images/readme/p2-w3c.jpg)
 
 ## CSS
-
+- No errors found.
+![#5493cd tints](assets/images/readme/p2-jigsaw.jpg)
 
 ## Code Testing
 
@@ -91,7 +100,7 @@ Sets a conditonal statement to notify the user if they scored 50% and above or l
 - Questions remaining and  total correct count per answer:
 - Restart-quiz button:
 - Final score and correct statement: 
-  ![Testing Excel Sheet](assets/images/screenshots-readme/testing-excel.jpg)
+  ![]()
 
 ## Media Response
 
@@ -102,11 +111,8 @@ Examples:
 
 ## Lighthouse
 
-- Main points of feedback were due to the paint colour, sizing of headings and header per page and speed to load these.
-- The site displays a red colour for both the user team's home colours and representation and further for accessibility.
-- One of the team players has a blinding in one eye and the bold titles and title colours make this more accessible for this user.
-- Could re-consider the design for better performance.
-  ![Lighthouse Checks](assets/images/screenshots-readme/lighthouse.jpg)
+- CANNOT PRODUCE REPORT UNTIL DEPLOYED.
+  ![Lighthouse Checks]()
 
 ## Wave
 
@@ -118,34 +124,28 @@ Examples:
 ### Solved Bugs
 
 - All js files were showing error messages due to syntax errors, these have been corrected.
-- Test-knowl issues on starting the quiz. I logged the console each time pressed to check in Dev Tools, of which js errors explained on the syntax. Error message read that it didn't like the 'export' action I set for internal js files. Tis has been removed. 
+- Test-knowl issues on starting the quiz. I logged the console each time pressed to check in Dev Tools, of which js errors explained on the syntax. Error message read that it didn't like the 'export' action I set for internal js files. This has been removed. 
+-
 
 ### Unsolved Bugs
 
-- Social Page Twitter Timeline rendering in Firefox not so good - unsure how to implement change.
+- 
 
 ## Deployment
 
 - The site was deployed to GitHub pages.
-  The live link can be found here - https://jodiehillkitcherside.github.io/project1-bcfcls/
+  The live link can be found here - ""
 
 ## Credits
 
 ### Inspired websites and tutor/mentor suggestions
 
-- [Stackoverflow - Hide div onload](https://stackoverflow.com/questions/39307329/hide-div-onload-in-javascript) taught me how to hide elements until event listeners clicked!
 - [Stackoverflow - Loop options and questions](https://stackoverflow.com/questions/66765795/for-loops-for-multiple-choice-questions) taught me how to create a loop to extract options and questions.
 - [Stackoverflow - Timer](https://stackoverflow.com/questions/44314897/javascript-timer-for-a-quiz) taught me how to create a timer.
 - [Stackoverflow - Window Onload](https://stackoverflow.com/questions/39307329/hide-div-onload-in-javascript) taught me how to reset the quiz and postion my elements on load of the browser. 
-
-https://www.scaler.com/topics/javascript/import-js-file-in-js/#
-
+- [Stackoverflow - Multiple true answers](https://stackoverflow.com/questions/19384915/multiple-true-answers-in-javascript-array-prompt) taught me how to check and validate multiple true answers.
+- [GeeksforGeeks - Accessing nested object arrays](https://www.geeksforgeeks.org/how-to-access-and-process-nested-objects-arrays-or-json/) taught me how to use dot notation to access quiz.js object arrays. 
 - Tutor Ed helped me identify how to change the x-index of elements layered on the screen. 
-- 
-
-- Header, Nav and Footer first inspired by the Love Running Project, which have been really edited fit for this website.
-- Thanks to the Code Institute Tutors: Sean, Sarah, Gemma and Joanne who really helped with media response confusion for various sections and items across media device sizes.
-- Thanks to my mentor Lauren-Nicole Popich who has been all start amazing at simplifying the break down of displaying items flex and how to assemble multple sections, divs within divs. The use of sketching intention and working through what needed a div or needed to be put in to another div section, then flexed, has really provided help.
 
 ### Content
 
@@ -155,7 +155,7 @@ https://www.scaler.com/topics/javascript/import-js-file-in-js/#
 
 ### Media
 
-- Background image sourced directly from the IPCC Article AR6 Syntehsis Report landing page. 
+- Background image sourced directly from the IPCC Article AR6 Synthesis Report landing page. 
 
 ### Inspiration
 
