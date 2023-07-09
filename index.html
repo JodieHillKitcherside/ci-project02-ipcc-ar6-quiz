@@ -26,27 +26,26 @@
         <main>
             <!-- This is the quiz area : -->
             <div id="quiz-area"> 
-                <div id="question">
-                    <h3 id="question-no">1</h3>
-                    <h2 id="question-text">Insert Question?</h2>
-                    <div id="timer"><i class="fa-regular fa-clock fa-spin-pulse"></i>0</div>
+                <div question-area>
+                    <div id="question">
+                        <h3 id="question-no">1</h3>
+                        <h2 id="question-text">Insert Question?</h2>
+                        <div id="timer"><i class="fa-regular fa-clock fa-spin-pulse"></i>0</div>
+                    </div>
+                    <h3>Select your answer below:</h3>
                 </div>
                 <!-- Option select buttons : -->
                 <div id="option-select-area">
                     <div class="select-option">
-                        <p class="choice-prefix" data-number="1">A</p>
                         <button type="button" data-number="1">Enter Choice Example</button>
                     </div>
                     <div class="select-option">
-                        <p class="choice-prefix" data-number="2">B</p>
                         <button type="button">Enter Choice Example</button>
                     </div>
                     <div class="select-option">
-                        <p class="choice-prefix" data-number="3">C</p>
                         <button type="button" data-number="3">Enter Choice Example</button>
                     </div>
                     <div class="select-option">
-                        <p class="choice-prefix" data-number="4">D</p>
                         <button type="button" data-number="4">Enter Choice Example</button>
                     </div>
                 </div>
@@ -54,10 +53,10 @@
                 <br>
                 <!--  Results area : -->
                 <div id="results-area">
-                    <p>Questions Remaining:</p>
-                    <div id="questions-count"> /12</div>
-                    <p>Total Correct:</p>
-                    <div id="correct-count">/12</div>
+                    <h3>Questions Remaining:</h3>
+                    <div id="questions-count"><h3>/15</h3></div>
+                    <h3>Total Correct:</h3>
+                    <div id="correct-count"><h3>/15</h3></div>
                 </div>
             </div>
             <br>
@@ -97,15 +96,19 @@
                 </button>
             </div>
             <div id="final-result-area">
-                <div id="result">
-                    <h2>Congratulations!
+                    <div id="result">
+                        <h2>Congratulations!
                         You finished the quiz!
-                    </h2>
-                    <h2>Your final score is:</h2>
-                    <div id="final-result">
+                        </h2>
+                        <h2>Your final score is:</h2>
+                        <div id="final-result">
                         <h2>0</h2>
+                        </div>
                     </div>
-                    <p id="result-takeaway">Now you know more about the report findings from this year; we hope this
+                    <br>
+                    <div id="result-takeaway">
+                        <div id="score-statement">Enter score statment</div>
+                        <p>Now you know more about the report findings from this year; we hope this
                         ultimately impacts our
                         progress -
                         whether that be making you more aware, condisering new habits or challenging your team at work
@@ -114,15 +117,15 @@
                         However best we can work towards reducing global warming, we have a number of years to make a
                         difference before we cause irreversible devestation.
                         <br>
-                        Keep an eye out for next year's report and we hope to see you at COP28.
-                    </p>
+                        Keep an eye out for next year's report and we hope to see you at <a href="https://www.cop28.com/en/" aria-label="Opens link to COP28 website">COP28</a>.
+                        </p>
+                    </div>
                     <br>
                     <div id="restart-quiz">
                         <button type="button">
                             Restart Quiz
                         </button>
                     </div>
-                </div>
             </div>
         </main>
         <br>

@@ -188,6 +188,9 @@ function rereshQuestion () {
  * both answers proceed to display result-takeaway and restart-quiz button
  */
 
+const scoreStatement = document.getElementById("score-statment");
+
+
 function finalResultTakeaway() {
     if (totalCorrect < 7) {
         document.getElementById("quiz-area").style.display = 'none';
@@ -199,7 +202,7 @@ function finalResultTakeaway() {
     else {
         document.getElementById("quiz-area").style.display = 'none';
         document.getElementById("quiz-bio").style.display = 'block';
-        scoreStatement.innerHTML = "Better luck next time! You scored less than 50%, but that's really okay. We hope to have inspired more learning and provided you with key takeaways."
+        scoreStatement.innerHTML = "Better luck next time! You scored less than 50%, but that's really okay. We hope to have inspired you with more learnings!"
         document.getElementById("result-takeaway").style.display = 'block';
         document.getElementById("restart-quiz").style.display = 'block';
     }

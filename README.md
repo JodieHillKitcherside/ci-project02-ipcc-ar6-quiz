@@ -120,7 +120,8 @@ Examples:
 ## Wave
 
 - No errors or contrast errors on all pages
-- Examples of alerts: - Gallery - images and videos miss caption - would add captions for all media on gallery page with feedback per upload from the bcfcls team, features to add. - Team - missing headings or alternative text in quotes and mentions - the headings have been used to style from the h1/h2/h3/h4 in the main body css and body p font would not suit the format.
+- There were contrast errors due to the light text colour (white) and the dark background image. In order to eliminate contrast errors, background opacity has been set per divided section to provide a more fluid readability. 
+- Some divs have increased opcacity with background lighter opacity in order to highlight some sections (ie. the question section).
   ![Wave Checks](assets/images/screenshots-readme/wave.png)
 
 ### Solved Bugs
