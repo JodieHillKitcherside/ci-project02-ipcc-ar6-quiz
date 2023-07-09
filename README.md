@@ -76,7 +76,7 @@ The questions.js quiz dataset has two unique questions 'numb 3' and 'numb 13'. B
 - Background photo and basic colour scheme mirroring the IPCC Synthesis Report website:
 ![IPCC Website Styling](assets/images/readme/ipcc-styling.png)
 
-- Colour scheme worked around tints of  s#5493cd Blue:
+- Colour scheme worked around tints of #5493cd Blue:
 ![#5493cd tints](assets/images/readme/tints.jpg)
 
 - Complimentary tones of light grey and white used in fonts and div backgrounds to improve over all styling and readability. 
