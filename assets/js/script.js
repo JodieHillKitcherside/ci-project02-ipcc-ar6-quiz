@@ -91,16 +91,16 @@ var interval = setInterval(function() {
  * start the loop at index of 0
  */
 
-function selectOption() {
-    const selectOption = Array.from(document.getElementsByClassName('select-option'));
+function displayOptions() {
+    const displayOptions = Array.from(document.getElementsByClassName('select-option'));
     optionsCounter = 0;
-    optionsLoop = () => {
+    displayOptionsLoop = () => {
         options.forEach(option => {
-        selectOption.innerHTML = quiz.dataset.options;
-        optionsCounter++;
+        displayOptions.innerHTML = quiz.dataset.options;
+        displayOptionsCounter++;
   });
 };
-optionsLoop(0)
+displayOptionsLoop(0)
 }
 
 /**
