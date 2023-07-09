@@ -1,3 +1,7 @@
+//importing modules
+import { quiz } from "./questions.js";
+import { explanations } from "./explanations.js";
+
 //Js ordered in sequence of flowchart (see readme file)
 // Page load, hide elements until clicked 
 window.onload = function () {
@@ -5,10 +9,6 @@ window.onload = function () {
     document.getElementById("answer-explanation").style.display = 'none';
     document.getElementById("final-result-area").style.display = 'none';
 };
-
-//importing modules
-import { quiz } from "assets/js/questions.js";
-import { explanations } from "assets/js/explanations.js";
 
 //Constanants per function
 

@@ -55,10 +55,13 @@ Implemented to either add 1 to the questions number counter or stop quiz based o
 Sets a conditonal statement to notify the user if they scored 50% and above or less then 50%.
 
 ## Questions.js and explanatation.js 
-### Separate files: 
+### Separate files
 This quiz has two addtional files set up to store both the quiz dataset and explanations dataset. The quiz containts: question number, question, (correct) answer and all options. The explanation data set contains the question number and relevant explanation. 
-Due to the context of this quiz, the explnatation has been added to reveal more depth to the user's understanding and knowldge as a takeaway from the quiz. 
+Due to the context of this quiz, the explanatation has been added to reveal more depth to the user's understanding and knowldge as a takeaway from the quiz. 
 Both the reveal answer and explanation are built to load simulatnouesly as the user selects their answer option for the question. 
+
+### Import, export and modules
+Quiz from Questions.js and explanations from explanations.js are both exported and imported in to the script.js. Script.js has been listed as modules on HTML.
 
 ### Changing options length per question 
 The questions.js quiz dataset has a different number of options to select per question. Most online quiz examples use a basic format of four routine options, labelled with dataset 1 and so forth. This quiz uses a loop to return all select options per object (question). 
@@ -149,6 +152,8 @@ Examples:
 - [Stackoverflow - Multiple true answers](https://stackoverflow.com/questions/19384915/multiple-true-answers-in-javascript-array-prompt) taught me how to check and validate multiple true answers.
 - [GeeksforGeeks - Accessing nested object arrays](https://www.geeksforgeeks.org/how-to-access-and-process-nested-objects-arrays-or-json/) taught me how to use dot notation to access quiz.js object arrays. 
 - Tutor Ed helped me identify how to change the x-index of elements layered on the screen. 
+- Sean Young_Hackteam helped me greatly understand the import, export and modules with separate files for js. I also used [JS Guide Modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules).
+
 
 ### Content
 
