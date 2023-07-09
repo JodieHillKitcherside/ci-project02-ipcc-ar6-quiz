@@ -62,6 +62,7 @@ Sets a conditonal statement to notify the user if they scored 50% and above or l
 2. Graphs or assigned links to each explanation/ when answer revealled. 
 3. List of all sources with a button to release this - would be especially useful for any scientists, research and developemtn or product development users. 
 4. Option to pdf the questions and answers dataset. 
+5. Most arrays have been accessed using JSON dot notation, for more complex addtions to the quiz would use indexing.
 
 ## Design
 
@@ -72,34 +73,24 @@ Sets a conditonal statement to notify the user if they scored 50% and above or l
 ![#5493cd tints](assets/images/readme/tints.jpg)
 
 - Complimentary tones of light grey and white used in fonts and div backgrounds to improve over all styling and readability. 
-- All elements have been centred to allow a common theme and easy scrolling / movement throughout the quiz for the user. 
+- All elements have been centred to allow a common theme and easy scrolling / movement throughout the quiz for the user.
+- Capitalised fonts and letter spacing have been used to increase contrast for readibilty where the background image is dark and text is light. 
 
 ### Validator Testing
 
 ## HTML
 
-- No errors were returned when passing the index.html through the official [W3C validator](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fjodiehillkitcherside.github.io%2Fproject1-bcfcls%2F)
-- No errors were returned when passing the fixtures.html through the official [W3C validator](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2F8000-jodiehillki-project1bcf-tq9a2fe5a8y.ws-eu98.gitpod.io%2Ffixtures.html)
-- No errors were returned when passing the team.html through the official [W3C validator](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2F8000-jodiehillki-project1bcf-tq9a2fe5a8y.ws-eu98.gitpod.io%2Fteam.html)
-  NB: Warning mentions not to use h1 for headings, however h1 is used throughout to highlight big sections and gives a sport feel to the website.
-- No errors were returned when passing the social.html through the official [W3C validator](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2F8000-jodiehillki-project1bcf-tq9a2fe5a8y.ws-eu98.gitpod.io%2Fsocial.html)
-- No errors were returned when passing the gallery.html through the official [W3C validator](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2F8000-jodiehillki-project1bcf-tq9a2fe5a8y.ws-eu98.gitpod.io%2Fgallery.html)
-  NB: Warning mentions not to use h1 for headings, however h1 is used throughout to highlight big sections and gives a sport feel to the website.
-  ![HMTL W3 Validator](assets/images/screenshots-readme/w3-html.png)
 
 ## CSS
 
-- No errors were found when passing through the ccs official Jigsaw Validator. This document validates as CSS level 3 + SVG. [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2F8000-jodiehillki-project1bcf-tq9a2fe5a8y.ws-eu98.gitpod.io%2Fteam.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
-  ![CSS Jigsaw Validator](assets/images/screenshots-readme/css-jigsaw.png)
 
 ## Code Testing
 
-- Nav Bar: All navigation links take to the corresponding page. The main logo image on each page links to the home page.
-- Footer: All footer links open in a new tab for each social media site. NB: User has to be logged in to the social media platform to access the information, as per any social media site.
-- Fixtures - Map Link: Google maps on the fixtures page displays the home ground site, if the user clicks 'view on a larger map' this opens in a new tab.
-- Social - Twitter Link: Twitter timeline and the 'follow @' button both open in a new tab, directly to the teams twitter page.
-- Social - Event link to map page: Event box suggests a link to the fixtures page where the map is.
-- Media Response (shown as MR in table below) - all checked through dev tools in Chrome and on various mobile devices.
+- Test-knowl button:
+- Select-option buttons:
+- Questions remaining and  total correct count per answer:
+- Restart-quiz button:
+- Final score and correct statement: 
   ![Testing Excel Sheet](assets/images/screenshots-readme/testing-excel.jpg)
 
 ## Media Response

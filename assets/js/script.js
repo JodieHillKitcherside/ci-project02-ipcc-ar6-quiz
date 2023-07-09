@@ -189,9 +189,14 @@ function rereshQuestion () {
  */
 
 const scoreStatement = document.getElementById("score-statment");
+const showFinalScore = document.getElementById("final-result.Child");
 
+function showFinalScore () {
+    showFinalScore.innerHTML = (totalCorrect());
+}
 
 function finalResultTakeaway() {
+    showFinalScore ();
     if (totalCorrect < 7) {
         document.getElementById("quiz-area").style.display = 'none';
         document.getElementById("quiz-bio").style.display = 'block';
