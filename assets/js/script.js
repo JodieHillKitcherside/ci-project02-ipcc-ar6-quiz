@@ -111,7 +111,7 @@ displayOptionsLoop(0)
 
 const totalCorrect = document.getElementById("correct-count");
 
-selectOption.addEventListener("click", () => {
+selectOption.addEventListener("click", function () {
     if (selectOption = correctAnswer) {
         totalCorrect.innerHTML = totalCorrect + 1;
         revealAnswer();
@@ -186,12 +186,8 @@ function rereshQuestion () {
 const scoreStatement = document.getElementById("score-statment");
 const showFinalScore = document.getElementById("final-result.Child");
 
-function showFinalScore () {
-    showFinalScore.innerHTML = (totalCorrect());
-}
-
 function finalResultTakeaway() {
-    showFinalScore ();
+    showFinalScore.innerHTML = (totalCorrect());
     if (totalCorrect < 7) {
         document.getElementById("quiz-area").style.display = 'none';
         document.getElementById("quiz-bio").style.display = 'block';
