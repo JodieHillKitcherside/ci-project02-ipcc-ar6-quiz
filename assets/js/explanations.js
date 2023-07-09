@@ -1,4 +1,4 @@
-var explanation = [
+export var explanation = [
     {
         numb: 1,
         answer: "Human activities, principally through emissions of greenhouse gases, have unequivocally caused global warming, with global surface temperature reaching 1.1°C above 1850 - 1900 in 2011 - 2020. Global surface temperature has increased faster since 1970 than in any other 50 - year period over at least the last 2000 years."

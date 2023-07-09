@@ -1,4 +1,4 @@
-var quiz = [
+export var quiz = [
     {
         numb: 1,
         question:"Which statement accurately describes the global surface temperature difference between the period 2001-2020 and 1850-1900?",

@@ -1,4 +1,3 @@
-
 //Js ordered in sequence of flowchart (see readme file)
 // Page load, hide elements until clicked 
 window.onload = function () {
@@ -7,11 +6,15 @@ window.onload = function () {
     document.getElementById("final-result-area").style.display = 'none';
 };
 
+//importing modules
+import { quiz } from "assets/js/questions.js";
+import { explanations } from "assets/js/explanations.js";
+
 //Constanants per function
 
 const testKnowl = document.getElementById("test-knowl");
 const startInterval = document.getElementById("timer");
-const selectOption = document.getElementById("selectOption");
+const selectOption = document.getElementById("select-option");
 
 testKnowl.addEventListener("click", function () {
     console.log("test-knowl")
@@ -40,7 +43,7 @@ function questionNumber() {
     questionNumbersCounter = 0;
     questionNumberLoop = () => {
         questionNumber.forEach(questionNumber => {
-        questionNumber.innerHTML = (quiz.dataset.numb);
+        questionNumber.innerHTML = (quiz.numb);
         questionNumberCounter++;
   });
 };
@@ -61,7 +64,7 @@ function question() {
     questionsCounter = 0;
     questionLoop = (_questionId) => {
         question.forEach(question => {
-        document.getElementById('question').innerHTML = (quiz.dataset.question);
+        document.getElementById('question').innerHTML = (quiz.question);
   });
 };
 questionLoop(0);
@@ -96,7 +99,7 @@ function displayOptions() {
     optionsCounter = 0;
     displayOptionsLoop = () => {
         options.forEach(option => {
-        displayOptions.innerHTML = quiz.dataset.options;
+        displayOptions.innerHTML = quiz.options;
         displayOptionsCounter++;
   });
 };
@@ -151,7 +154,7 @@ answersLoop(0);
     const revealExplanation = Array.from(document.getElementsByClassName('explanation'));
     explanationsLoop = () => {
         explanations.forEach(answer => {
-        explanation.innerHTML = (explanation.datset.answer);
+        explanation.innerHTML = (explanation.answer);
   });
 };
 explanationsLoop(0); 
