@@ -57,4 +57,3 @@ var explanation = [
         answer: "All three have high confidence to work towards mitigating global warming. Examples of improved availability for finance scores the highest and includes: addressing the needs and gaps for equitable finance, increased access to finance to advert risks for vulnerable countries, public finance for private finance, reducing financial barriers and scaling up financial flows, scaled - up public grants for areas like Sub-Sharan Africa, financing to enable technology for innovation and international co-operation for accessing finance."
     }
 ];
-export{explanation}

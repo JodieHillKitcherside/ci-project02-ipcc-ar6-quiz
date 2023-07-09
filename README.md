@@ -29,12 +29,10 @@ Featured on window load, hidden display once 'Test Your Knowledge Here!' button 
 Text explains the importance of the quiz and what the user should gain from testing their knowledge. 
 Unordered list and basic html format reduce when screen width is smaller. 
 This section allows the user to progress to the quiz. 
-![BCFCLS Nav Bar](assets/images/screenshots-readme/nav-bar-logo.jpg)
 
 ### Footer
 
 Fixed throughout, displays link to the IPCC AR6 report where a user can read in full, should they wish. Aria labelled accordingly. 
-![BCFCLS Footer](assets/images/screenshots-readme/footer.jpg)
 
 ## Quiz area
 
@@ -43,18 +41,27 @@ Fixed throughout, displays link to the IPCC AR6 report where a user can read in 
 ### Select Option Buttons
 ### Question Number and Current Score (Total Correct)
 
-### Questions.js and script.js 
+### Questions.js and explanatation.js 
+## Separate files: 
+This quiz has two addtional files set up to store both the quiz dataset and explanations dataset. The quiz containts: question number, question, (correct) answer and all options. The explanation data set contains the question number and relevant explanation. 
+Due to the context of this quiz, the explnatation has been added to reveal more depth to the user's understanding and knowldge as a takeaway from the quiz. 
+Both the reveal answer and explanation are built to load simulatnouesly as the user selects their answer option for the question. 
 
-## Result Takeaway area
-### Result 
-### Result takeaway
-### Restart quiz 
+## Changing options lenegth per question 
+The questions.js quiz dataset has a different number of options to select per question. Most online quiz examples use a basic format of four routine options, labelled with dataset 1 and so forth. This quiz uses a loop to return all select options per object (question). 
+
+## Mulitple true answers in javascript array 
+The questions.js quiz dataset has two unique questions 'numb 3' and 'numb 13'. Both of these questions are trick questions to the user, and have multple answers as the correct answer. Code has been written with an array of corrrect answers  for each, then checked via a loop under the main function for reveal answer.
+
+## Final Result Takeaway
+Sets a conditonal statement to notify the user if they scored 50% and above or less then 50%.
 
 ### Features left to implement
 
 1. Nested questions inside a question in javascript. Ie. Q11 Part A..., Q11 Part B.... . 
 2. Graphs or assigned links to each explanation/ when answer revealled. 
 3. List of all sources with a button to release this - would be especially useful for any scientists, research and developemtn or product development users. 
+4. Option to pdf the questions and answers dataset. 
 
 ## Design
 
@@ -102,31 +109,6 @@ Fixed throughout, displays link to the IPCC AR6 report where a user can read in 
 
 Examples:
 
-# iPhoneXR View - Fixtures - Tables and Map
-
-![iPhoneXR Home](assets/images/screenshots-readme/iphonexr-fixtures.jpg)
-
-# iPhoneXR View - Team Top Section
-
-![iPhone11 Fixtures](assets/images/screenshots-readme/iphonexr-team-top.jpg)
-
-# iPhoneXR View - Team Quotes and Mentions
-
-![iPhoneXR Home](assets/images/screenshots-readme/iphonexr-team.jpg)
-
-# iPhoneXR View - Social Events Section
-
-![iPhone11 Fixtures](assets/images/screenshots-readme/iphonexr-social.jpg)
-
-# iPad Mini View - Tables
-
-![iPadMini Tables](assets/images/screenshots-readme/ipadmini-fixtures.jpg)
-
-# iPad Mini View - Team Mentions
-
-![iPadMini Team Mentions](assets/images/screenshots-readme/ipadmini-team.jpg) # iPad Mini View - Social Twitter
-![iPadMini Team Mentions](assets/images/screenshots-readme/ipadmini-social.jpg)
-
 ## Lighthouse
 
 - Main points of feedback were due to the paint colour, sizing of headings and header per page and speed to load these.
@@ -143,11 +125,8 @@ Examples:
 
 ### Solved Bugs
 
-- Logo and h1 in the header would not display side by side without an imposed margin, the design did not fit well. Instead, the logo and h1 are positioned parralel and central to keep the design fluid independant of the screen size.
-- Hero Image did not suit to cover screen as a background due to the image quality. Instead, the hero image has been set to fill and image rendering; auto. This is a much clear picture.
-- W3 HTML Validator highlighted unclosed divs or sections missed (2) errors that have been updated.
-- Jigsaw CSS Validator highlighted a margin: none used for the media response on the fantasy ules table section, which has been chnaged to 5px.
-- Images nested in between divs on the fixtures page would not size adjust well with the flex display command in situ. Similarly, images on the social page also followed the same pattern. These images have been removed for now.
+- All js files were showing error messages due to syntax errors, these have been corrected.
+- Test-knowl issues on starting the quiz. I logged the console each time pressed to check in Dev Tools, of which js errors explained on the syntax. Error message read that it didn't like the 'export' action I set for internal js files. Tis has been removed. 
 
 ### Unsolved Bugs
 
@@ -166,9 +145,11 @@ Examples:
 - [Stackoverflow - Loop options and questions](https://stackoverflow.com/questions/66765795/for-loops-for-multiple-choice-questions) taught me how to create a loop to extract options and questions.
 - [Stackoverflow - Timer](https://stackoverflow.com/questions/44314897/javascript-timer-for-a-quiz) taught me how to create a timer.
 - [Stackoverflow - Window Onload](https://stackoverflow.com/questions/39307329/hide-div-onload-in-javascript) taught me how to reset the quiz and postion my elements on load of the browser. 
-https://stackoverflow.com/questions/58580824/in-javascript-how-to-import-an-array-from-another-javascript-file 
+
+https://www.scaler.com/topics/javascript/import-js-file-in-js/#
+
 - Tutor Ed helped me identify how to change the x-index of elements layered on the screen. 
-- [Youtube](https://www.youtube.com/watch?v=Opje9VBrNfg) and [Youtube](https://www.youtube.com/watch?v=3fbU4z7fPe4&t=2606s) examples helped with functionality and event listening. 
+- 
 
 - Header, Nav and Footer first inspired by the Love Running Project, which have been really edited fit for this website.
 - Thanks to the Code Institute Tutors: Sean, Sarah, Gemma and Joanne who really helped with media response confusion for various sections and items across media device sizes.

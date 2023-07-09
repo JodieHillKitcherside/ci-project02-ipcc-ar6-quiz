@@ -37,7 +37,7 @@ testKnowl.addEventListener("click", function () {
  * start the loop at index of 0
  */
 
-function questionNumber(_index) {
+function questionNumber() {
     const questionNumber = Array.from(document.getElementsById('question-no'));
     questionNumbersCounter = 0;
     questionNumberLoop = () => {
@@ -59,7 +59,7 @@ questionNumberLoop(0)
  * start the loop at index of 0
  */
 
-function question(_index) {
+function question() {
     const question = Array.from(document.getElementsById('question'));
     questionsCounter = 0;
     questionLoop = (_questionId) => {
@@ -93,7 +93,7 @@ var interval = setInterval(function(){
  * start the loop at index of 0
  */
 
-function selectOption(_index) {
+function selectOption() {
     const selectOption = Array.from(document.getElementsByClassName('select-option'));
     optionsCounter = 0;
     optionsLoop = () => {
@@ -124,30 +124,34 @@ selectOption.addEventListener("click", () => {
         revealAnswer();
         revealExplanation();
     }
-}
+});
 
 /** 
  * reveal answer function implemented to:
  * select correct answer from quiz array (questions.js)
  */
 
- function revealAnswer(_index) {
+ function revealAnswer() {
     const revealAnswer = Array.from(document.getElementsByClassName('answer'));
     answersLoop = () => {
         answer.forEach(answer => {
         const answer = quiz.dataset['answer'];
         answer.innerHTML = quiz[answer];
+        for (let i = 0; i < answers.length; i++) {
+            if (selectOption === answers[i])
+            result = true;
+        }
   });
 };
 answersLoop(0)
-}
+};
 
 /** 
  * reveal explanation function implemented to:
  * select correct answer from explanation array (explanations.js)
  */
 
- function revealExplanation(_index) {
+ function revealExplanation() {
     const revealExplanation = Array.from(document.getElementsByClassName('explanation'));
     answersLoop = () => {
         answer.forEach(answer => {
@@ -156,4 +160,53 @@ answersLoop(0)
   });
 };
 answersLoop(0)
+};
+
+/**
+ * automatically checks if there is still a question, or if the quiz length has finished
+ * if still a question from the quiz.dataset, js will return to testKnowl()
+ * if not, js will proceed to final result takeaway
+ */
+
+function rereshQuestion () {
+    questionNumber++;
+    if (questionNumber , quiz.length) {
+        questionNumber();
+        question();
+        startInterval();
+        selectOption()
+    }
+    else {
+        questionNumber = 0;
+        finalResultTakeaway();
+    }
+};
+
+/**
+ * check if the total correct answers is more than 7 (50%), if so return a message 
+ * if not, return other message 
+ * both answers proceed to display result-takeaway and restart-quiz button
+ */
+
+function finalResultTakeaway() {
+    if (totalCorrect < 7) {
+        document.getElementById("quiz-area").style.display = 'none';
+        document.getElementById("quiz-bio").style.display = 'block';
+        scoreStatement.innerHTML = "Amazing job! You scored more than 50% on the quiz.. Now it's time to put your knowledge in to action!"
+        document.getElementById("result-takeaway").style.display = 'block';
+        document.getElementById("restart-quiz").style.display = 'block';
+    }
+    else {
+        document.getElementById("quiz-area").style.display = 'none';
+        document.getElementById("quiz-bio").style.display = 'block';
+        scoreStatement.innerHTML = "Better luck next time! You scored less than 50%, but that's really okay. We hope to have inspired more learning and provided you with key takeaways."
+        document.getElementById("result-takeaway").style.display = 'block';
+        document.getElementById("restart-quiz").style.display = 'block';
+    }
+}
+
+// displays function to restart the quiz 
+
+function restartQuiz () {
+    testKnowl();
 }
