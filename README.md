@@ -68,7 +68,7 @@ Both the reveal answer and explanation are built to load simulatnouesly as the u
 Quiz from Questions.js and explanations from explanations.js are both exported and imported in to the script.js. Script.js has been listed as modules on HTML.
 
 ### Changing options length per question 
-The questions.js quiz dataset has a different number of options to select per question. Most online quiz examples use a basic format of four routine options, labelled with dataset 1 and so forth. This quiz uses a loop to return all select options per object (question). 
+The questions.js quiz dataset has a different number of options to select per question. Most online quiz examples use a basic format of four routine options, labelled with dataset 1 and so forth. This quiz uses code to create a button for each option per question. 
 
 ### Mulitple true answers in javascript array 
 The questions.js quiz dataset has two unique questions 'numb 3' and 'numb 13'. Both of these questions are trick questions to the user, and have multple answers as the correct answer. Code has been written with an array of corrrect answers  for each, then checked via a loop under the main function for reveal answer.
@@ -97,11 +97,11 @@ The questions.js quiz dataset has two unique questions 'numb 3' and 'numb 13'. B
 
 ## HTML
 - No errors found.
-![#5493cd tints](assets/images/readme/p2-w3c.jpg)
+![W3C Validator](assets/images/readme/p2-w3c.jpg)
 
 ## CSS
 - No errors found.
-![#5493cd tints](assets/images/readme/p2-jigsaw.jpg)
+![Jigsaw Validator](assets/images/readme/p2-jigsaw.jpg)
 
 ## Code Testing
 
@@ -158,6 +158,7 @@ Examples:
 - [Viewport width and height to cover screen](https://dev.to/lennythedev/css-gotcha-how-to-fill-page-with-a-div-270j) taught me how to make my image fill the screen. 
 - [Footer](https://www.freecodecamp.org/news/how-to-keep-your-footer-where-it-belongs-59c6aa05c59c/) taught me how to postion fotter to the very bottom despite the content fit.
 - Tutor Ed helped me identify how to change the x-index of elements layered on the screen. 
+- Tutor Sean helped me massively rewrite a function to aply to other functions, where before I had written the wrong instructions to display question.
 - Sean Young_Hackteam helped me greatly understand the import, export and modules with separate files for js. I also used [JS Guide Modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules).
 
 
