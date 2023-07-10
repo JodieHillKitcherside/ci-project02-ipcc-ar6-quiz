@@ -10,9 +10,8 @@ body {
     padding: 0;
     color: #fff;
     vertical-align: middle;
-    position: relative;
-    min-height: 100vh;
-    padding-bottom: 2.5rem;
+    height: 100vh;
+    width: 100vw;
 }
 
 /* style headings */
@@ -226,16 +225,11 @@ button:hover {
 /* footer */
 
 #footer {
-    position: absolute;
     left: 0;
     right: 0;
     background-color: #5493cdda;
     padding-top: 1.2rem;
     padding-bottom: 1.2rem;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 2.5rem; 
 }
 
 footer a {
@@ -254,6 +248,7 @@ footer a {
  #quiz-bio ul,
  .select-option button, 
  #test-knowl, 
- #restart-quiz button  {
+ #restart-quiz button
+ #timer  {
     font-size: 80%;
  }}

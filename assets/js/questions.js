@@ -29,16 +29,15 @@ export var quiz = [
         "Limited resources, lack of private sector and citizen engagement",
         "Insufficient mobilization of finance (including for research)",
         "Low climate literacy",
-        "Lack of political commitment, limited research and/or slow and low uptake of adaptation science, and low sense of urgency.",
-        "All of them"],
+        "Lack of political commitment, limited research and/or slow and low uptake of adaptation science, and low sense of urgency."
+    ],
         options: [
             "Financial, governance, institutional and policy constraints ",
             "Some tropical, coastal, polar and mountain ecosystems have reached hard adaptation limits ",
             "Limited resources, lack of private sector and citizen engagement",
             "Insufficient mobilization of finance (including for research)",
             "Low climate literacy",
-            "Lack of political commitment, limited research and/or slow and low uptake of adaptation science, and low sense of urgency.",
-            "All of them"
+            "Lack of political commitment, limited research and/or slow and low uptake of adaptation science, and low sense of urgency."
         ]
     },
     {
