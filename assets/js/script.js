@@ -53,10 +53,7 @@ function displayNextQuestion() {
 };
 
 function checkAnswer() {
-    document.getElementById("quiz-bio").style.display = 'none';
-    document.getElementById("final-result-area").style.display = 'none';
-    document.getElementById("test-knowl").style.display = 'none';
-    document.getElementById("quiz-area").style.display = 'block'
+    document.getElementById("quiz-area").style.display = 'block';
     const currentQuestion = quiz[questionNumber];
     const questionAnswer = currentQuestion.answer;
     const clickedAnswer = this.innerHTML;
@@ -76,9 +73,13 @@ function checkAnswer() {
         revealExplanation();
         // delay 5 seconds for user to read
         setTimeout(function(){
-        }, 500); 
+        }, 3000); 
+        // block quiz bio
+        document.getElementById("quiz-bio").style.display = 'none !important;';
         // call the next question only if the the question number is less than the number of items in the quiz array
         if (questionNumber > quiz[questionNumber].length) {
+            // increase the question number to the next index in the loop
+            questionNumber++;
             displayNextQuestion();
         }
         // decide if the game is over
@@ -124,22 +125,20 @@ var interval = setInterval(function() {
         revealExplanation();}
 }, 2000);
 
+const currentAnswer = quiz[questionNumber].answer;
+const currentExplanation = explanations[questionNumber].answer;
+
 function revealAnswer() {
     // display answer and explanation area 
-    document.getElementById("quiz-bio").style.display = 'none';
-    document.getElementById("final-result-area").style.display = 'none';
-    document.getElementById("test-knowl").style.display = 'none';
     document.getElementById("quiz-area").style.display = 'block'
     document.getElementById("answer-explanation").style.display = 'block';
 
-    const currentCorrectAnswer = quiz[questionNumber].answer;
     // set the answer
-    document.querySelector('.answer').innerHTML = currentCorrectAnswer;
+    document.querySelector('.answer').innerHTML = currentAnswer;
     console.log();
 };
 
 function revealExplanation() {
-    const currentExplanation = explanations[questionNumber].answer;
     // set the explanation
     document.querySelector('.explanation').innerHTML = currentExplanation;
     console.log();
