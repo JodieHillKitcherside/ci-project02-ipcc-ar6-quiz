@@ -10,8 +10,6 @@ body {
     padding: 0;
     color: #fff;
     vertical-align: middle;
-    height: 100vh;
-    width: 100vw;
 }
 
 /* style headings */
@@ -60,9 +58,10 @@ h3 {
 
 #fog-opening {
     background-image: url("../images/fog-opening-the-dawn-ipcc-ar6-synthesis.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
-    height: 100vh;
-    width: 100vw;
     background-position: center;
     background-repeat: no-repeat;
     position: absolute;
@@ -249,10 +248,9 @@ footer a {
  p, 
  footer, 
  #quiz-bio ul,
- .select-option button, 
  #test-knowl, 
  #restart-quiz button
- #timer 
- body {
-    font-size: 80%;
+ #timer
+ button {
+    font-size: 70%;
  }}

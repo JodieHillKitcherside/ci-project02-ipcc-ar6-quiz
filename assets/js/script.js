@@ -35,7 +35,7 @@ function displayNextQuestion() {
     // set the question
     document.querySelector('#question-text').innerHTML = currentQuestion.question;
 
-    // set the options, they can be styled with the class name of  "option"
+    // set the options with the class name of "select-option"
     currentQuestion.options.forEach(option => {
         optionArea.innerHTML += `<button class="select-option">${option}</button>`;
     });

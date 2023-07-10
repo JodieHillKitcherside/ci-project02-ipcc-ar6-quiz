@@ -4,7 +4,6 @@ The IPCC AR6 Synthesis Report Quiz has been created to test the user's knowledge
 The quiz' main target market group includes both the public (average joe or jaspreet!), and those with knowledge in the sector currently: private sector, public sector, investors, scientists and activists, all working towards reducing gloabl warming. This target market group has such a huge varitety of typical users, and therefore the quiz has been designed for those with any level of knowledge. If a user doesn't have any context to the questions, then they can simply guess and recieve the correct answer and facts to boost their knowledge. For users that are already focussing work in the sctor, the quiz provides extra depth and controversial facts as to how we advance our efforts to reducing warming.
 
 An ideal user would be members from product development in RnD across industry sectors, asset managers, policy makers, UN advisory group memebers and so forth; (typically those who have not read the report page to page) and in order to educate on the means neccessary to achieve, and in some way redirect our efforts, for reduction of gloabl warming.
-![amiresponsive.co.uk](INSERT IMAGE HERE)
 
 # User Feedback
 
@@ -30,7 +29,7 @@ Text explains the importance of the quiz and what the user should gain from test
 Unordered list and basic html format reduce when screen width is smaller. 
 This section allows the user to progress to the quiz. 
 At any point during the quiz, should a user refresh the page, it will bring you back to the start of the quiz.
-![Winow onload - Quiz bio](assets/images/readme/window-onload.jpg)
+![Window onload - Quiz bio](assets/images/readme/window-onload.jpg)
 
 ## Footer
 
@@ -40,7 +39,8 @@ Fixed throughout, displays link to the IPCC AR6 report where a user can read in 
 ## Quiz area
 
 ### Question 
-Selects relevant question number and question from quiz array.
+Selects relevant question from quiz array.
+![Questions example](assets/images/readme/questions-example.jpg)
 
 ### Timer
 Set to 20secs for every question. Text at timer id should result "done" when the timer is up, and the correct answer and explanation is shown.
@@ -48,8 +48,12 @@ Set to 20secs for every question. Text at timer id should result "done" when the
 ### Select Option Buttons
 Event listener added to check when the select option chosen is selected and check if this matches the correct answer.
 
-### Question Number and Current Score (Total Correct)
-Implemented to either add 1 to the questions number counter or stop quiz based on quiz length. Current score to add 1 if the question is answered correctly.
+### Current Score (Total Correct) and Questions Remaining
+Implemented to either add 1 to the total correct if the question is answered correctly, and either way minus 1 to the quiz questions length. 
+
+### Relevant answer and explanation
+Displays relevant answer and explanation when either timer runs out or when the user clicks on an option to answer.
+![Answer and explanation example](assets/images/readme/reveal-answer-example.jpg)
 
 ### Final Result Takeaway
 Sets a conditonal statement to notify the user if they scored 50% and above or less then 50%.
@@ -101,12 +105,8 @@ The questions.js quiz dataset has two unique questions 'numb 3' and 'numb 13'. B
 
 ## Code Testing
 
-- Test-knowl button:
-- Select-option buttons:
-- Questions remaining and  total correct count per answer:
-- Restart-quiz button:
-- Final score and correct statement: 
-  ![]()
+- Incomplete tests. Only practiced tests on laptop chrome due to issues progressing the quiz and spent time on dev tools and testing to try and solve (unsuccesful).
+  ![Testing javascript](assets/images/readme/tests.jpg)
 
 ## Media Response
 
@@ -133,12 +133,13 @@ Examples:
 - Test-knowl issues on starting the quiz. I logged the console each time pressed to check in Dev Tools, of which js errors explained on the syntax. Error message read that it didn't like the 'export' action I set for internal js files. This has been removed. 
 - Global and local bugs where repeated const and function usage was blocking js. This has been checked and changed appropriately.
 - Background image would not cover the entire screen display, so I have used view port width and height to adjust to all screen sizes. 
-- Background image was resizing based on media screen
-- Quiz bio was displaying after selected option alongside answer and explanation and the display next question was not looping 
 
 ### Unsolved Bugs
 
-- 
+- Background image was resizing based on media screen
+- Quiz bio was displaying after selected option alongside answer and explanation and the display next question was not looping 
+- Buttons written in js cannot resize when reduced screen size
+- Cannot progress quiz 
 
 ## Deployment
 
