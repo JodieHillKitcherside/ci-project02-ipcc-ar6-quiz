@@ -14,7 +14,7 @@ window.onload = function () {
 
 const testKnowl = document.getElementById("test-knowl");
 const startInterval = document.getElementById("timer");
-const selectOption = document.getElementById("select-option");
+const selectOption = document.getElementsByClassName("select-option");
 
 testKnowl.addEventListener("click", function () {
     console.log("test-knowl")
@@ -28,47 +28,41 @@ testKnowl.addEventListener("click", function () {
     selectOption();
 });
 
+// note "quiz" is reffered to from questions.js and "explanations" refered to from "explanations.js"
 /**
  * question number function implemented to:
  * select elements with id of "question-no"
- * log a questions number counter
- * loop through the question number for each question in the quiz array (question.js), assosciated as "numb"
+ * filter quiz for "numb"s
+ * loop through the question number for each object item (question)
  * print inner html to the correct question number 
- * for each question, add 1 to the questions number counter 
+ * for each question, add 1 to progress quiz 
  * start the loop at index of 0
  */
 
-function questionNumber() {
-    const questionNumber = Array.from(document.getElementsByClassName('question-no'));
-    questionNumbersCounter = 0;
-    questionNumberLoop = () => {
-        questionNumber.forEach(questionNumber => {
-        questionNumber.innerHTML = (quiz.numb);
-        questionNumberCounter++;
-  });
-};
-questionNumberLoop(0);
-}
+ function questionNumber() {
+    const questionNumbers = document.getElementsByClassName('question-no');
+    const numb = quiz.filter(item => item === "numb");
+    questionNumbers.forEach((numb, index) => {
+      questionNumber.innerHTML = index + 1;
+    });
+  }
 
 /**
  * question  function implemented to:
- * select elements with id of "question"
- * log a questions counter
- * loop through the question for each question in the quiz array (question.js), assosciated as "question"
+ * select elements with id of "question" 
+ * fiter quiz for "question"s object item (question)
+ * loop through the question for each question 
  * print inner html to the correct question 
  * start the loop at index of 0
  */
 
-function question() {
-    const question = Array.from(document.getElementsById('question'));
-    questionsCounter = 0;
-    questionLoop = (_questionId) => {
-        question.forEach(question => {
-        document.getElementById('question').innerHTML = (quiz.question);
-  });
-};
-questionLoop(0);
-}
+ function question() {
+    const displayQuestion = document.getElementsByClassName('question');
+    const question = quiz.filter(item => item === "question");
+    displayQuestion.forEach((question, index) => {
+      displayQuestion.innerHTML = index + 1;
+    });
+  }
 
 // start interval function is set to start timer
 
@@ -87,35 +81,39 @@ var interval = setInterval(function() {
 /**
  * select option function implemented to:
  * select elements with id of "select-option"
- * log a options counter
- * loop through the options for each question in the quiz array (question.js), assosciated as "options"
+ * filter quiz for "options" 
+ * loop through the options for object item (question)
  * print inner html to the correct options array 
- * for each question, add 1 to the options counter 
  * start the loop at index of 0
  */
 
-function displayOptions() {
-    const displayOptions = Array.from(document.getElementsByClassName('select-option'));
-    optionsCounter = 0;
-    displayOptionsLoop = () => {
-        options.forEach(option => {
-        displayOptions.innerHTML = quiz.options;
-        displayOptionsCounter++;
-  });
-};
-displayOptionsLoop(0)
-}
+ function displayOptions() {
+    const displayOptions = document.getElementsByClassName('select-option');
+    const options = quiz.filter(item => item === "options");
+    displayOptions.forEach((options, index) => {
+      displayOptions.innerHTML = index + 1;
+    });
+    function listOfOptions () {
+        for (var i = 0; i < options.length; i++) {
+          displayOptions.innerHTML += "<button>" + [i] + "</button>";
+        }
+      }
+      listOfOptions();
+  }
 
 /**
- * statements 
- * if answer correct - and 1 to totalCorrect then proceed to reveal answer + explanation 
+ * identifies total correct element 
+ * identifies answer from quiz 
+ * checks when user clicks on the option
+ * if answer correct - and 1 to total correct then proceed to reveal answer + explanation 
  * else answer incorrect - proceed to reveal answer + explanation 
  */
 
 const totalCorrect = document.getElementById("correct-count");
+const answer = quiz.filter(item => item === "answer");
 
-selectOption.addEventListener("click", function () {
-    if (selectOption = answer) {
+displayOptions.addEventListener("click", function () {
+    if (displayOptions = answer) {
         totalCorrect.innerHTML = totalCorrect + 1;
         revealAnswer();
         revealExplanation();
@@ -128,36 +126,28 @@ selectOption.addEventListener("click", function () {
 
 /** 
  * reveal answer function implemented to:
- * select correct answer from quiz array (questions.js)
+ * select correct answer from quiz 
  */
 
  function revealAnswer() {
-    let answer = Array.from(document.getElementsByClassName('answer'));
-    answersLoop = () => {
-        answer.forEach(answer => {
-        answer.innerHTML = quiz.dataset.answer;
-        for (let i = 0; i < answers.length; i++) {
-            if (selectOption === answers[i])
-            result = true;
-        }
-  });
-};
-answersLoop(0);
+    const revealAnswer = document.getElementsByClassName("answer");
+    const correctAnswer = quiz.filter(item => item === "answer");
+    revealAnswer.forEach((correctAnswer, index) => {
+      revealAnswer.innerHTML = index + 1;
+    })
 };
 
 /** 
  * reveal explanation function implemented to:
- * select correct answer from explanation array (explanations.js)
+ * select correct answer from explanations
  */
 
  function revealExplanation() {
-    const revealExplanation = Array.from(document.getElementsByClassName('explanation'));
-    explanationsLoop = () => {
-        explanations.forEach(answer => {
-        explanation.innerHTML = (explanation.answer);
-  });
-};
-explanationsLoop(0); 
+    const revealExplanation = document.getElementsByClassName("explanation");
+    const correctExplanation = explanations.filter(item => item === "answer");
+    revealExplanation.forEach((correctExplanation, index) => {
+      revealExplanation.innerHTML = index + 1;
+    })
 };
 
 /**
@@ -172,13 +162,15 @@ function rereshQuestion () {
         questionNumber();
         question();
         startInterval();
-        selectOption();
+        displayOptions();
     }
     else {
         questionNumber = 0;
         finalResultTakeaway();
     }
 };
+
+rereshQuestion();
 
 /**
  * check if the total correct answers is more than 7 (50%), if so return a message 

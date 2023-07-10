@@ -132,6 +132,8 @@ Examples:
 - All js files were showing error messages due to syntax errors, these have been corrected.
 - Test-knowl issues on starting the quiz. I logged the console each time pressed to check in Dev Tools, of which js errors explained on the syntax. Error message read that it didn't like the 'export' action I set for internal js files. This has been removed. 
 - Gloabl and local bugs where repeated const and function usage was blocking js. This has been checked and changed appropriately.
+- Background image would not cover the entire screen display, so I have used view port width and height to adjust to all screen sizes. 
+- Footer was misplaced under content where some of the divs were shorter, I have solved this by adding relative/abslute positioning, body and footer height a dn a padding bottom for body. 
 
 ### Unsolved Bugs
 
@@ -151,6 +153,8 @@ Examples:
 - [Stackoverflow - Window Onload](https://stackoverflow.com/questions/39307329/hide-div-onload-in-javascript) taught me how to reset the quiz and postion my elements on load of the browser. 
 - [Stackoverflow - Multiple true answers](https://stackoverflow.com/questions/19384915/multiple-true-answers-in-javascript-array-prompt) taught me how to check and validate multiple true answers.
 - [GeeksforGeeks - Accessing nested object arrays](https://www.geeksforgeeks.org/how-to-access-and-process-nested-objects-arrays-or-json/) taught me how to use dot notation to access quiz.js object arrays. 
+- [Viewport width and height to cover screen](https://dev.to/lennythedev/css-gotcha-how-to-fill-page-with-a-div-270j) taught me how to make my image fill the screen. 
+- [Footer](https://www.freecodecamp.org/news/how-to-keep-your-footer-where-it-belongs-59c6aa05c59c/) taught me how to postion fotter to the very bottom despite the content fit.
 - Tutor Ed helped me identify how to change the x-index of elements layered on the screen. 
 - Sean Young_Hackteam helped me greatly understand the import, export and modules with separate files for js. I also used [JS Guide Modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules).
 

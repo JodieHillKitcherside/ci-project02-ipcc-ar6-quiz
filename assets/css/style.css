@@ -10,6 +10,9 @@ body {
     padding: 0;
     color: #fff;
     vertical-align: middle;
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 2.5rem;
 }
 
 /* style headings */
@@ -59,7 +62,8 @@ h3 {
 #fog-opening {
     background-image: url("../images/fog-opening-the-dawn-ipcc-ar6-synthesis.jpg");
     background-size: cover;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
     background-position: center;
     background-repeat: no-repeat;
     position: absolute;
@@ -110,7 +114,6 @@ button:hover {
 .select-option button {
     background-color: #5493cdda;
     color: rgba(255, 255, 255, 0.797);
-    /*#bad3eb;*/
     font-size: 18px;
     letter-spacing: 0.2rem;
     font-family: 'Playfair Display', sans-serif;
@@ -229,6 +232,10 @@ button:hover {
     background-color: #5493cdda;
     padding-top: 1.2rem;
     padding-bottom: 1.2rem;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem; 
 }
 
 footer a {
