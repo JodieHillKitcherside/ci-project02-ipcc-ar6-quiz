@@ -116,9 +116,7 @@ The questions.js quiz dataset has two unique questions 'numb 3' and 'numb 13'. B
 Examples:
 
 ## Lighthouse
-
-- CANNOT PRODUCE REPORT UNTIL DEPLOYED.
-  ![Lighthouse Checks]()
+  ![Lighthouse Checks](assets/images/readme/lighthouse.jpg)
 
 ## Wave
 
@@ -144,7 +142,7 @@ Examples:
 ## Deployment
 
 - The site was deployed to GitHub pages.
-  The live link can be found here - ""
+  The live link can be found here - "https://jodiehillkitcherside.github.io/project2-ipcc-ar6-quiz/"
 
 ## Credits
 
