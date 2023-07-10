@@ -212,7 +212,7 @@ button:hover {
     padding: 2rem;
     background: rgba(57, 55, 69, .2);
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 #result-takeaway {
@@ -252,6 +252,7 @@ footer a {
  .select-option button, 
  #test-knowl, 
  #restart-quiz button
- #timer  {
+ #timer 
+ body {
     font-size: 80%;
  }}

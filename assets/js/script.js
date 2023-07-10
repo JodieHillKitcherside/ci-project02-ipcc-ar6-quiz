@@ -23,6 +23,9 @@ testKnowl.addEventListener("click", function () {
     displayNextQuestion()
 });
 
+let totalCorrect = 0;
+let questionsRemaining = quiz.length;
+
 function displayNextQuestion() {
     // clear all options if they exist, this removes the old event listener
     const optionArea = document.querySelector("#option-select-area");
@@ -37,21 +40,28 @@ function displayNextQuestion() {
         optionArea.innerHTML += `<button class="select-option">${option}</button>`;
     });
 
+    // set the total correct and questions remaining 
+    document.querySelector('#questions-count').innerHTML = questionsRemaining;
+    document.querySelector('#correct-count').innerHTML = totalCorrect;
+
     // add the event listeners to the options
-    const options = document.querySelectorAll(".option");
+    const options = document.querySelectorAll(".select-option");
 
     // when the option is clicked call the check answer function
     options.forEach(option => option.addEventListener("click", checkAnswer));
+    console.log();
 };
 
-let totalCorrect = 0;
-
 function checkAnswer() {
+    document.getElementById("quiz-bio").style.display = 'none';
+    document.getElementById("final-result-area").style.display = 'none';
+    document.getElementById("test-knowl").style.display = 'none';
+    document.getElementById("quiz-area").style.display = 'block'
     const currentQuestion = quiz[questionNumber];
     const questionAnswer = currentQuestion.answer;
     const clickedAnswer = this.innerHTML;
 
-    console.log(questionAnswer, clickedAnswer)
+    console.log(questionAnswer, clickedAnswer);
 
     // compare the questionAnswer with the clicked element answer
     if (questionAnswer === clickedAnswer) {
@@ -59,8 +69,36 @@ function checkAnswer() {
         totalCorrect++;
         // increase the question number
         questionNumber++;
+        // decrease quesitons remaining 
+        questionsRemaining--;
+        // display correct answer and explanation 
+        revealAnswer();
+        revealExplanation();
+        // delay 5 seconds for user to read
+        setTimeout(function(){
+        }, 500); 
         // call the next question only if the the question number is less than the number of items in the quiz array
-        if (questionNumber > quiz.length) {
+        if (questionNumber > quiz[questionNumber].length) {
+            displayNextQuestion();
+        }
+        // decide if the game is over
+        else {
+            finalResultTakeaway();
+        }
+    }
+    else {
+        // increase the question number
+        questionNumber++;
+        // decrease quesitons remaining 
+        questionsRemaining--;
+        // display correct answer and explanation 
+        revealAnswer();
+        revealExplanation();
+        // delay 5 seconds for user to read
+        setTimeout(function(){
+        }, 500); 
+        // call the next question only if the the question number is less than the number of items in the quiz array
+        if (questionNumber > quiz[questionNumber].length) {
             displayNextQuestion();
         }
         // decide if the game is over
@@ -88,16 +126,23 @@ var interval = setInterval(function() {
 
 function revealAnswer() {
     // display answer and explanation area 
-    document.getElementById("answer-explanation").style.display = 'none';
+    document.getElementById("quiz-bio").style.display = 'none';
+    document.getElementById("final-result-area").style.display = 'none';
+    document.getElementById("test-knowl").style.display = 'none';
+    document.getElementById("quiz-area").style.display = 'block'
+    document.getElementById("answer-explanation").style.display = 'block';
+
     const currentCorrectAnswer = quiz[questionNumber].answer;
     // set the answer
-    document.querySelector('#answer').innerHTML = currentCorrectAnswer;
+    document.querySelector('.answer').innerHTML = currentCorrectAnswer;
+    console.log();
 };
 
 function revealExplanation() {
     const currentExplanation = explanations[questionNumber].answer;
     // set the explanation
-    document.querySelector('#explanation').innerHTML = currentExplanation;
+    document.querySelector('.explanation').innerHTML = currentExplanation;
+    console.log();
 };
 
 function refreshQuestion() {
@@ -111,13 +156,14 @@ function refreshQuestion() {
         questionNumber = 0;
         finalResultTakeaway();
     }
+    console.log();
 };
 
 // calling the next questions
 refreshQuestion();
 
 function finalResultTakeaway () {
-    const scoreStatement = document.getElementById("score-statment");
+    const scoreStatement = document.getElementById("score-statement");
 
     // hide quiz bio and quiz area 
     document.getElementById("quiz-area").style.display = 'none';
@@ -134,10 +180,10 @@ function finalResultTakeaway () {
         scoreStatement.innerHTML = "Amazing job! You scored more than 50% on the quiz.. Now it's time to put your knowledge in to action!";
     }
     else {
-        scoreStatement.innerHTML = "Better luck next time! You scored less than 50%, but that's really okay. We hope to have inspired you with more learnings!";
+      scoreStatement.innerHTML = "Better luck next time! You scored less than 50%, but that's really okay. We hope to have inspired you with more learnings!";
     }
+    console.log();
 };
 
-function restartQuiz () {
-    restartQuiz.addEventListener("click", displayNextQuestion())
-};
+let restartQuiz = document.getElementById('restart-quiz');
+restartQuiz.addEventListener("click", displayNextQuestion());
