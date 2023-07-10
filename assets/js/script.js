@@ -44,11 +44,12 @@ function displayNextQuestion() {
     options.forEach(option => option.addEventListener("click", checkAnswer));
 };
 
+let totalCorrect = 0;
+
 function checkAnswer() {
     const currentQuestion = quiz[questionNumber];
     const questionAnswer = currentQuestion.answer;
     const clickedAnswer = this.innerHTML;
-    var totalCorrect = 0;
 
     console.log(questionAnswer, clickedAnswer)
 
@@ -117,7 +118,6 @@ refreshQuestion();
 
 function finalResultTakeaway () {
     const scoreStatement = document.getElementById("score-statment");
-    const showFinalScore = document.getElementById("final-result.Child");
 
     // hide quiz bio and quiz area 
     document.getElementById("quiz-area").style.display = 'none';
