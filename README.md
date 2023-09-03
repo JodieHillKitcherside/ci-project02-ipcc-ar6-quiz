@@ -19,7 +19,7 @@ This is a basic format used to formalise a theory for the website. Ideas for the
 ### Flowchart planning
 
 This is a basic structure for both html sections and javascript, and I produced this to run through the plan for the quiz. Breaking this down in to thoughts on each function, event listeners for my html buttons (onlclick), loops and conditional statements helped to simplify how I wrote out the javascript, each function step by step.
-![Wireframe](assets/images/readme/p2-ipcc-flowchart.jpg)
+![Flowchart](assets/images/readme/flowchart-pp2.png)
 
 ## Existing Features
 
