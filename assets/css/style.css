@@ -79,7 +79,7 @@ h3 {
     width: 70%;
     text-align: center;
     border-radius: 25px;
-    margin: 0 auto; 
+    margin: 0 auto;
 }
 
 /* buttons */
@@ -149,6 +149,8 @@ button:hover {
     color: rgba(255, 255, 255, 0.797);
     text-align: center;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
 }
 
 #question {
@@ -242,15 +244,15 @@ footer a {
 /* media query */
 
 @media screen and (max-width: 700px) {
- h1, 
- h2, 
- h3, 
- p, 
- footer, 
- #quiz-bio ul,
- #test-knowl, 
- #restart-quiz button
- #timer
- button {
-    font-size: 70%;
- }}
+
+    h1,
+    h2,
+    h3,
+    p,
+    footer,
+    #quiz-bio ul,
+    #test-knowl,
+    #restart-quiz button #timer button {
+        font-size: 70%;
+    }
+}
