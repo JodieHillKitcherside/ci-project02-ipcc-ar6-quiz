@@ -3,6 +3,7 @@ import { quiz } from "./questions.js";
 import { explanations } from "./explanations.js";
 
 const testKnowl = document.getElementById("test-knowl");
+const nextQuestion = document.getElementById("next-question");
 let questionNumber = 0;
 
 // js ordered in sequence of flowchart (see readme file)
@@ -144,7 +145,7 @@ function revealExplanation() {
     console.log();
 };
 
-function refreshQuestion() {
+nextQuestion.addEventListener("click", function () {
     // goes to the next question if the quiz is not yet finished
     if (questionNumber > quiz.length) {
         questionNumber++;
@@ -155,11 +156,9 @@ function refreshQuestion() {
         questionNumber = 0;
         finalResultTakeaway();
     }
-    console.log();
-};
-
-// calling the next questions
-refreshQuestion();
+    // start quiz by calling the next question
+    displayNextQuestion()
+});
 
 function finalResultTakeaway () {
     const scoreStatement = document.getElementById("score-statement");
