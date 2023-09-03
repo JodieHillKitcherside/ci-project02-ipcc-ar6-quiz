@@ -37,13 +37,8 @@
  */
 
 /**
- * 
  * Event listener for restart quiz 
- */
-
-/**
- * Stop quiz 
- * Return to homepage + quiz bio
- * Display none none for quiz area, result area
+ * Display none none for quiz area, final result area
+ * 
  */
 
