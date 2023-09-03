@@ -21,7 +21,7 @@ testKnowl.addEventListener("click", function () {
     document.getElementById("quiz-area").style.display = 'block';
 
     // start quiz by calling the next question
-    displayNextQuestion()
+    displayNextQuestion();
 });
 
 let totalCorrect = 0;
@@ -46,7 +46,7 @@ function displayNextQuestion() {
     document.querySelector('#correct-count').innerHTML = totalCorrect;
 
     // add the event listeners to the options
-    const options = document.querySelectorAll(".select-option");
+    const options = document.querySelectorAll("select-option");
 
     // when the option is clicked call the check answer function
     options.forEach(option => option.addEventListener("click", checkAnswer));
@@ -70,8 +70,8 @@ function checkAnswer() {
         revealAnswer();
         revealExplanation();
         // delay 5 seconds for user to read
-        setTimeout(function(){
-        }, 3000); 
+        setTimeout(function () {
+        }, 3000);
         // block quiz bio
         document.getElementById("quiz-bio").style.display = 'none !important;';
         // call the next question only if the the question number is less than the number of items in the quiz array
@@ -94,8 +94,8 @@ function checkAnswer() {
         revealAnswer();
         revealExplanation();
         // delay 5 seconds for user to read
-        setTimeout(function(){
-        }, 500); 
+        setTimeout(function () {
+        }, 500);
         // call the next question only if the the question number is less than the number of items in the quiz array
         if (questionNumber > quiz[questionNumber].length) {
             displayNextQuestion();
@@ -109,18 +109,19 @@ function checkAnswer() {
 
 // start interval function is set to start timer
 var count = 20;
-var interval = setInterval(function() {
+var interval = setInterval(function () {
     // get the timer id to associate as the count
-    document.getElementById('timer').innerHTML= count;
+    document.getElementById('timer').innerHTML = count;
     // count backward -1
     count--;
-    if (count === 0){
+    if (count === 0) {
         // clear interval when count is ) and state done
         clearInterval(interval);
-        document.getElementById('timer').innerHTML='Done';
+        document.getElementById('timer').innerHTML = 'Done';
         // if user has not selected in time and answer is done, reveal answer and explanation
         revealAnswer();
-        revealExplanation();}
+        revealExplanation();
+    }
 }, 2000);
 
 const currentAnswer = quiz[questionNumber].answer;
@@ -128,7 +129,7 @@ const currentExplanation = explanations[questionNumber].answer;
 
 function revealAnswer() {
     // display answer and explanation area 
-    document.getElementById("quiz-area").style.display = 'block'
+    document.getElementById("quiz-area").style.display = 'block';
     document.getElementById("answer-explanation").style.display = 'block';
 
     // set the answer
@@ -154,10 +155,10 @@ nextQuestion.addEventListener("click", function () {
         finalResultTakeaway();
     }
     // start quiz by calling the next question
-    displayNextQuestion()
+    displayNextQuestion();
 });
 
-function finalResultTakeaway () {
+function finalResultTakeaway() {
     const scoreStatement = document.getElementById("score-statement");
 
     // hide quiz bio and quiz area 
@@ -175,7 +176,7 @@ function finalResultTakeaway () {
         scoreStatement.innerHTML = "Amazing job! You scored more than 50% on the quiz.. Now it's time to put your knowledge in to action!";
     }
     else {
-      scoreStatement.innerHTML = "Better luck next time! You scored less than 50%, but that's really okay. We hope to have inspired you with more learnings!";
+        scoreStatement.innerHTML = "Better luck next time! You scored less than 50%, but that's really okay. We hope to have inspired you with more learnings!";
     }
     console.log();
 };
