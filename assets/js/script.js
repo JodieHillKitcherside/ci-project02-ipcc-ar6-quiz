@@ -50,7 +50,6 @@ function displayNextQuestion() {
 
     // when the option is clicked call the check answer function
     options.forEach(option => option.addEventListener("click", checkAnswer));
-    console.log();
 };
 
 function checkAnswer() {
@@ -58,8 +57,6 @@ function checkAnswer() {
     const currentQuestion = quiz[questionNumber];
     const questionAnswer = currentQuestion.answer;
     const clickedAnswer = this.innerHTML;
-
-    console.log(questionAnswer, clickedAnswer);
 
     // compare the questionAnswer with the clicked element answer
     if (questionAnswer === clickedAnswer) {
