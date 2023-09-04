@@ -22,76 +22,36 @@ testKnowl.addEventListener("click", function () {
     document.getElementById("final-result-area").style.display = 'none';
     document.getElementById("answer-explanation").style.display = 'none';
 
-    startQuestion(); // start quiz by calling the next question
+    displayQuestion(); // start quiz by calling the next question
 });
 
 /**
  * START QUESTION 
- * Reveal first question number, question, options prefix, select options and start timer
+ * Select first question number, question, options prefix, select options and start timer (Index 0)
  * Questions to be selected in order from questions.js
+ * Populate inner html 
+ * Start timer
+ * 
  */
-function startQuestion() {
-    // Select item 0 from the questions list 
-    // Populate question number, question and selected options 
+function displayQuestion() {
     setInterval(timerInterval);
-    const currentQuestion = quiz[questionNumber]; // set question number 1
+    const optionArea = document.querySelector("#option-select-area");
 
-    document.querySelector('#question-text').innerHTML = nextQuestion.question;
+    for (var i = 0; i < quiz.length; i += 1) {
+        function getQuestion() {
+            var currentQuestion = document.getElementById("question-text");
+            return currentQuestion.innerHTML = quiz[i].question;
+        } // sets the function to retrive and loop through each question in the quiz array
+        currentQuestion.options.forEach(option => {
+            optionArea.innerHTML += `<button class="select-option">${option}</button>`;
+        }); // sets the function to retrive the correct select options  and sets each option as a button
+    }
     currentQuestionIndex++;
     timer();
 }
 
-/**
- * DISPLAY NEXT QUESTION
- * Reveal next question number, question, options prefix, select options and reset timer
- * Questions to be selected in order from questions.js
- */
-
-function displayNextQuestion() {
-    const optionArea = document.querySelector("#option-select-area"); // clear all options if they exist, this removes the old event listener
-    optionArea.innerHTML = '';
-
-    for (var q = 0; q < quiz[questionNumber].length; q++) {
-
-
-
-    }
-
-
-
-    // set the options with the class name of "select-option"
-    nextQuestion.options.forEach(option => {
-        optionArea.innerHTML += `<button class="select-option">${option}</button>`;
-    });
-
-    document.querySelector('#questions-count').innerHTML = questionsRemaining; // set the questions remaining 
-    document.querySelector('#correct-count').innerHTML = totalCorrect; // set the total correct 
-
-    const options = document.querySelectorAll("select-option"); // add the event listeners to the options
-
-    options.forEach(option => option.addEventListener("click", checkAnswer)); // when the option is clicked call the check answer function
-}
-
-function resetQuizContent() {
-    quizArea = document.querySelector("#quiz-area");
-    quizArea.innerHTML = '';
-}
-
-function nextQuestion() {
-    resetQuizContent(); // resets the quiz area every time 
-    clearInterval(timerInterval); // stops the timer from continuing
-    if (currentQuestionIndex < 15) {
-        // resetQuizContent();
-        // display next question from array?
-        nextQuestion = (currentQuestion + 1) % quiz.length;
-        quiz[nextQuestion];
-        document.querySelector('#question-text').innerHTML = nextQuestion.question;
-        currentQuestionIndex++;
-        timer();
-    } else {
-        finalResult();
-    }
-}
+const option = document.querySelector("#option-select-area");
+optionArea.innerHTML = '';
 
 /**
  * READ SELECTED OPTION
@@ -129,6 +89,38 @@ function revealAnswer() {
     revealExplanation();
 }
 
+
+
+
+
+document.querySelector('#questions-count').innerHTML = questionsRemaining; // set the questions remaining 
+document.querySelector('#correct-count').innerHTML = totalCorrect; // set the total correct 
+
+const options = document.querySelectorAll("select-option"); // add the event listeners to the options
+
+options.forEach(option => option.addEventListener("click", checkAnswer)); // when the option is clicked call the check answer function
+
+
+function resetQuizContent() {
+    quizArea = document.querySelector("#quiz-area");
+    quizArea.innerHTML = '';
+}
+
+function nextQuestion() {
+    resetQuizContent(); // resets the quiz area every time 
+    clearInterval(timerInterval); // stops the timer from continuing
+    if (currentQuestionIndex < 15) {
+        // resetQuizContent();
+        // display next question from array?
+        nextQuestion = (currentQuestion + 1) % quiz.length;
+        quiz[nextQuestion];
+        document.querySelector('#question-text').innerHTML = nextQuestion.question;
+        currentQuestionIndex++;
+        timer();
+    } else {
+        finalResult();
+    }
+}
 
 /**
  * READ NEXT QUESTION
