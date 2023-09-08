@@ -20,7 +20,20 @@ function resetQuizContent() {
 
 /**
  * WINDOW ONLOAD
- * TEST KNOWL - START QUIZ
+ * JS ordered in sequence of flowchart (see readme file)
+ * Page load, hide elements until clicked testKnowl
+ * Hide quiz area, answer explanation and final result
+ * Show quiz bio 
+ **/
+ 
+window.onload = function () {
+    document.getElementById("quiz-area").style.display = 'none';
+    document.getElementById("answer-explanation").style.display = 'none';
+    document.getElementById("final-result-area").style.display = 'none';
+    document.getElementById("final-result-area").style.display = 'block';
+};
+
+/* TEST KNOWL - START QUIZ
  * Event listener for test knowledge button clicked by user
  * Display none answer explanation, final result, quiz bio
  * Show quiz area
