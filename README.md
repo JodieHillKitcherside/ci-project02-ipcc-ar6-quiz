@@ -173,7 +173,7 @@ Examples:
 - Tutor Ed helped me identify how to change the x-index of elements layered on the screen.
 - Tutor Sean helped me massively rewrite a function to aply to other functions, where before I had written the wrong instructions to display question.
 - Sean Young_Hackteam helped me greatly understand the import, export and modules with separate files for js. I also used [JS Guide Modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules).
-- https://stackoverflow.com/questions/43695026/iterate-through-an-array-one-at-the-time-for-a-quiz
+- [Reminder to iterate through nesteded arrays](https://stackoverflow.com/questions/43695026/iterate-through-an-array-one-at-the-time-for-a-quiz_
 
 ### Content
 

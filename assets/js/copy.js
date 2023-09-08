@@ -35,7 +35,8 @@ testKnowl.addEventListener("click", function () {
  */
 function displayQuestion() {
     setInterval(timerInterval);
-    const optionArea = document.querySelector("#option-select-area");
+    const optionArea = document.querySelector("#option-select-area");ƒ
+    optionArea.innerHTML = '';
 
     for (var i = 0; i < quiz.length; i += 1) {
         function getQuestion() {
@@ -49,9 +50,6 @@ function displayQuestion() {
     currentQuestionIndex++;
     timer();
 }
-
-const option = document.querySelector("#option-select-area");
-optionArea.innerHTML = '';
 
 /**
  * READ SELECTED OPTION
@@ -69,6 +67,8 @@ options.addEventListener("click", function () {
         if (questionAnswer === clickedAnswer) {
             totalCorrect++;
             questionNumber++;
+            document.querySelector('#questions-count').innerHTML = questionsRemaining; // set the questions remaining 
+            document.querySelector('#correct-count').innerHTML = totalCorrect; // set the total correct 
             questionsRemaining--;
             revealAnswer();
             shortDelay;
@@ -92,9 +92,6 @@ function revealAnswer() {
 
 
 
-
-document.querySelector('#questions-count').innerHTML = questionsRemaining; // set the questions remaining 
-document.querySelector('#correct-count').innerHTML = totalCorrect; // set the total correct 
 
 const options = document.querySelectorAll("select-option"); // add the event listeners to the options
 
