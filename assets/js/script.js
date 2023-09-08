@@ -73,7 +73,22 @@ function displayNextQuestion() {
     // set the total correct and questions remaining 
     document.querySelector('#questions-count').innerHTML = questionsRemaining;
     document.querySelector('#correct-count').innerHTML = totalCorrect;
+}
 
+// CONTINUE FUNCTION
+function continueFunc() {
+    // call the next question only if the the question number is less than the number of items in the quiz array
+    if (questionNumber > quiz.length) {
+        // increase the question number to the next index in the loop
+        questionNumber++;
+        resetQuizContent();
+        displayNextQuestion();
+    }
+    // decide if the game is over
+    else {
+        finalResultTakeaway();
+    }
+}
 
 /**
  * READ SELECTED OPTION
@@ -190,9 +205,10 @@ function finalResultTakeaway() {
     // display final result area
     document.getElementById("result-takeaway").style.display = 'block';
     document.getElementById("restart-quiz").style.display = 'block';
-    const scoreStatement = document.getElementById("score-statement");
-    // display the score 
+    // display the correct final result
     document.querySelector('#final-result').innerHTML = totalCorrect;
+    // display the correct score statement 
+    const scoreStatement = document.getElementById("score-statement");
     if (totalCorrect > 7) {
         scoreStatement.innerHTML = "Amazing job! You scored more than 50% on the quiz.. Now it's time to put your knowledge in to action!";
     }
