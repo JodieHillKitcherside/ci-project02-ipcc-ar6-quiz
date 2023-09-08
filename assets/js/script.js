@@ -16,6 +16,7 @@ window.onload = function () {
     document.getElementById("answer-explanation").style.display = 'none';
     document.getElementById("final-result-area").style.display = 'none';
     document.getElementById("quiz-bio").style.display = 'block !important';
+    console.log("Window loaded")
 };
 
 // Global reset quiz content 
@@ -88,7 +89,7 @@ function continueFunc() {
         }
 }
 
-// SET TIMEOUT FUNCTION
+// SET TIMEOUT FUNCTION for 5 sec delay
 setTimeout(function () {
         }, 5000);
 
