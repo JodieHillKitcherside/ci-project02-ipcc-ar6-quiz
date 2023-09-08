@@ -82,26 +82,25 @@ function displayQuestion() {
  * If correct +tally, +total correct and alert user
  * If incorrect option, -tally, alert user
  */
-const clickedAnswer = this.innerHTML;
-clickedAnswer.addEventListener("click", function () {
+const clickedElement = document.getElementsByClass("select-option"); 
+clickedElement.addEventListener("click", function () {
     document.getElementById("quiz-area").style.display = 'block';
-    const questionAnswer = currentQuestion.answer;
+    const questionAnswer = currentQuestion.answer; 
     const clickedAnswer = this.innerHTML;
-    const shortDelay = setInterval(func, 3000);
 
     if (questionAnswer === clickedAnswer) {
-        document.querySelector('#questions-count').innerHTML = questionsRemaining; // set the questions remaining 
-        document.querySelector('#correct-count').innerHTML = totalCorrect; // set the total correct 
+        document.querySelector('#questions-count').innerHTML = questionsRemaining; // Set the questions remaining.
+        document.querySelector('#correct-count').innerHTML = totalCorrect; // Set the total correct.
         totalCorrect++;
         questionNumber++;
         questionsRemaining--;
-        revealAnswer();
-        shortDelay;
+        revealAnswer(); // 
+        setTimeout(shortDelay, 3000); 
     }
     else {
-        finalResultTakeaway();
+        finalResultTakeaway(); 
     }
-    console.log(clickedAnswer;)
+    console.log(clickedAnswer); 
 });
 
 /**
