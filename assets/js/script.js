@@ -64,7 +64,6 @@ function displayNextQuestion() {
 
     // set the total correct and questions remaining 
     document.querySelector('#questions-count').innerHTML = questionsRemaining;
-    document.querySelectƒor('#questions-count').innerHTML = questionsRemaining;
     document.querySelector('#correct-count').innerHTML = totalCorrect;
 }
 

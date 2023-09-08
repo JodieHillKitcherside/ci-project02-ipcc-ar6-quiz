@@ -82,8 +82,8 @@ h3 {
     margin: 0 auto;
 }
 
-ul li { 
-    padding: 5px 0px; 
+ul li {
+    padding: 5px 0px;
 }
 
 /* buttons */
@@ -175,7 +175,6 @@ button:hover {
 }
 
 #question {
-    display: flex;
     justify-content: space-around;
     padding: 2rem;
     background: rgba(57, 55, 69, .3);
