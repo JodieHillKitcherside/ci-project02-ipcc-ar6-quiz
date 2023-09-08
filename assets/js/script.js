@@ -76,20 +76,19 @@ clickedAnswer.addEventListener("click", function () {
     const clickedAnswer = this.innerHTML;
     const shortDelay = setInterval(func, 3000);
 
-    while (true) {
-        if (questionAnswer === clickedAnswer) {
-            document.querySelector('#questions-count').innerHTML = questionsRemaining; // set the questions remaining 
-            document.querySelector('#correct-count').innerHTML = totalCorrect; // set the total correct 
-            totalCorrect++;
-            questionNumber++;
-            questionsRemaining--;
-            revealAnswer();
-            shortDelay;
-        }
-        else {
-            finalResultTakeaway();
-        }
+    if (questionAnswer === clickedAnswer) {
+        document.querySelector('#questions-count').innerHTML = questionsRemaining; // set the questions remaining 
+        document.querySelector('#correct-count').innerHTML = totalCorrect; // set the total correct 
+        totalCorrect++;
+        questionNumber++;
+        questionsRemaining--;
+        revealAnswer();
+        shortDelay;
     }
+    else {
+        finalResultTakeaway();
+    }
+    console.log(clickedAnswer;)
 });
 
 /**
