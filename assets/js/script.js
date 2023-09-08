@@ -8,10 +8,10 @@ const nextQuestionButton = document.getElementById("next-quest");
 let questionNumber = 0;
 
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('hi'); 
-});
+    console.log('Everything inside the DOMContentLoaded listener...');
 
-document.addEventListener('DOMContentLoaded', () => { console.log('hi'); });
+
+});
 
 /** WINDOW ONLOAD
  * Display none answer explanation, final result, quiz bio
@@ -98,9 +98,8 @@ setTimeout(function () {
  * If correct +tally, +total correct and alert user
  * If incorrect option, -tally, alert user
  */
-
 // Add the event listeners to the options
-const options = document.querySelectorAll("select-option");
+const options = document.querySelectorAll(".select-option");
 // When the option is clicked call the check answer function
 options.forEach(option => option.addEventListener("click", checkAnswer));
 
