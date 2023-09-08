@@ -89,6 +89,10 @@ function continue() {
         }
 }
 
+// SET TIMEOUT FUNCTION
+setTimeout(function () {
+        }, 5000);
+
 /**
  * READ SELECTED OPTION
  * Event listener for user selected option
@@ -111,9 +115,7 @@ function checkAnswer() {
        // display correct answer and explanation 
         revealAnswer();
         revealExplanation();
-        // delay 5 seconds for user to read
-        setTimeout(function () {
-        }, 3000);
+        setTimeout();
         // block quiz bio
         document.getElementById("quiz-bio").style.display = 'none !important;';
         continue();
@@ -127,8 +129,7 @@ function checkAnswer() {
         revealAnswer();
         revealExplanation();
         // delay 5 seconds for user to read
-        setTimeout(function () {
-        }, 500);
+        setTimeout();
         // call the next question only if the the question number is less than the number of items in the quiz array
         continue();
     }

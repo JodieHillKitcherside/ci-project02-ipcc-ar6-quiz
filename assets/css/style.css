@@ -82,6 +82,10 @@ h3 {
     margin: 0 auto;
 }
 
+ul li { 
+    padding: 5px 0px; 
+}
+
 /* buttons */
 
 #test-knowl {
