@@ -1,13 +1,11 @@
-// importing modules
+// Importing modules
 import { quiz } from "./questions.js";
 import { explanations } from "./explanations.js";
 
 // Constant and variables declared
 const testKnowl = document.getElementById("test-knowl");
-const nextQuestion = document.getElementById("next-question");
+const nextQuestionButton = document.getElementById("next-quest");
 let questionNumber = 0;
-
-window.onload();
 
 /** WINDOW ONLOAD
  * Display none answer explanation, final result, quiz bio
@@ -17,6 +15,7 @@ window.onload = function () {
     document.getElementById("quiz-area").style.display = 'none';
     document.getElementById("answer-explanation").style.display = 'none';
     document.getElementById("final-result-area").style.display = 'none';
+    document.getElementById("quiz-bio").style.display = 'block !important';
 };
 
 // Global reset quiz content 
@@ -72,10 +71,10 @@ function displayNextQuestion() {
     const options = document.querySelectorAll("select-option");
     // when the option is clicked call the check answer function
     options.forEach(option => option.addEventListener("click", checkAnswer));
-};
+}
 
 // CONTINUE FUNCTION
-function continue() {
+function continueFunc() {
     // call the next question only if the the question number is less than the number of items in the quiz array
     if (questionNumber > quiz[questionNumber].length) {
             // increase the question number to the next index in the loop
@@ -118,7 +117,7 @@ function checkAnswer() {
         setTimeout();
         // block quiz bio
         document.getElementById("quiz-bio").style.display = 'none !important;';
-        continue();
+        continueFunc();
     }
     else {
         // increase the question number
@@ -131,9 +130,9 @@ function checkAnswer() {
         // delay 5 seconds for user to read
         setTimeout();
         // call the next question only if the the question number is less than the number of items in the quiz array
-        continue();
+        continueFunc();
     }
-};
+}
 
 // TIMER FUNCTION
 var count = 20;
@@ -167,13 +166,12 @@ function revealAnswer() {
     document.getElementById("answer-explanation").style.display = 'block';
     // set the answer
     document.querySelector('.answer').innerHTML = currentAnswer;
-};
+}
 
 function revealExplanation() {
     // set the explanation
     document.querySelector('.explanation').innerHTML = currentExplanation;
-};
-
+}
 
 /**
  * NEXT QUESTION BUTTON
@@ -182,9 +180,7 @@ function revealExplanation() {
  * If yes, continue, reveal next question (questions+1)
  * If no, result takeaway
  */
-const nextQuestion = document.getElementById("next-quest");
-
-nextQuestion.addEventListener("click", function () {
+nextQuestionButton.addEventListener("click", function () {
     // goes to the next question if the quiz is not yet finished
     if (questionNumber > quiz.length) {
     questionNumber++;
@@ -222,7 +218,7 @@ function finalResultTakeaway() {
     else {
         scoreStatement.innerHTML = "Better luck next time! You scored less than 50%, but that's really okay. We hope to have inspired you with more learnings!";
     }
-};
+}
 
 /**
  * RESTART QUIZ BUTTON
