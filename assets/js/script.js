@@ -178,7 +178,7 @@ function revealExplanation() {
  */
 nextQuestionButton.addEventListener("click", function () {
     // goes to the next question if the quiz is not yet finished
-    if (questionNumber > quiz.length) {
+    if (questionNumber >= quiz.length) {
         questionNumber++;
         displayNextQuestion();
     }
