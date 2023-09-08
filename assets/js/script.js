@@ -68,6 +68,11 @@ function displayNextQuestion() {
         optionArea.innerHTML += `<button class="select-option">${option}</button>`;
     });
 
+    // Add the event listeners to the options
+    const options = document.querySelectorAll(".select-option");
+    // When the option is clicked call the check answer function
+    options.forEach(option => option.addEventListener("click", checkAnswer));
+
     // set the total correct and questions remaining 
     document.querySelector('#questions-count').innerHTML = questionsRemaining;
     document.querySelector('#correct-count').innerHTML = totalCorrect;
@@ -98,10 +103,6 @@ setTimeout(function () {
  * If correct +tally, +total correct and alert user
  * If incorrect option, -tally, alert user
  */
-// Add the event listeners to the options
-const options = document.querySelectorAll(".select-option");
-// When the option is clicked call the check answer function
-options.forEach(option => option.addEventListener("click", checkAnswer));
 
 function checkAnswer() {
     console.log("clicked");
