@@ -72,20 +72,20 @@ function displayNextQuestion() {
 function continueFunc() {
     // call the next question only if the the question number is less than the number of items in the quiz array
     if (questionNumber > quiz[questionNumber].length) {
-            // increase the question number to the next index in the loop
-            questionNumber++;
-            resetQuizContent();
-            displayNextQuestion();
-        }
-        // decide if the game is over
-        else {
-            finalResultTakeaway();
-        }
+        // increase the question number to the next index in the loop
+        questionNumber++;
+        resetQuizContent();
+        displayNextQuestion();
+    }
+    // decide if the game is over
+    else {
+        finalResultTakeaway();
+    }
 }
 
 // SET TIMEOUT FUNCTION for 5 sec delay
 setTimeout(function () {
-        }, 5000);
+}, 5000);
 
 /**
  * READ SELECTED OPTION
@@ -112,7 +112,7 @@ function checkAnswer() {
         questionNumber++;
         // decrease quesitons remaining 
         questionsRemaining--;
-       // display correct answer and explanation 
+        // display correct answer and explanation 
         revealAnswer();
         revealExplanation();
         setTimeout();
@@ -184,7 +184,7 @@ function revealExplanation() {
 nextQuestionButton.addEventListener("click", function () {
     // goes to the next question if the quiz is not yet finished
     if (questionNumber > quiz.length) {
-    questionNumber++;
+        questionNumber++;
         displayNextQuestion();
     }
     // goes to the final result + ends quiz
@@ -194,6 +194,7 @@ nextQuestionButton.addEventListener("click", function () {
     }
     // start quiz by calling the next question
     displayNextQuestion();
+    console.log("Next question clicked");
 });
 
 /**

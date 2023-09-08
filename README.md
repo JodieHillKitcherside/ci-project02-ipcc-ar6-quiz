@@ -142,17 +142,11 @@ Examples:
 
 ### Solved Bugs
 
-- All js files were showing error messages due to syntax errors, these have been corrected.
-- Test-knowl issues on starting the quiz. I logged the console each time pressed to check in Dev Tools, of which js errors explained on the syntax. Error message read that it didn't like the 'export' action I set for internal js files. This has been removed.
-- Global and local bugs where repeated const and function usage was blocking js. This has been checked and changed appropriately.
-- Background image would not cover the entire screen display, so I have used view port width and height to adjust to all screen sizes.
-
 ### Unsolved Bugs
 
-- Background image was resizing based on media screen
+- Background image resizing based on media screen
 - Quiz bio was displaying after selected option alongside answer and explanation and the display next question was not looping
 - Buttons written in js cannot resize when reduced screen size
-- Cannot progress quiz
 
 ## Deployment
 
