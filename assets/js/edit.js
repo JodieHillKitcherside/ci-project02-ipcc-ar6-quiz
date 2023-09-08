@@ -6,7 +6,7 @@ import { explanations } from "./explanations.js";
 const testKnowl = document.getElementById("test-knowl");
 const currentQuestion = document.getElementById("question");
 const currentQuestionIndex = document.getElementById("total-correct");
-const nextQuestion = document.getElementById("next-question");
+const nextQuestion = document.getElementById("next-quest");
 let currentQuestionIndex;
 let questionNumber;
 let totalCorrect;
