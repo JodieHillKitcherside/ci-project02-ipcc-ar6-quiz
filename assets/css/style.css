@@ -176,6 +176,8 @@ button:hover {
     font-family: 'Playfair Display', serif;
     font-size: 16px;
     color: #fff;
+    display: flex;
+    flex-direction: column;
 }
 
 #select-option button {
