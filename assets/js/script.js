@@ -16,7 +16,6 @@ window.onload = function () {
     document.getElementById("answer-explanation").style.display = 'none';
     document.getElementById("final-result-area").style.display = 'none';
     document.getElementById("quiz-bio").style.display = 'block !important';
-    console.log("Window loaded")
 };
 
 // Global reset quiz content 
@@ -67,11 +66,6 @@ function displayNextQuestion() {
     document.querySelector('#questions-count').innerHTML = questionsRemaining;
     document.querySelectƒor('#questions-count').innerHTML = questionsRemaining;
     document.querySelector('#correct-count').innerHTML = totalCorrect;
-
-    // add the event listeners to the options
-    const options = document.querySelectorAll("select-option");
-    // when the option is clicked call the check answer function
-    options.forEach(option => option.addEventListener("click", checkAnswer));
 }
 
 // CONTINUE FUNCTION
@@ -99,6 +93,12 @@ setTimeout(function () {
  * If correct +tally, +total correct and alert user
  * If incorrect option, -tally, alert user
  */
+
+// Add the event listeners to the options
+const options = document.querySelectorAll("select-option");
+// When the option is clicked call the check answer function
+options.forEach(option => option.addEventListener("click", checkAnswer));
+
 function checkAnswer() {
     document.getElementById("quiz-area").style.display = 'block';
     const currentQuestion = quiz[questionNumber];
