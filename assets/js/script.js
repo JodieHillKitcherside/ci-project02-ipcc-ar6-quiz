@@ -9,8 +9,6 @@ let questionNumber = 0;
 
 document.addEventListener('DOMContentLoaded', () => {
     console.log('Everything inside the DOMContentLoaded listener...');
-
-
 });
 
 /** WINDOW ONLOAD
@@ -60,7 +58,6 @@ function displayNextQuestion() {
     const optionArea = document.querySelector("#option-select-area");
     optionArea.innerHTML = '';
     const currentQuestion = quiz[questionNumber];
-
     // set the question
     document.querySelector('#question-text').innerHTML = currentQuestion.question;
     // set the options with the class name of "select-option"
@@ -76,26 +73,7 @@ function displayNextQuestion() {
     // set the total correct and questions remaining 
     document.querySelector('#questions-count').innerHTML = questionsRemaining;
     document.querySelector('#correct-count').innerHTML = totalCorrect;
-}
 
-// CONTINUE FUNCTION
-function continueFunc() {
-    // call the next question only if the the question number is less than the number of items in the quiz array
-    if (questionNumber > quiz[questionNumber].length) {
-        // increase the question number to the next index in the loop
-        questionNumber++;
-        resetQuizContent();
-        displayNextQuestion();
-    }
-    // decide if the game is over
-    else {
-        finalResultTakeaway();
-    }
-}
-
-// SET TIMEOUT FUNCTION for 5 sec delay
-setTimeout(function () {
-}, 5000);
 
 /**
  * READ SELECTED OPTION
@@ -103,7 +81,6 @@ setTimeout(function () {
  * If correct +tally, +total correct and alert user
  * If incorrect option, -tally, alert user
  */
-
 function checkAnswer() {
     console.log("clicked");
     document.getElementById("quiz-area").style.display = 'block';
@@ -121,7 +98,6 @@ function checkAnswer() {
         // display correct answer and explanation 
         revealAnswer();
         revealExplanation();
-        setTimeout();
         // block quiz bio
         document.getElementById("quiz-bio").style.display = 'none !important;';
         continueFunc();
@@ -135,7 +111,6 @@ function checkAnswer() {
         revealAnswer();
         revealExplanation();
         // delay 5 seconds for user to read
-        setTimeout();
         // call the next question only if the the question number is less than the number of items in the quiz array
         continueFunc();
     }
@@ -174,7 +149,6 @@ function revealAnswer() {
     // set the answer
     document.querySelector('.answer').innerHTML = currentAnswer;
 }
-
 function revealExplanation() {
     // set the explanation
     document.querySelector('.explanation').innerHTML = currentExplanation;
@@ -216,7 +190,6 @@ function finalResultTakeaway() {
     // display final result area
     document.getElementById("result-takeaway").style.display = 'block';
     document.getElementById("restart-quiz").style.display = 'block';
-
     const scoreStatement = document.getElementById("score-statement");
     // display the score 
     document.querySelector('#final-result').innerHTML = totalCorrect;
