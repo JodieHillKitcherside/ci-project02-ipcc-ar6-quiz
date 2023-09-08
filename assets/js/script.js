@@ -99,6 +99,7 @@ const options = document.querySelectorAll("select-option");
 options.forEach(option => option.addEventListener("click", checkAnswer));
 
 function checkAnswer() {
+    console.log("clicked");
     document.getElementById("quiz-area").style.display = 'block';
     const currentQuestion = quiz[questionNumber];
     const questionAnswer = currentQuestion.answer;
@@ -118,7 +119,6 @@ function checkAnswer() {
         // block quiz bio
         document.getElementById("quiz-bio").style.display = 'none !important;';
         continueFunc();
-        console.log("clicked");
     }
     else {
         // increase the question number
@@ -132,7 +132,6 @@ function checkAnswer() {
         setTimeout();
         // call the next question only if the the question number is less than the number of items in the quiz array
         continueFunc();
-        console.log("clicked");
     }
 }
 
