@@ -7,6 +7,12 @@ const testKnowl = document.getElementById("test-knowl");
 const nextQuestionButton = document.getElementById("next-quest");
 let questionNumber = 0;
 
+document.addEventListener('DOMContentLoaded', () => {
+    console.log('hi'); 
+});
+
+document.addEventListener('DOMContentLoaded', () => { console.log('hi'); });
+
 /** WINDOW ONLOAD
  * Display none answer explanation, final result, quiz bio
  * Show quiz bio
