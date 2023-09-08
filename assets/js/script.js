@@ -7,6 +7,8 @@ const testKnowl = document.getElementById("test-knowl");
 const nextQuestion = document.getElementById("next-question");
 let questionNumber = 0;
 
+window.onload();
+
 /** WINDOW ONLOAD
  * Display none answer explanation, final result, quiz bio
  * Show quiz bio
@@ -78,6 +80,7 @@ function continue() {
     if (questionNumber > quiz[questionNumber].length) {
             // increase the question number to the next index in the loop
             questionNumber++;
+            resetQuizContent();
             displayNextQuestion();
         }
         // decide if the game is over
