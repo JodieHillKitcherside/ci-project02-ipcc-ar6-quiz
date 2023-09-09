@@ -98,7 +98,7 @@ function continueFunc() {
  */
 function checkAnswer() {
     console.log("clicked");
-    document.getElementById("quiz-area").style.display = 'block';
+    // document.getElementById("quiz-area").style.display = 'block';
     const currentQuestion = quiz[questionNumber];
     const questionAnswer = currentQuestion.answer;
     const clickedAnswer = this.innerHTML;

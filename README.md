@@ -96,7 +96,7 @@ The questions.js quiz dataset has two unique questions 'numb 3' and 'numb 13'. B
 ## Design
 
 - Background photo and basic colour scheme mirroring the IPCC Synthesis Report website:
-  ![IPCC Website Styling](assets/images/readme/ipcc-styling.png)
+  ![IPCC Website Styling](assets/images/readme/ipcc-styling.png)-
 
 - Colour scheme worked around tints of #5493cd Blue:
   ![#5493cd tints](assets/images/readme/tints.jpg)
@@ -138,15 +138,15 @@ Examples:
 - No errors or contrast errors on all pages
 - There were contrast errors due to the light text colour (white) and the dark background image. In order to eliminate contrast errors, background opacity has been set per divided section to provide a more fluid readability.
 - Some divs have increased opcacity with background lighter opacity in order to highlight some sections (ie. the question section).
-  ![Wave Checks](assets/images/screenshots-readme/wave.png)
+![Wave Checks](assets/images/readme/solved.jpg)
 
 ### Solved Bugs
 
+![Solved](assets/images/readme/solved.jpg)
+
 ### Unsolved Bugs
 
-- Background image resizing based on media screen
-- Quiz bio was displaying after selected option alongside answer and explanation and the display next question was not looping
-- Buttons written in js cannot resize when reduced screen size
+![Unsolved](assets/images/readme/unsolved.jpg)
 
 ## Deployment
 
@@ -164,7 +164,7 @@ Examples:
 - [GeeksforGeeks - Accessing nested object arrays](https://www.geeksforgeeks.org/how-to-access-and-process-nested-objects-arrays-or-json/) taught me how to use dot notation to access quiz.js object arrays.
 - [Viewport width and height to cover screen](https://dev.to/lennythedev/css-gotcha-how-to-fill-page-with-a-div-270j) taught me how to make my image fill the screen.
 - [Footer](https://www.freecodecamp.org/news/how-to-keep-your-footer-where-it-belongs-59c6aa05c59c/) taught me how to postion fotter to the very bottom despite the content fit.
-- Tutor Ed helped me identify how to change the x-index of elements layered on the screen.
+- Tutor Ed helped me identify how to change the x-index of elements layered on the screen and setting an event listener for the DOM.
 - Tutor Sean helped me massively rewrite a function to aply to other functions, where before I had written the wrong instructions to display question.
 - Sean Young_Hackteam helped me greatly understand the import, export and modules with separate files for js. I also used [JS Guide Modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules).
 - [Reminder to iterate through nesteded arrays](https://stackoverflow.com/questions/43695026/iterate-through-an-array-one-at-the-time-for-a-quiz_
@@ -172,6 +172,7 @@ Examples:
 ### Content
 
 - All quiz quesitons, multiple choice answers, correct answers and explanations taken from [IPCC AR6 Synthesis Report Policy Makers Summary](https://www.ipcc.ch/report/ar6/syr/downloads/report/IPCC_AR6_SYR_SPM.pdf)
+- No preauthorisation from the IPCC for the project given, the project this is for non-commercial use. 
 - No API used to form questions, all researched and created by myself.
 - Bio text and takeaway written by myself, with context to the report and current industry I work in. You can see more about the company I currently work for here: [Climate Action](https://www.climateaction.org/)
 
