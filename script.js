@@ -1,6 +1,6 @@
 // Importing modules
-import { quiz } from "./questions.js";
-import { explanations } from "./explanations.js";
+import { quiz } from "./assets/js/questions.js";
+import { explanations } from "./assets/js/explanations.js";
 
 // Constant and variables declared
 const testKnowl = document.getElementById("test-knowl");

@@ -5,11 +5,7 @@ The quiz' main target market group includes both the public (average joe or jasp
 
 An ideal user would be members from product development in RnD across industry sectors, asset managers, policy makers, UN advisory group memebers and so forth; (typically those who have not read the report page to page) and in order to educate on the means neccessary to achieve, and in some way redirect our efforts, for reduction of gloabl warming.
 
-# User Feedback
-
-- ""
-
-# Features
+## Features
 
 ### Wireframe
 
@@ -138,7 +134,7 @@ Examples:
 - No errors or contrast errors on all pages
 - There were contrast errors due to the light text colour (white) and the dark background image. In order to eliminate contrast errors, background opacity has been set per divided section to provide a more fluid readability.
 - Some divs have increased opcacity with background lighter opacity in order to highlight some sections (ie. the question section).
-![Wave Checks](assets/images/readme/solved.jpg)
+![Wave Checks](assets/images/readme/wave.jpg)
 
 ### Solved Bugs
 
@@ -172,7 +168,7 @@ Examples:
 ### Content
 
 - All quiz quesitons, multiple choice answers, correct answers and explanations taken from [IPCC AR6 Synthesis Report Policy Makers Summary](https://www.ipcc.ch/report/ar6/syr/downloads/report/IPCC_AR6_SYR_SPM.pdf)
-- No preauthorisation from the IPCC for the project given, the project this is for non-commercial use. 
+- No preauthorisation from the IPCC for the project given, the project this is for non-commercial use.
 - No API used to form questions, all researched and created by myself.
 - Bio text and takeaway written by myself, with context to the report and current industry I work in. You can see more about the company I currently work for here: [Climate Action](https://www.climateaction.org/)
 
